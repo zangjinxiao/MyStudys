@@ -18,6 +18,8 @@
 		49F8691C178EFF2300A933FF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 49F8691B178EFF2300A933FF /* Default-568h@2x.png */; };
 		49F8691F178EFF2300A933FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F8691E178EFF2300A933FF /* ViewController.m */; };
 		49F86922178EFF2300A933FF /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F86920178EFF2300A933FF /* ViewController.xib */; };
+		49F8692A178EFF5F00A933FF /* CTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F86929178EFF5F00A933FF /* CTView.m */; };
+		49F8692C178EFF7700A933FF /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F8692B178EFF7700A933FF /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		49F8691D178EFF2300A933FF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		49F8691E178EFF2300A933FF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		49F86921178EFF2300A933FF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		49F86928178EFF5F00A933FF /* CTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTView.h; sourceTree = "<group>"; };
+		49F86929178EFF5F00A933FF /* CTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTView.m; sourceTree = "<group>"; };
+		49F8692B178EFF7700A933FF /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49F8692C178EFF7700A933FF /* CoreText.framework in Frameworks */,
 				49F86906178EFF2300A933FF /* UIKit.framework in Frameworks */,
 				49F86908178EFF2300A933FF /* Foundation.framework in Frameworks */,
 				49F8690A178EFF2300A933FF /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +62,7 @@
 		49F868F9178EFF2300A933FF = {
 			isa = PBXGroup;
 			children = (
+				49F8692B178EFF7700A933FF /* CoreText.framework */,
 				49F8690B178EFF2300A933FF /* CoreTextStudy */,
 				49F86904178EFF2300A933FF /* Frameworks */,
 				49F86903178EFF2300A933FF /* Products */,
@@ -89,6 +96,8 @@
 				49F8691E178EFF2300A933FF /* ViewController.m */,
 				49F86920178EFF2300A933FF /* ViewController.xib */,
 				49F8690C178EFF2300A933FF /* Supporting Files */,
+				49F86928178EFF5F00A933FF /* CTView.h */,
+				49F86929178EFF5F00A933FF /* CTView.m */,
 			);
 			path = CoreTextStudy;
 			sourceTree = "<group>";
@@ -176,6 +185,7 @@
 				49F86912178EFF2300A933FF /* main.m in Sources */,
 				49F86916178EFF2300A933FF /* AppDelegate.m in Sources */,
 				49F8691F178EFF2300A933FF /* ViewController.m in Sources */,
+				49F8692A178EFF5F00A933FF /* CTView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +306,7 @@
 				49F86927178EFF2300A933FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
