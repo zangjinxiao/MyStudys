@@ -1,0 +1,146 @@
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2008 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+Name:				index.html
+Author:				John Huan Vu
+					Photoshop Engineering Intern
+					Adobe Systems Incorporated
+Description:		The index file describes the overall picture of the Adobe
+					Photoshop Panel Developer's Guide for other developers to use
+					and make using Adobe Flex Builder.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adobe Photoshop Panel Developer's Guide</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="twoColLiqLt">
+<div id="container">
+  <div id="sidebar1">
+    <h4>Table of Contents</h4>
+    <span class = "toc_links">
+		<a href="index.html">Introduction</a><br/>
+    	<a href="who.html">Who Should Read This?</a><br/>
+		<a href="howDoesItWork.html">How Does It Work?</a><br/>
+		<a href="download.html">Download(s)</a><br/>
+		<a href="requirements.html">System and Software Requirements</a><br/>
+		<a href="psReservedWords.html">Adobe Photoshop Reserved Words</a><br/>
+		<br />
+		Tutorials<br />
+		<a href="tutorial_overview.html">Overview</a>
+    	<ol>
+			<li><a href="startingFlexProject.html">Starting a Flex Project</a></li>
+			<li><a href="helloworld.html">Hello World Panel</a></li>
+			<li><a href="csxsfile.html">Placing the CSXS Library</a></li>
+			<br />
+			<li><a href="shortcutbuttons.html">Shortcut Buttons Panel</a>
+			<ol type="a">
+				<li><a href="shortcutbuttons_javascript.html">JavaScript</a></li>
+				<li><a href="shortcutbuttons_design.html">Design the Panel</a></li>
+				<li><a href="shortcutbuttons_actionscript.html">ActionScript</a></li>
+				<li><a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></li>
+				<li><a href="shortcutbuttons_air.html">CSXS Logger AIR Debugger (Optional)</a></li>
+			</ol>
+			</li>
+			<br />
+			<li><a href="scriptlistener.html">Setting Up Script Listener</a></li>
+			<br />
+			<li><a href="colorpicker.html">Color Picker Panel</a></li>
+			<ol type="a.html">
+				<li><a href="colorpicker_javascript.html">JavaScript</a></li>
+				<li><a href="colorpicker_design.html">Design the Panel</a></li>
+				<li><a href="colorpicker_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="colorpicker_actionscript.html">ActionScript</a></li>
+				<li><a href="colorpicker_icons.html">Create Custom Icons</a></li>
+			</ol>
+			<br />
+			<li><a href="flickr.html">Flickr Search Panel</a></li>
+			<ol type="a.html">
+				<li><a href="flickr_design.html">Design the Panel</a></li>
+				<li><a href="flickr_actionscriptFlickr.html">Create a Flickr Service</a></li>
+				<li><a href="flickr_createThumbnailModule.html">Design a Custom Module</a></li>
+				<li><a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></li>
+				<li><a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></li>
+			</ol>
+			<br />
+			<li><a href="perLayer.html">Per Layer Metadata Panel</a></li>
+			<ol type="a.html">
+				<li><a href="perLayer_metadata.html">View Metadata</a></li>
+				<li><a href="perLayer_javascript.html">JavaScript</a></li>
+				<li><a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="perLayer_design.html">Designing the Panel</a></li>
+				<li><a href="perLayer_actionscript.html">ActionScript</a></li>
+				<li><a href="perLayer_photomerge.html">Using Photomerge</a></li>
+			</ol>
+    	</ol>
+	 	<a href="otherSamples.html">Other Samples</a> <br/>
+	 	<a href="bestPractices.html">Best Practices</a><br />
+		<a href="faq.html">Frequently Asked Questions</a><br />
+		<a href="acronyms.html">Acronyms and Definitions</a><br />
+		<a href="links.html">Links</a>
+		</span>
+	</div>
+  <div id="mainContent">
+    <span class="main_title">Adobe<sup>&reg;</sup> Photoshop<sup>&reg;</sup> Panel Developer's Guide</span>
+	<hr />
+    <h1>Flickr Search Panel: Create Custom Module</h1>
+    <p>The third part of the Flickr Search Panel is creating a custom module for the tile list control component. The custom module will be designed as a new component called a Flickr Thumbnail. The module will be a vertical box component containing a fixed-size image and a fixed-size text field. The fixed-size image and fixed-size text will retrieve the data from the main application and use the photograph's properties such as the internet's location to display the image and the name of the image to display the text. The result is using the Flickr Thumbnail module to be placed in the tile list control component of the main application.
+    <p><u>Instructions</u>: </p>
+    <ol>
+		<li>Go to <b>File &gt; New &gt; MXML Component</b>.</li>
+    	<ol type="a">
+			<li>Under <b>Filename:</b>, type in <b>FlickrThumbnail</b>.</li>
+    		<li>Under <b>Based on:</b>, select <b>VBox</b>.</li>
+    		<li>Under <b>Width</b> and <b>Height</b>, type in <b>125</b>.</li>
+    		<img src="../images/FlickrSearch_NewMXMLComponentDialog.jpg" />
+		</ol>
+    	<li>Press <b>Finish</b>. The <b>Flex Navigator</b> now shows <b>FlickrThumbnail.mxml</b> under the <b>src</b> folder:<br />
+    			<img src="../images/FlickrSearch_AfterNewMXMLComponent.jpg" /><br />
+    		The initial code should look similar to the following:
+    		<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;mx:VBox xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot; width=&quot;125&quot; height=&quot;125&quot;&gt;
+&lt;/mx:VBox&gt;</pre>
+		</li>
+    	<li>The red colored text are the changes made to <b>FlickrThumbnail.mxml</b>:
+    		<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;mx:VBox xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot; width=&quot;125&quot; height=&quot;125&quot;&gt;
+   <span class="codeChange">&lt;mx:Image width=&quot;75&quot; height=&quot;75&quot; source=&quot;{data.thumbnail.url}&quot;/&gt;
+   &lt;mx:Text width=&quot;100&quot; text=&quot;{data.credit}&quot;/&gt;</span>
+&lt;/mx:VBox&gt;</pre>
+		  <p><u>Code Walkthrough</u>: The <code>Image</code> tag and <code>Text</code> tag each have a specified fixed-size. The <code>Image</code> tag displays the image based on the parameter <code>source</code> obtained from <code>data.thumbnail.url</code> from the Flickr API. The <code>Test</code> tag displays the text based on the parameter <code>text</code> obtained from <code>data.credit</code> from the Flickr API.</p>
+    		</li>
+    	<li>Click on the <b>FlickSearch.mxml</b> tab or double-click on <b>FlickSearch.mxml</b> under the <b>src</b> folder in the <b>Flex Navigator</b>. </li>
+    	<li>The red colored text are the changes made to the <b>TileList</b> tag in <b>FlickrSearch.mxml</b>:
+    		<pre>&lt;mx:TileList width=&quot;100%&quot; height=&quot;100%&quot; <span class="codeChange">dataProvider=&quot;{photoFeed}&quot; itemRenderer=&quot;FlickrThumbnail&quot;</span>&gt;
+&lt;/mx:TileList&gt;</pre>
+				<p><u>Code Walkthrough</u>: The <code>TileList</code> tag has a parameter <code>dataProvider</code> to obtain the <code>ArrayCollection</code> called <code>photoFeed</code>. The <code>TileList</code> tag also has a parameter called <code>itemRenderer</code> to render each item with the <code>FlickrThumbnail</code> module created earlier.</p>
+    		</li>
+    	</ol>
+        <span class="nextLink">Continue to <a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></span>
+  </div>
+	<br class="clearfloat" />
+</div>
+</body>
+</html>

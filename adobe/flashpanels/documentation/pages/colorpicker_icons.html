@@ -1,0 +1,148 @@
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2008 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+Name:				index.html
+Author:				John Huan Vu
+					Photoshop Engineering Intern
+					Adobe Systems Incorporated
+Description:		The index file describes the overall picture of the Adobe
+					Photoshop Panel Developer's Guide for other developers to use
+					and make using Adobe Flex Builder.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adobe Photoshop Panel Developer's Guide</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="twoColLiqLt">
+<div id="container">
+  <div id="sidebar1">
+    <h4>Table of Contents</h4>
+    <span class = "toc_links">
+		<a href="index.html">Introduction</a><br/>
+    	<a href="who.html">Who Should Read This?</a><br/>
+		<a href="howDoesItWork.html">How Does It Work?</a><br/>
+		<a href="download.html">Download(s)</a><br/>
+		<a href="requirements.html">System and Software Requirements</a><br/>
+		<a href="psReservedWords.html">Adobe Photoshop Reserved Words</a><br/>
+		<br />
+		Tutorials<br />
+		<a href="tutorial_overview.html">Overview</a>
+    	<ol>
+			<li><a href="startingFlexProject.html">Starting a Flex Project</a></li>
+			<li><a href="helloworld.html">Hello World Panel</a></li>
+			<li><a href="csxsfile.html">Placing the CSXS Library</a></li>
+			<br />
+			<li><a href="shortcutbuttons.html">Shortcut Buttons Panel</a>
+			<ol type="a">
+				<li><a href="shortcutbuttons_javascript.html">JavaScript</a></li>
+				<li><a href="shortcutbuttons_design.html">Design the Panel</a></li>
+				<li><a href="shortcutbuttons_actionscript.html">ActionScript</a></li>
+				<li><a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></li>
+				<li><a href="shortcutbuttons_air.html">CSXS Logger AIR Debugger (Optional)</a></li>
+			</ol>
+			</li>
+			<br />
+			<li><a href="scriptlistener.html">Setting Up Script Listener</a></li>
+			<br />
+			<li><a href="colorpicker.html">Color Picker Panel</a></li>
+			<ol type="a.html">
+				<li><a href="colorpicker_javascript.html">JavaScript</a></li>
+				<li><a href="colorpicker_design.html">Design the Panel</a></li>
+				<li><a href="colorpicker_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="colorpicker_actionscript.html">ActionScript</a></li>
+				<li><a href="colorpicker_icons.html">Create Custom Icons</a></li>
+			</ol>
+			<br />
+			<li><a href="flickr.html">Flickr Search Panel</a></li>
+			<ol type="a.html">
+				<li><a href="flickr_design.html">Design the Panel</a></li>
+				<li><a href="flickr_actionscriptFlickr.html">Create a Flickr Service</a></li>
+				<li><a href="flickr_createThumbnailModule.html">Design a Custom Module</a></li>
+				<li><a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></li>
+				<li><a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></li>
+			</ol>
+			<br />
+			<li><a href="perLayer.html">Per Layer Metadata Panel</a></li>
+			<ol type="a.html">
+				<li><a href="perLayer_metadata.html">View Metadata</a></li>
+				<li><a href="perLayer_javascript.html">JavaScript</a></li>
+				<li><a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="perLayer_design.html">Designing the Panel</a></li>
+				<li><a href="perLayer_actionscript.html">ActionScript</a></li>
+				<li><a href="perLayer_photomerge.html">Using Photomerge</a></li>
+			</ol>
+    	</ol>
+	 	<a href="otherSamples.html">Other Samples</a> <br/>
+	 	<a href="bestPractices.html">Best Practices</a><br />
+		<a href="faq.html">Frequently Asked Questions</a><br />
+		<a href="acronyms.html">Acronyms and Definitions</a><br />
+		<a href="links.html">Links</a>
+		</span>
+	</div>
+  <div id="mainContent">
+    <span class="main_title">Adobe<sup>&reg;</sup> Photoshop<sup>&reg;</sup> Panel Developer's Guide</span>
+	<hr />
+    <h1>Color Picker Panel: Create Custom Icons</h1>
+    <p>The fifth part of the Color Picker Panel is customizing the icons of the Adobe Photoshop Panel when it is minimized, closed, or hiding in Adobe Photoshop. This section of the Color Picker Panel tutorial will show how to use Portable Network Graphics (PNG) images as normal and rollover  icons for the Adobe Photoshop Panel.
+    <p><u>Instructions</u>: </p>
+    <ol>
+		<li>To develop custom icons for the Color Picker Panel, images must be in Portable Network Graphics (PNG) format. Each image must have the name of the Panel followed by either (but not both) of the following keywords:
+			<ul>
+					<li><b>Normal</b> - Used during normal or no-event state.</li>
+				<li><b>Rollover</b> - Used during mouse rollover state.</li>
+			</ul>
+			<i>For this tutorial, the following PNG images will be used to demonstrate its use: </i>
+			<ul>
+					<li><i><b>ColorPickerNormal.PNG</b><br />
+								<img src="../images/ColorPicker_ColorPickerIconNormal.png" /></i></li>
+				<li><i><b>ColorPickerRollover.PNG</b><br />
+							<img src="../images/ColorPicker_ColorPickerIconRollover.png" /></i></li>
+			</ul>
+		</li>
+    	<li>Save <b>ColorPickerNormal.PNG</b> and <b>ColorPickerRollover.PNG</b> into the <b>Panels</b> folder under the <b>Adobe Photoshop CS5\Plug-ins\</b> folder located under:</li>
+    	<ul>
+			<li><b>Applications</b> for Macintosh</li>
+    		<li><b>Program Files</b> for Windows</li>
+    		</ul>
+    	<li>Copy <b>ColorPickerNormal.PNG</b> and <b>ColorPickerRollover.PNG</b> from the <b>Panels</b> folder into the <b>bin-debug</b> folder under the <b>ColorPicker</b> folder on the <b>Desktop</b>.</li>
+    	<li>Open <b>Adobe Photoshop</b>.</li>
+    	<li>If the Color Picker Panel is not already open, go to <b>Windows &gt; Extensions &gt; ColorPicker</b>. The Color Picker Panel opens as a panel like seen below:<br />
+    			<img src="../images/ColorPicker_ColorPickerFlashPanel.jpg" /></li>
+    	<li>Click on the <b>top-right corner</b> of the Color Picker Panel. The Color Picker Panel  minimizes and is like a panel as seen below:<br />
+    			<img src="../images/ColorPicker_ColorPickerMinimizedNormal.jpg" /></li>
+    	<li>Place the mouse over the Color Picker Panel  and now the panel changes to what is seen below:<br />
+    			<img src="../images/ColorPicker_ColorPickerMinimizedRollover.jpg" /></li>
+    	<li>Click on the Color Picker Panel  and now the panel changes to what is seen below:<br />
+				<img src="../images/ColorPicker_ColorPickerMinimizedClicked.jpg" /></li>
+    	<li>The Color Picker Panel  now has two color pickers, two labels, and custom icons in which the user can change the background or foreground colors either on the Adobe Photoshop Panel or within the Adobe Photoshop tools palette.</li>
+    	<li>Close the <b>Color Picker Panel</b>.</li>
+    	<li>Close <b>Adobe Photoshop</b>.</li>
+    	</ol>
+  </div>
+	<br class="clearfloat" />
+</div>
+</body>
+</html>

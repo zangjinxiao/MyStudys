@@ -1,0 +1,277 @@
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2008 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+Name:				index.html
+Author:				John Huan Vu
+					Photoshop Engineering Intern
+					Adobe Systems Incorporated
+Description:		The index file describes the overall picture of the Adobe
+					Photoshop Panel Developer's Guide for other developers to use
+					and make using Adobe Flex Builder.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adobe Photoshop Panel Developer's Guide</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="twoColLiqLt">
+<div id="container">
+  <div id="sidebar1">
+    <h4>Table of Contents</h4>
+    <span class = "toc_links">
+		<a href="index.html">Introduction</a><br/>
+    	<a href="who.html">Who Should Read This?</a><br/>
+		<a href="howDoesItWork.html">How Does It Work?</a><br/>
+		<a href="download.html">Download(s)</a><br/>
+		<a href="requirements.html">System and Software Requirements</a><br/>
+		<a href="psReservedWords.html">Adobe Photoshop Reserved Words</a><br/>
+		<br />
+		Tutorials<br />
+		<a href="tutorial_overview.html">Overview</a>
+    	<ol>
+			<li><a href="startingFlexProject.html">Starting a Flex Project</a></li>
+			<li><a href="helloworld.html">Hello World Panel</a></li>
+			<li><a href="csxsfile.html">Placing the CSXS Library</a></li>
+			<br />
+			<li><a href="shortcutbuttons.html">Shortcut Buttons Panel</a>
+			<ol type="a">
+				<li><a href="shortcutbuttons_javascript.html">JavaScript</a></li>
+				<li><a href="shortcutbuttons_design.html">Design the Panel</a></li>
+				<li><a href="shortcutbuttons_actionscript.html">ActionScript</a></li>
+				<li><a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></li>
+				<li><a href="shortcutbuttons_air.html">CSXS Logger AIR Debugger (Optional)</a></li>
+			</ol>
+			</li>
+			<br />
+			<li><a href="scriptlistener.html">Setting Up Script Listener</a></li>
+			<br />
+			<li><a href="colorpicker.html">Color Picker Panel</a></li>
+			<ol type="a.html">
+				<li><a href="colorpicker_javascript.html">JavaScript</a></li>
+				<li><a href="colorpicker_design.html">Design the Panel</a></li>
+				<li><a href="colorpicker_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="colorpicker_actionscript.html">ActionScript</a></li>
+				<li><a href="colorpicker_icons.html">Create Custom Icons</a></li>
+			</ol>
+			<br />
+			<li><a href="flickr.html">Flickr Search Panel</a></li>
+			<ol type="a.html">
+				<li><a href="flickr_design.html">Design the Panel</a></li>
+				<li><a href="flickr_actionscriptFlickr.html">Create a Flickr Service</a></li>
+				<li><a href="flickr_createThumbnailModule.html">Design a Custom Module</a></li>
+				<li><a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></li>
+				<li><a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></li>
+			</ol>
+			<br />
+			<li><a href="perLayer.html">Per Layer Metadata Panel</a></li>
+			<ol type="a.html">
+				<li><a href="perLayer_metadata.html">View Metadata</a></li>
+				<li><a href="perLayer_javascript.html">JavaScript</a></li>
+				<li><a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="perLayer_design.html">Designing the Panel</a></li>
+				<li><a href="perLayer_actionscript.html">ActionScript</a></li>
+				<li><a href="perLayer_photomerge.html">Using Photomerge</a></li>
+			</ol>
+    	</ol>
+	 	<a href="otherSamples.html">Other Samples</a> <br/>
+	 	<a href="bestPractices.html">Best Practices</a><br />
+		<a href="faq.html">Frequently Asked Questions</a><br />
+		<a href="acronyms.html">Acronyms and Definitions</a><br />
+		<a href="links.html">Links</a>
+		</span>
+	</div>
+  <div id="mainContent">
+    <span class="main_title">Adobe<sup>&reg;</sup> Photoshop<sup>&reg;</sup> Panel Developer's Guide</span>
+	<hr />
+    <h1>Color Picker Panel: ActionScript</h1>
+    <p>The fourth part of the Color Picker Panel is programming the Adobe Photoshop Panel using ActionScript. Since Adobe Flex Builder was previously closed, the developer will able to import Adobe Flex Builder Project if there is an empty project. The developer will program in ActionScript to call functions and retrieve data from the JavaScript file created earlier. The developer will also program utility functions in ActionScript to initialize the Color Picker Panel and convert the character ID code events into an integer value to register for monitoring events. The developer will also set up a Photoshop Callback call to listen for registered events that are executed. After programming in ActionScript, the developer will copy the Adobe Flex Builder produced SWF file to the Adobe Photoshop Panels folder. The result is enabling and using the Color Picker Panel in Adobe Photoshop allowing users to change the colors on the Color Picker Panel or the colors on the tools palette in parallel.
+    <p><u>Instructions</u>: </p>
+    <ol>
+		<li>Open <b>Adobe Flex Builder</b>.</li>
+    	<li> If the <b>ColorPicker</b> project fails to show up:
+    		<ol type = "a">
+					<li>Go to <b>File &gt; Import &gt; Flex Project...</b>.</li>
+    			<li>Select <b>Project</b> and <b>Browse...</b> to the <b>ColorPicker</b> folder on the desktop.</li>
+    			<li>Deselect <b>Use default location</b>.</li>
+    			<li>Press <b>Finish</b>.</li>
+    			<img src="../images/ColorPicker_ImportFlexProject.jpg" />
+				</ol>
+    		</li>
+    	<li>Go to <b>Flex Navigator</b> or go to <b>Window &gt; Flex Navigator</b>.</li>
+    	<li>Verify that <b>CSXSLibrary.swc</b> is under the <b>libs</b> folder. Double-click on <b>ColorPicker.mxml</b> if the Design Area is empty.</li>
+    	<img src="../images/ColorPicker_FlexNavigator.jpg" />
+		<li>Go to <b>Source Mode</b> by selecting <b>Source</b> under the <b>ColorPicker.mxml</b> tab or go to <b> Window &gt; Switch Source/Design Mode</b>. The initial code should look similar to the following:
+			<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt; 
+&lt;mx:Application xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot; layout=&quot;absolute&quot;&gt; 
+   &lt;mx:ColorPicker x=&quot;10&quot; y=&quot;10&quot;/&gt; 
+   &lt;mx:ColorPicker x=&quot;10&quot; y=&quot;40&quot;/&gt; 
+   &lt;mx:Label x=&quot;40&quot; y=&quot;14&quot; text=&quot;Foreground Color&quot;/&gt; 
+   &lt;mx:Label x=&quot;40&quot; y=&quot;44&quot; text=&quot;Background Color&quot;/&gt; 
+&lt;/mx:Application&gt;</pre>
+      </li>
+    	<li>The red colored text are the changes made to <b>ColorPicker.mxml</b>:
+             <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;mx:Application xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot; layout=&quot;absolute&quot;&gt;
+   <span class="codeChange">&lt;mx:Script&gt;
+      &lt;![CDATA[
+         import com.adobe.csxs.core.CSXSInterface;
+         import com.adobe.csxs.types.*;
+         
+         public function changePSForeground():void{
+            CSXSInterface.instance.evalScript(&quot;setForeground&quot;, ForegroundPicker.selectedColor.toString());
+         }
+         
+         public function changePSBackground():void{
+            CSXSInterface.instance.evalScript(&quot;setBackground&quot;, BackgroundPicker.selectedColor.toString());
+         }
+      ]]&gt;
+   &lt;/mx:Script&gt;</span>
+   &lt;mx:ColorPicker x=&quot;10&quot; y=&quot;10&quot; <span class="codeChange">id=&quot;ForegroundPicker&quot; change=&quot;changePSForeground();&quot;</span>/&gt;
+   &lt;mx:ColorPicker x=&quot;10&quot; y=&quot;40&quot; <span class="codeChange">id=&quot;BackgroundPicker&quot; change=&quot;changePSBackground();&quot;</span>/&gt;
+   &lt;mx:Label x=&quot;40&quot; y=&quot;14&quot; text=&quot;Foreground Color&quot;/&gt;
+   &lt;mx:Label x=&quot;40&quot; y=&quot;44&quot; text=&quot;Background Color&quot;/&gt;
+&lt;/mx:Application&gt;</pre>
+				<p><u>Code Walkthrough</u>: The code is a communication from the Color Picker Panel to the Color Picker JavaScript file. The ActionScript will have two imports from CSXSLibrary.swc as shown above to allow communication between the Color Picker JavaScript file and the Color Picker Panel. The functions <code>changePSForeground</code> and <code>changePSBackground</code> call the functions <code>setForeground</code> and <code>setBackground</code> in ColorPicker.jsx respectively by passing the color selected from the respective ColorPicker control component called <code>ForegroundPicker</code> and <code>BackgroundPicker</code>. Each of the ColorPicker has a <code>change</code> event invoking the functions <code>changePSForeground</code> and <code>changePSBackground</code> every time the ColorPicker changes color.</p>
+    		</li>
+    	<li>The red colored text are the changes made to the <b>Script</b> tag in <b>ColorPicker.mxml</b>:
+    		<pre>   &lt;mx:Script&gt;
+      &lt;![CDATA[
+         import com.adobe.csxs.core.CSXSInterface;
+         import com.adobe.csxs.types.*;
+         
+         public function changePSForeground():void{
+            CSXSInterface.instance.evalScript(&quot;setForeground&quot;, ForegroundPicker.selectedColor.toString());
+         }
+         
+         public function changePSBackground():void{
+            CSXSInterface.instance.evalScript(&quot;setBackground&quot;, BackgroundPicker.selectedColor.toString());
+         }
+         
+<span class="codeChange">         public function getPSForeground():void{
+            var reqResult:SyncRequestResult = CSXSInterface.instance.evalScript(&quot;getForeground&quot;);
+            if (SyncRequestResult.COMPLETE == reqResult.status) {
+               ForegroundPicker.selectedColor = parseInt(&quot;0x&quot; + reqResult.data.foreground);
+            }
+         }
+         
+         public function getPSBackground():void{
+            var reqResult:SyncRequestResult = CSXSInterface.instance.evalScript(&quot;getBackground&quot;);
+            if (SyncRequestResult.COMPLETE == reqResult.status) {
+               BackgroundPicker.selectedColor = parseInt(&quot;0x&quot; + reqResult.data.background);
+            }
+         }</span>
+      ]]&gt;
+   &lt;/mx:Script&gt;
+</pre>
+				<p><u>Code Walkthrough</u>: The code is a communication from the Color Picker JavaScript file to the Color Picker Panel. The function <code>getPSForeground</code> and <code>getPSBackground</code> call the functions <code>getForeground</code> and <code>getBackground</code> in ColorPicker.jsx respectively by retrieving an XML object of type <code>SyncRequestResult</code>.  Each of the functions respectively set the <code>selectedColor</code> of <code>ForegroundPicker</code> and/or <code>BackgroundPicker</code> after parsing the value into a hexadecimal value.</p>
+    		</li>
+    	<li>The red colored text are the changes made to the <b>Script</b> tag in <b>ColorPicker.mxml</b>:
+    		<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;mx:Application xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot; layout=&quot;absolute&quot; <span class="codeChange">creationComplete=&quot;init();&quot;</span>&gt;
+   &lt;mx:Script&gt;
+      &lt;![CDATA[
+         import com.adobe.csxs.core.CSXSInterface;
+         import com.adobe.csxs.types.*;
+         
+         public function changePSForeground():void{
+            CSXSInterface.instance.evalScript(&quot;setForeground&quot;, ForegroundPicker.selectedColor.toString());
+         }
+         
+         public function changePSBackground():void{
+            CSXSInterface.instance.evalScript(&quot;setBackground&quot;, BackgroundPicker.selectedColor.toString());
+         }
+         
+         public function getPSForeground():void{
+            var reqResult:SyncRequestResult = CSXSInterface.instance.evalScript(&quot;getForeground&quot;);
+            if (SyncRequestResult.COMPLETE == reqResult.status) {
+               ForegroundPicker.selectedColor = parseInt(&quot;0x&quot; + reqResult.data.foreground);
+            }
+         }
+         
+         public function getPSBackground():void{
+            var reqResult:SyncRequestResult = CSXSInterface.instance.evalScript(&quot;getBackground&quot;);
+            if (SyncRequestResult.COMPLETE == reqResult.status) {
+               BackgroundPicker.selectedColor = parseInt(&quot;0x&quot; + reqResult.data.background);
+            }
+         }
+         
+<span class="codeChange">         public function init():void{
+            getPSForeground();
+            getPSBackground();
+            CSXSInterface.instance.evalScript(&quot;PhotoshopRegisterEvent&quot;, charToInteger(&quot;setd&quot;).toString());
+            CSXSInterface.instance.evalScript(&quot;PhotoshopRegisterEvent&quot;, charToInteger(&quot;Rset&quot;).toString());
+            ExternalInterface.addCallback(&quot;PhotoshopCallback&quot;, PhotoshopCallback);
+         }      
+                  
+         public function charToInteger(keyword:String):Number{
+            var value:Number;
+            value  = keyword.charCodeAt(0) * 256 * 256 * 256;
+            value += keyword.charCodeAt(1) * 256 * 256;
+            value += keyword.charCodeAt(2) * 256;
+            value += keyword.charCodeAt(3);
+            return value;
+         }
+         
+         public function PhotoshopCallback(eventID:Number, descID:Number):void{
+            if(eventID == charToInteger(&quot;setd&quot;) || eventID == charToInteger(&quot;Rset&quot;)){
+               getPSForeground();
+               getPSBackground();
+            }
+         }</span>
+      ]]&gt;
+   &lt;/mx:Script&gt;
+   &lt;mx:ColorPicker x=&quot;10&quot; y=&quot;10&quot; id=&quot;ForegroundPicker&quot; change=&quot;changePSForeground();&quot;/&gt;
+   &lt;mx:ColorPicker x=&quot;10&quot; y=&quot;40&quot; id=&quot;BackgroundPicker&quot; change=&quot;changePSBackground();&quot;/&gt;
+   &lt;mx:Label x=&quot;40&quot; y=&quot;14&quot; text=&quot;Foreground Color&quot;/&gt;
+   &lt;mx:Label x=&quot;40&quot; y=&quot;44&quot; text=&quot;Background Color&quot;/&gt;
+&lt;/mx:Application&gt;</pre>
+            <p><u>Code Walkthrough</u>: The <code>creationComplete</code> parameter inside <code>mx:Application</code> tag is like a constructor in Object-Oriented Programming. The function <code>init</code> is called by <code>creationComplete</code> to initialize the ColorPicker control components of the foreground and background color currently in Adobe Photoshop's tools palette. The function <code>init</code> also sets <code>setd</code> and <code>Rset</code> as registered events using with the parameter <code>PhotoshopRegisterEvent</code>. <i>Note: For more information about <code>PhotoshopRegisterEvent</code>, see <a href="psReservedWords.html">Adobe Photoshop Reserved Words</a> including how to unregister an event</i>. Lastly, the function <code>init</code> includes <code>PhotoshopCallback</code> to monitor events in Adobe Photoshop. The function <code>charToInteger</code> takes a string parameter called <code>keyword</code> and returns a converted <code>Number</code> returned as value understood as a Photoshop event. <i>Note: The parameter <code>keyword</code> must be four characters long since there is no error checking if it is three characters or less.</i> The function <code>PhotoshopCallback</code> takes in parameter <code>eventID</code> and <code>descID</code> to execute <code>getPSForeground</code> and <code>getPSBackground</code> whenever an event <code>setd</code> or <code>Rset</code> has occurred in Adobe Photoshop.</p>
+    		</li>
+    	<li>Go to <b>Run &gt; Run ColorPicker</b> to preview the design area in the web browser.<br />
+				<i>Note: The color pickers will not work in the web browser because the target is Adobe Photoshop.</i></li>
+    	<li>Close the web browser.</li>
+    	<li>Close <b>Adobe Flex Builder</b>.</li>
+    	<li>Open the <b>ColorPicker</b> folder on the desktop.<br />
+    			<img src="../images/ColorPicker_ColorPickerFolder.jpg" /></li>
+    	<li>Open the <b>bin-debug</b> folder.<br />
+    			<img src="../images/ColorPicker_BinDebugFolder.jpg" /></li>
+    	<li>Copy <b>ColorPicker.swf</b> into the <b>Panels</b> folder under the <b>Adobe Photoshop CS5\Plug-ins\</b> folder located under:</li>
+    	<ul>
+			<li><b>Applications</b> for Macintosh</li>
+    		<li><b>Program Files</b> for Windows</li>
+    		</ul>
+    	<li>Copy <b>ColorPicker.jsx</b> from the <b>Panels</b> folder into the <b>bin-debug</b> folder under the <b>ColorPicker</b> folder on the <b>Desktop</b>.</li>
+    	<li>Open <b>Adobe Photoshop</b>.</li>
+    	<li>Go to <b>Windows &gt; Extensions &gt; ColorPicker</b>. The <b>ColorPicker</b> Panel opens as a panel like seen below:<br />
+				<img src="../images/ColorPicker_ColorPickerFlashPanel.jpg" /></li>
+    	<li>The Color Picker Panel now has two color pickers and two labels in which the user can change the background or foreground colors either on the Color Picker Panel or within the Adobe Photoshop tools palette.</li>
+    	<li>Close <b>Adobe Photoshop</b>.</li>
+    	</ol>
+        <span class="nextLink">Continue to <a href="colorpicker_icons.html">Create Custom Icons</a></span>
+  </div>
+	<br class="clearfloat" />
+</div>
+</body>
+</html>

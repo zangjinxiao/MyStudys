@@ -1,0 +1,190 @@
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2008 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+Name:				index.html
+Author:				John Huan Vu
+					Photoshop Engineering Intern
+					Adobe Systems Incorporated
+Description:		The index file describes the overall picture of the Adobe
+					Photoshop Panel Developer's Guide for other developers to use
+					and make using Adobe Flex Builder.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adobe Photoshop Panel Developer's Guide</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="twoColLiqLt">
+<div id="container">
+  <div id="sidebar1">
+    <h4>Table of Contents</h4>
+    <span class = "toc_links">
+		<a href="index.html">Introduction</a><br/>
+    	<a href="who.html">Who Should Read This?</a><br/>
+		<a href="howDoesItWork.html">How Does It Work?</a><br/>
+		<a href="download.html">Download(s)</a><br/>
+		<a href="requirements.html">System and Software Requirements</a><br/>
+		<a href="psReservedWords.html">Adobe Photoshop Reserved Words</a><br/>
+		<br />
+		Tutorials<br />
+		<a href="tutorial_overview.html">Overview</a>
+    	<ol>
+			<li><a href="startingFlexProject.html">Starting a Flex Project</a></li>
+			<li><a href="helloworld.html">Hello World Panel</a></li>
+			<li><a href="csxsfile.html">Placing the CSXS Library</a></li>
+			<br />
+			<li><a href="shortcutbuttons.html">Shortcut Buttons Panel</a>
+			<ol type="a">
+				<li><a href="shortcutbuttons_javascript.html">JavaScript</a></li>
+				<li><a href="shortcutbuttons_design.html">Design the Panel</a></li>
+				<li><a href="shortcutbuttons_actionscript.html">ActionScript</a></li>
+				<li><a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></li>
+				<li><a href="shortcutbuttons_air.html">CSXS Logger AIR Debugger (Optional)</a></li>
+			</ol>
+			</li>
+			<br />
+			<li><a href="scriptlistener.html">Setting Up Script Listener</a></li>
+			<br />
+			<li><a href="colorpicker.html">Color Picker Panel</a></li>
+			<ol type="a.html">
+				<li><a href="colorpicker_javascript.html">JavaScript</a></li>
+				<li><a href="colorpicker_design.html">Design the Panel</a></li>
+				<li><a href="colorpicker_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="colorpicker_actionscript.html">ActionScript</a></li>
+				<li><a href="colorpicker_icons.html">Create Custom Icons</a></li>
+			</ol>
+			<br />
+			<li><a href="flickr.html">Flickr Search Panel</a></li>
+			<ol type="a.html">
+				<li><a href="flickr_design.html">Design the Panel</a></li>
+				<li><a href="flickr_actionscriptFlickr.html">Create a Flickr Service</a></li>
+				<li><a href="flickr_createThumbnailModule.html">Design a Custom Module</a></li>
+				<li><a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></li>
+				<li><a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></li>
+			</ol>
+			<br />
+			<li><a href="perLayer.html">Per Layer Metadata Panel</a></li>
+			<ol type="a.html">
+				<li><a href="perLayer_metadata.html">View Metadata</a></li>
+				<li><a href="perLayer_javascript.html">JavaScript</a></li>
+				<li><a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="perLayer_design.html">Designing the Panel</a></li>
+				<li><a href="perLayer_actionscript.html">ActionScript</a></li>
+				<li><a href="perLayer_photomerge.html">Using Photomerge</a></li>
+			</ol>
+    	</ol>
+	 	<a href="otherSamples.html">Other Samples</a> <br/>
+	 	<a href="bestPractices.html">Best Practices</a><br />
+		<a href="faq.html">Frequently Asked Questions</a><br />
+		<a href="acronyms.html">Acronyms and Definitions</a><br />
+		<a href="links.html">Links</a>
+		</span>
+	</div>
+  <div id="mainContent">
+    <span class="main_title">Adobe<sup>&reg;</sup> Photoshop<sup>&reg;</sup> Panel Developer's Guide</span>
+	<hr />
+    <h1>Flickr Search Panel: Modify Panel's Properties</h1>
+    <p>The fourth part of the Flickr Search Panel is programming the Adobe Photoshop Panel to change its properties using ActionScript. The developer will  program in ActionScript and set the initial size of the Flickr Search Panel and retrieve properties of the host environment (Adobe Photoshop) to mimic the panel's background, font style, and font size. The developer will program in ActionScript to create fly out menu items along with its event handlers to change the color background to differing colors.
+    <p><u>Instructions</u>: </p>
+    <ol>
+		<li>The red colored text are the changes made to the <b>Script</b> tag in <b>FlickrSearch.mxml</b>:
+			<pre>&lt;mx:Script&gt;
+   &lt;![CDATA[
+      import mx.controls.Alert;
+      import mx.events.FlexEvent;
+      import mx.rpc.events.*;
+      import mx.collections.*;
+<span class="codeChange">      import com.adobe.csxs.core.CSXSInterface;
+      import com.adobe.csxs.events.*;
+      import com.adobe.csxs.types.*;
+   
+      private var defaultColor:String;</span>
+         
+      [Bindable]
+      private var photoFeed:ArrayCollection;
+      private function init():void{
+         searchText.addEventListener(FlexEvent.ENTER, requestPhotos);
+         
+<span class="codeChange">         var windowSize:WindowGeometry = new WindowGeometry(100,100,350,350);
+         CSXSInterface.getInstance().requestStateChange(StateChangeEvent.WINDOW_RESIZE, windowSize);
+         
+         var result:SyncRequestResult = CSXSInterface.instance.getHostEnvironment();
+         var hostData:HostEnvironment = result.data;
+         var skinInfo:AppSkinInfo = hostData.appSkinInfo;
+         defaultColor = skinInfo.panelBackgroundColor.color.rgb;
+         this.setStyle(&quot;backgroundGradientColors&quot;, [defaultColor, defaultColor]);
+         this.setStyle(&quot;fontFamily&quot;, skinInfo.baseFontFamily);
+         this.setStyle(&quot;fontSize&quot;, skinInfo.baseFontSize);
+         
+         var xmlMenu:XML = &lt;Menu&gt;
+            &lt;MenuItem Label=&quot;Photoshop Color Background&quot;/&gt;
+            &lt;MenuItem Label=&quot;---&quot;/&gt;
+            &lt;MenuItem Label=&quot;White Background&quot;/&gt;
+            &lt;MenuItem Label=&quot;Red Background&quot;/&gt;
+            &lt;MenuItem Label=&quot;Green Background&quot;/&gt;
+            &lt;MenuItem Label=&quot;Blue Background&quot;/&gt;
+            &lt;/Menu&gt;;
+         CSXSInterface.getInstance().setPanelMenu(xmlMenu);
+         CSXSInterface.getInstance().addEventListener(MenuClickEvent.FLYOUT_MENU_CLICK, onMenuHandler);</span>
+      }
+<span class="codeChange">      private function onMenuHandler(inEvent:MenuClickEvent):void {
+         if (&quot;Photoshop Color Background&quot; == inEvent.menuName) {
+            this.setStyle(&quot;backgroundGradientColors&quot;, [defaultColor, defaultColor]);
+         } else if (&quot;White Background&quot; == inEvent.menuName) {
+            this.setStyle(&quot;backgroundGradientColors&quot;, [0xffffff, 0xffffff]);
+         } else if (&quot;Blue Background&quot; == inEvent.menuName) {
+            this.setStyle(&quot;backgroundGradientColors&quot;, [0x005a8c, 0x005a8c]);
+         } else if (&quot;Red Background&quot; == inEvent.menuName) {
+            this.setStyle(&quot;backgroundGradientColors&quot;, [0x8c0000, 0x8c0000]);
+         } else if (&quot;Green Background&quot; == inEvent.menuName) {
+            this.setStyle(&quot;backgroundGradientColors&quot;, [0x008c00, 0x008c00]);
+         } else {
+            Alert.show(&quot;Unknown selection: &quot; + inEvent.menuName);
+         }
+      }</span>
+      private function requestPhotos(event:Event):void{
+         flickrService.cancel();
+         var params:Object = new Object();
+         params.format = &quot;rss_200_enc&quot;;
+         params.tags = searchText.text;
+         flickrService.send(params);
+      }
+      private function photoHandler(event:ResultEvent):void{
+         photoFeed = event.result.rss.channel.item as ArrayCollection;
+      }
+      private function faultHandler(event:FaultEvent):void{
+         Alert.show(&quot;Not able to load photos from services&quot;,&quot;Error&quot;);
+      }
+   ]]&gt;
+&lt;/mx:Script&gt;</pre>
+				<p><u>Code Walkthrough</u>: The private String variable, <code>defaultColor</code>, is to hold the value of the Adobe Photoshop default panel background. Inside the <code>init</code> tag, the variable <code>windowSize</code> sets up the initial size of the Flickr Search Panel by sending through <code>CSXSInterface</code> with the parameter <code>StateChangeEvent.WINDOW_RESIZE</code>. Inside the <code>init</code> tag, the <code>getHostEnvironment()</code> retrieves the host environment, Adobe Photoshop, properties. The Flickr Search Panel is first initialized to the default color. For this tutorial, the  background color of an Adobe Photoshop default panel is retrieved by <code>skinInfo.panelBackgroundColor.color.rgb</code> and set in the <code>setStyle</code> function with the parameter <code>backgroundGradientColors</code>. In addition, the font family and the font size of an Adobe Photoshop default panel is retrieved by <code>skinInfo.baseFontFamily</code> and <code>skinInfo.baseFontSize</code> respectively and set in the <code>setStyle</code> function with the parameter <code>fontFamily</code> and <code>fontSize</code> respectively. <i>Note: <code>backgroundGradientColors</code>, <code>fontFamily</code>, and <code>fontSize</code> are usually the parameters within the <code>Application</code> tag.</i> Inside the <code>init</code> tag, the variable <code>xmlMenu</code> is an XML object to set up  the flyout menu with the parameter <code>MenuClickEvent.FLYOUT_MENU_CLICK</code>. The <code>---</code> is  a separator in the fly out menu between the menu items. <i>Note: Submenus are currently not supported and therefore flyout menus can only have one level.</i> The event listener function <code>onMenuHandler</code> is the function that handles the user's selection of the menu items on the flyout menu.</p>
+		</li>
+    	</ol>
+        <span class="nextLink">Continue to <a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></span>
+  </div>
+	<br class="clearfloat" />
+</div>
+</body>
+</html>

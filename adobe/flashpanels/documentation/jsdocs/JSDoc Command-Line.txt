@@ -1,0 +1,7 @@
+When making JSDocs of the samples, make sure JSDoc is installed on the computer. Search for "JSDocs" on SourceForge:
+
+Go to the directory of JSDocs where jsdoc.pl is contained.
+
+You can make the modifications but this is what works on my computer. Keep in mind that your target is to place within the jsdoc folder in the documentation folder.
+
+sudo perl jsdoc.pl /Perforce/photoshop/main/sdk/flashpanels/public/samples/ --extensions jsx -r --directory /Perforce/photoshop/main/sdk/flashpanels/public/documentation/jsdoc

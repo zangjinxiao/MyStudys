@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="AsyncRequestResult,com.adobe.csxs.types.AsyncRequestResult,DENIED,EXTERNALINTERFACE_NOT_AVAILABLE,FAILED,INVALID_INPUT_PARAMS,INVALID_RETURN_PARAMS,INVALID_TOKEN,POSTED,status,token,toString" name="keywords">
+<title>com.adobe.csxs.types.AsyncRequestResult</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'AsyncRequestResult - Public SDK CSXSLibrary API Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Public SDK CSXSLibrary API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/adobe/csxs/types/AsyncRequestResult.html&amp;com/adobe/csxs/types/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;AsyncRequestResult</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class AsyncRequestResult"); titleBar_setSubNav(true,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.adobe.csxs.types</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class AsyncRequestResult</td>
+</tr>
+</table>
+<p></p>
+  Stores the result information for an asynchronous call. 
+  When an asynchronous call is complete, the system dispatches an <code>AsyncRequestEvent</code>.
+  that contains an object of this type. It includes the result <code>status</code>, 
+  which reports whether the request completed successfully or failed in a particular way, 
+  and a <code>token</code> that distinguishes requests that are made at the same time.
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#status">status</a> : String<div class="summaryTableDescription">
+   Retrieves the result status of the request.</div>
+</td><td class="summaryTableOwnerCol">AsyncRequestResult</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#token">token</a> : String<div class="summaryTableDescription">
+   Retrieves the identifying token associated with the request.</div>
+</td><td class="summaryTableOwnerCol">AsyncRequestResult</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#AsyncRequestResult()">AsyncRequestResult</a>(status:String = "PlugPlugRequestFailed", token:String)</div>
+<div class="summaryTableDescription"> Creates an asynchronous request result object.</div>
+</td><td class="summaryTableOwnerCol">AsyncRequestResult</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#toString()">toString</a>():String</div>
+<div class="summaryTableDescription">
+  Creates a string that contains all the properties of this object.</div>
+</td><td class="summaryTableOwnerCol">AsyncRequestResult</td>
+</tr>
+</table>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#DENIED">DENIED</a> : String = "PlugPlugRequestDenied"<div class="summaryTableDescription">[static] Asynchronous call result constant, passed in <code>status</code>.</div>
+</td><td class="summaryTableOwnerCol">AsyncRequestResult</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#EXTERNALINTERFACE_NOT_AVAILABLE">EXTERNALINTERFACE_NOT_AVAILABLE</a> : String = "ExternalInterfaceNotAvailable"<div class="summaryTableDescription">[static] Asynchronous call error result constant, passed in <code>status</code>.</div>
+</td><td class="summaryTableOwnerCol">AsyncRequestResult</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#FAILED">FAILED</a> : String = "PlugPlugRequestFailed"<div class="summaryTableDescription">[static] Asynchronous call result constant, passed in <code>status</code>.</div>
+</td><td class="summaryTableOwnerCol">AsyncRequestResult</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#INVALID_INPUT_PARAMS">INVALID_INPUT_PARAMS</a> : String = "InvalidInputParams"<div class="summaryTableDescription">[static] Asynchronous call error result constant, passed in <code>status</code>.</div>
+</td><td class="summaryTableOwnerCol">AsyncRequestResult</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#INVALID_RETURN_PARAMS">INVALID_RETURN_PARAMS</a> : String = "InvalidReturnParams"<div class="summaryTableDescription">[static] Asynchronous call error result constant, passed in <code>status</code>.</div>
+</td><td class="summaryTableOwnerCol">AsyncRequestResult</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#INVALID_TOKEN">INVALID_TOKEN</a> : String = "invalid"<div class="summaryTableDescription">[static] Asynchronous call error result constant, passed in <code>status</code>.</div>
+</td><td class="summaryTableOwnerCol">AsyncRequestResult</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#POSTED">POSTED</a> : String = "PlugPlugRequestPosted"<div class="summaryTableDescription">[static] Asynchronous call result constant, passed in <code>status</code>.</div>
+</td><td class="summaryTableOwnerCol">AsyncRequestResult</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="status"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">status</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>status:String</code>&nbsp;&nbsp;[read-write]<p>
+   Retrieves the result status of the request.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get status():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set status(value:String):void</code>
+<br>
+</div>
+<a name="token"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">token</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>token:String</code>&nbsp;&nbsp;[read-write]<p>
+   Retrieves the identifying token associated with the request. 
+   This is a unique identifying string passed to the original request that distinguishes
+     this request from others made at the same time.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get token():String</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set token(value:String):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="AsyncRequestResult()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">AsyncRequestResult</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function AsyncRequestResult(status:String = "PlugPlugRequestFailed", token:String)</code><p> Creates an asynchronous request result object. 
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">status</span>:String</code> (default = "<code>PlugPlugRequestFailed</code>")<code></code> &mdash; The result status constant.
+    </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">token</span>:String</code> &mdash; A unique identifying string passed to the original request that distinguishes
+       this request from others made at the same time.
+  </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="toString()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">toString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function toString():String</code><p>
+  Creates a string that contains all the properties of this object.
+  </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash; The properties string.
+  </td>
+</tr>
+</table>
+</div>
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="DENIED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">DENIED</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const DENIED:String = "PlugPlugRequestDenied"</code><p> Asynchronous call result constant, passed in <code>status</code>. </p></div>
+<a name="EXTERNALINTERFACE_NOT_AVAILABLE"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">EXTERNALINTERFACE_NOT_AVAILABLE</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const EXTERNALINTERFACE_NOT_AVAILABLE:String = "ExternalInterfaceNotAvailable"</code><p> Asynchronous call error result constant, passed in <code>status</code>. </p></div>
+<a name="FAILED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">FAILED</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const FAILED:String = "PlugPlugRequestFailed"</code><p> Asynchronous call result constant, passed in <code>status</code>. </p></div>
+<a name="INVALID_INPUT_PARAMS"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">INVALID_INPUT_PARAMS</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const INVALID_INPUT_PARAMS:String = "InvalidInputParams"</code><p> Asynchronous call error result constant, passed in <code>status</code>. </p></div>
+<a name="INVALID_RETURN_PARAMS"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">INVALID_RETURN_PARAMS</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const INVALID_RETURN_PARAMS:String = "InvalidReturnParams"</code><p> Asynchronous call error result constant, passed in <code>status</code>. </p></div>
+<a name="INVALID_TOKEN"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">INVALID_TOKEN</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const INVALID_TOKEN:String = "invalid"</code><p> Asynchronous call error result constant, passed in <code>status</code>. </p></div>
+<a name="POSTED"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">POSTED</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const POSTED:String = "PlugPlugRequestPosted"</code><p> Asynchronous call result constant, passed in <code>status</code>. </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">Copyright &copy; 2010 Adobe Systems Incorporated. All Rights Reserved.</center>
+</div>
+</body>
+</html>
+<!--Copyright © 2010 Adobe Systems Incorporated. All Rights Reserved.-->

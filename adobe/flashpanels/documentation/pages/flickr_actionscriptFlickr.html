@@ -1,0 +1,182 @@
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2008 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+Name:				index.html
+Author:				John Huan Vu
+					Photoshop Engineering Intern
+					Adobe Systems Incorporated
+Description:		The index file describes the overall picture of the Adobe
+					Photoshop Panel Developer's Guide for other developers to use
+					and make using Adobe Flex Builder.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adobe Photoshop Panel Developer's Guide</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="twoColLiqLt">
+<div id="container">
+  <div id="sidebar1">
+    <h4>Table of Contents</h4>
+    <span class = "toc_links">
+		<a href="index.html">Introduction</a><br/>
+    	<a href="who.html">Who Should Read This?</a><br/>
+		<a href="howDoesItWork.html">How Does It Work?</a><br/>
+		<a href="download.html">Download(s)</a><br/>
+		<a href="requirements.html">System and Software Requirements</a><br/>
+		<a href="psReservedWords.html">Adobe Photoshop Reserved Words</a><br/>
+		<br />
+		Tutorials<br />
+		<a href="tutorial_overview.html">Overview</a>
+    	<ol>
+			<li><a href="startingFlexProject.html">Starting a Flex Project</a></li>
+			<li><a href="helloworld.html">Hello World Panel</a></li>
+			<li><a href="csxsfile.html">Placing the CSXS Library</a></li>
+			<br />
+			<li><a href="shortcutbuttons.html">Shortcut Buttons Panel</a>
+			<ol type="a">
+				<li><a href="shortcutbuttons_javascript.html">JavaScript</a></li>
+				<li><a href="shortcutbuttons_design.html">Design the Panel</a></li>
+				<li><a href="shortcutbuttons_actionscript.html">ActionScript</a></li>
+				<li><a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></li>
+				<li><a href="shortcutbuttons_air.html">CSXS Logger AIR Debugger (Optional)</a></li>
+			</ol>
+			</li>
+			<br />
+			<li><a href="scriptlistener.html">Setting Up Script Listener</a></li>
+			<br />
+			<li><a href="colorpicker.html">Color Picker Panel</a></li>
+			<ol type="a.html">
+				<li><a href="colorpicker_javascript.html">JavaScript</a></li>
+				<li><a href="colorpicker_design.html">Design the Panel</a></li>
+				<li><a href="colorpicker_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="colorpicker_actionscript.html">ActionScript</a></li>
+				<li><a href="colorpicker_icons.html">Create Custom Icons</a></li>
+			</ol>
+			<br />
+			<li><a href="flickr.html">Flickr Search Panel</a></li>
+			<ol type="a.html">
+				<li><a href="flickr_design.html">Design the Panel</a></li>
+				<li><a href="flickr_actionscriptFlickr.html">Create a Flickr Service</a></li>
+				<li><a href="flickr_createThumbnailModule.html">Design a Custom Module</a></li>
+				<li><a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></li>
+				<li><a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></li>
+			</ol>
+			<br />
+			<li><a href="perLayer.html">Per Layer Metadata Panel</a></li>
+			<ol type="a.html">
+				<li><a href="perLayer_metadata.html">View Metadata</a></li>
+				<li><a href="perLayer_javascript.html">JavaScript</a></li>
+				<li><a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="perLayer_design.html">Designing the Panel</a></li>
+				<li><a href="perLayer_actionscript.html">ActionScript</a></li>
+				<li><a href="perLayer_photomerge.html">Using Photomerge</a></li>
+			</ol>
+    	</ol>
+	 	<a href="otherSamples.html">Other Samples</a> <br/>
+	 	<a href="bestPractices.html">Best Practices</a><br />
+		<a href="faq.html">Frequently Asked Questions</a><br />
+		<a href="acronyms.html">Acronyms and Definitions</a><br />
+		<a href="links.html">Links</a>
+		</span>
+	</div>
+  <div id="mainContent">
+    <span class="main_title">Adobe<sup>&reg;</sup> Photoshop<sup>&reg;</sup> Panel Developer's Guide</span>
+	<hr />
+    <h1>Flickr Search Panel: Create a Flickr Service</h1>
+    <p>The second part of the Flickr Search Panel is programming the Adobe Photoshop Panel for a service connection using ActionScript. Since Adobe Flex Builder was previously closed, the developer will able to import Adobe Flex Builder Project if there is an empty project. The developer will program functions in ActionScript to initialize the Flickr Search Panel, to request the photographs properties from Flickr, and to handle events of whether or not the connection to Flickr has been successful. The developer will also create an HTTP Service tag connection to Flickr. The result is enabling  Flickr Search Panel in Adobe Photoshop to make a service connection to Flickr to be able to retrieve the images and its properties.
+    <p><u>Instructions</u>: </p>
+    <ol>
+		<li>Open <b>Adobe Flex Builder</b>.</li>
+    	<li>If the <b>FlickrSearch</b> project fails to show up:
+    		<ol type = "a">
+					<li>Go to <b>File &gt; Import &gt; Flex Project...</b>.</li>
+    			<li>Select <b>Project</b> and <b>Browse...</b> to the <b>FlickrSearch</b> folder on the desktop.</li>
+    			<li>Deselect <b>Use default location</b>.</li>
+    			<li>Press <b>Finish</b>.</li>
+    			<img src="../images/FlickrSearch_ImportFlexProject.jpg" />
+				</ol>
+    		</li>
+    	<li>Go to <b>Flex Navigator</b> or go to <b>Window &gt; Flex Navigator</b>.</li>
+    	<li>Verify that <b>CSXSLibrary.swc</b> is under the <b>libs</b> folder. Double-click on <b>FlickrSearch.mxml</b> if the Design Area is empty.</li>
+    	<img src="../images/FlickrSearch_FlexNavigator.jpg" />
+		<li>Go to <b>Source Mode</b> by selecting <b>Source</b> under the <b>FlickrSearch.mxml</b> tab or go to <b> Window &gt; Switch Source/Design Mode</b>. The initial code should look similar to the following:
+				<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;mx:Application xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot; layout=&quot;vertical&quot;&gt;
+   &lt;mx:HBox width=&quot;100%&quot;&gt;
+      &lt;mx:TextInput/&gt;
+      &lt;mx:Button label=&quot;Search&quot;/&gt;
+   &lt;/mx:HBox&gt;
+   &lt;mx:TileList width=&quot;100%&quot; height=&quot;100%&quot;&gt;&lt;/mx:TileList&gt;
+&lt;/mx:Application&gt;</pre>
+      </li>
+       <li>The red colored text are the changes made to <b>FlickrSearch.mxml</b>:
+          <pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;mx:Application xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot; layout=&quot;vertical&quot; <span class="codeChange">creationComplete=&quot;init()&quot;</span>&gt;
+   <span class="codeChange">&lt;mx:Script&gt;
+      &lt;![CDATA[
+         import mx.controls.Alert;
+         import mx.events.FlexEvent;
+         import mx.rpc.events.*;
+         import mx.collections.*;
+         
+         [Bindable]
+         private var photoFeed:ArrayCollection;
+         private function init():void{
+            searchText.addEventListener(FlexEvent.ENTER, requestPhotos);
+         }
+         private function requestPhotos(event:Event):void{
+            flickrService.cancel();
+            var params:Object = new Object();
+            params.format = &quot;rss_200_enc&quot;;
+            params.tags = searchText.text;
+            flickrService.send(params);
+         }
+         private function photoHandler(event:ResultEvent):void{
+            photoFeed = event.result.rss.channel.item as ArrayCollection;
+         }
+         private function faultHandler(event:FaultEvent):void{
+            Alert.show(&quot;Not able to load photos from services&quot;,&quot;Error&quot;);
+         }
+      ]]&gt;
+   &lt;/mx:Script&gt;
+   &lt;mx:HTTPService id=&quot;flickrService&quot; showBusyCursor=&quot;true&quot;
+      url=&quot;http://api.flickr.com/services/feeds/photos_public.gne&quot;
+      result=&quot;photoHandler(event)&quot; fault=&quot;faultHandler(event)&quot;/&gt;</span>
+   &lt;mx:HBox width=&quot;100%&quot;&gt;
+      &lt;mx:TextInput <span class="codeChange">id=&quot;searchText&quot;</span>/&gt;
+      &lt;mx:Button label=&quot;Search&quot; <span class="codeChange">click=&quot;requestPhotos(event)&quot;</span>/&gt;
+   &lt;/mx:HBox&gt;
+   &lt;mx:TileList width=&quot;100%&quot; height=&quot;100%&quot;&gt;&lt;/mx:TileList&gt;
+&lt;/mx:Application&gt;</pre>
+				<p><u>Code Walkthrough</u>: The <code>creationComplete</code> parameter inside <code>mx:Application</code> tag is like a constructor in Object-Oriented Programming. The function <code>init</code> is called by <code>creationComplete</code> to initialize  the <code>searchText</code> event handler to detect the keyboard's <code>ENTER</code>. The function <code>requestPhotos</code> sets up the parameters to send the user's input tags to request the photograph's information. The function <code>photoHandler</code> and <code>faultHandler</code> both handles the <code>HTTPService</code> connection to Flickr to respectively retrieve the photograph's information into an <code>ArrayCollection</code> or alert the user that a problem has occurred. The <code>HTTPService</code> tag sets up a connection with Flickr with specified parameters such as the unique identifier <code>id</code>, the <code>url</code>, and the event handlers, <code>result</code> and <code>fault</code>. Inside the <code>HBox</code> tag, the <code>TextInput</code> tag is uniquely identified by <code>id</code> and the <code>Button</code> tag has a <code>click</code> event handler to call the function <code>requestPhotos</code>.</p>
+    		</li>
+    	</ol>
+        <span class="nextLink">Continue to <a href="flickr_createThumbnailModule.html">Design a Custom Module</a></span>
+  </div>
+	<br class="clearfloat" />
+</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2008 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+Name:				index.html
+Author:				John Huan Vu
+					Photoshop Engineering Intern
+					Adobe Systems Incorporated
+Description:		The index file describes the overall picture of the Adobe
+					Photoshop Panel Developer's Guide for other developers to use
+					and make using Adobe Flex Builder.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adobe Photoshop Panel Developer's Guide</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="twoColLiqLt">
+<div id="container">
+  <div id="sidebar1">
+    <h4>Table of Contents</h4>
+    <span class = "toc_links">
+		<a href="index.html">Introduction</a><br/>
+    	<a href="who.html">Who Should Read This?</a><br/>
+		<a href="howDoesItWork.html">How Does It Work?</a><br/>
+		<a href="download.html">Download(s)</a><br/>
+		<a href="requirements.html">System and Software Requirements</a><br/>
+		<a href="psReservedWords.html">Adobe Photoshop Reserved Words</a><br/>
+		<br />
+		Tutorials<br />
+		<a href="tutorial_overview.html">Overview</a>
+    	<ol>
+			<li><a href="startingFlexProject.html">Starting a Flex Project</a></li>
+			<li><a href="helloworld.html">Hello World Panel</a></li>
+			<li><a href="csxsfile.html">Placing the CSXS Library</a></li>
+			<br />
+			<li><a href="shortcutbuttons.html">Shortcut Buttons Panel</a>
+			<ol type="a">
+				<li><a href="shortcutbuttons_javascript.html">JavaScript</a></li>
+				<li><a href="shortcutbuttons_design.html">Design the Panel</a></li>
+				<li><a href="shortcutbuttons_actionscript.html">ActionScript</a></li>
+				<li><a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></li>
+				<li><a href="shortcutbuttons_air.html">CSXS Logger AIR Debugger (Optional)</a></li>
+			</ol>
+			</li>
+			<br />
+			<li><a href="scriptlistener.html">Setting Up Script Listener</a></li>
+			<br />
+			<li><a href="colorpicker.html">Color Picker Panel</a></li>
+			<ol type="a.html">
+				<li><a href="colorpicker_javascript.html">JavaScript</a></li>
+				<li><a href="colorpicker_design.html">Design the Panel</a></li>
+				<li><a href="colorpicker_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="colorpicker_actionscript.html">ActionScript</a></li>
+				<li><a href="colorpicker_icons.html">Create Custom Icons</a></li>
+			</ol>
+			<br />
+			<li><a href="flickr.html">Flickr Search Panel</a></li>
+			<ol type="a.html">
+				<li><a href="flickr_design.html">Design the Panel</a></li>
+				<li><a href="flickr_actionscriptFlickr.html">Create a Flickr Service</a></li>
+				<li><a href="flickr_createThumbnailModule.html">Design a Custom Module</a></li>
+				<li><a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></li>
+				<li><a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></li>
+			</ol>
+			<br />
+			<li><a href="perLayer.html">Per Layer Metadata Panel</a></li>
+			<ol type="a.html">
+				<li><a href="perLayer_metadata.html">View Metadata</a></li>
+				<li><a href="perLayer_javascript.html">JavaScript</a></li>
+				<li><a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="perLayer_design.html">Designing the Panel</a></li>
+				<li><a href="perLayer_actionscript.html">ActionScript</a></li>
+				<li><a href="perLayer_photomerge.html">Using Photomerge</a></li>
+			</ol>
+    	</ol>
+	 	<a href="otherSamples.html">Other Samples</a> <br/>
+	 	<a href="bestPractices.html">Best Practices</a><br />
+		<a href="faq.html">Frequently Asked Questions</a><br />
+		<a href="acronyms.html">Acronyms and Definitions</a><br />
+		<a href="links.html">Links</a>
+		</span>
+	</div>
+  <div id="mainContent">
+    <span class="main_title">Adobe<sup>&reg;</sup> Photoshop<sup>&reg;</sup> Panel Developer's Guide</span>
+	<hr />
+    <h1>Per Layer Metadata Panel: Using Photomerge</h1>
+    <p>The sixth part of the Per Layer Metadata Panel is  using Adobe Photoshop Photomerge to better understand per layer metadata. Using the samples included with the Adobe Photoshop Panel Developer's Guide, users will create a panoramic using Adobe Photoshop Photomerge. Adobe Photoshop Photomerge will copy the metadata of the original images and place into its corresponding layer. The result is using the Per Layer Metadata Panel to view and access the metadata of the layers used to create the panoramic.
+    <p><u>Instructions</u>: </p>
+    <ol>
+		<li>Go to <b>File &gt; Automate &gt; Photomerge...</b>.</li>
+    	<ul>
+			<li>Under <b>Layout</b>, select <b>Auto</b>.</li>
+    		<li>Press <b>Browse...</b><b></b> and load <b>PerLayerMetadataLeft.jpg</b>, <b>PerLayerMetadataMiddle.jpg</b>, and <b>PerLayerMetadataRight.jpg</b> under the <b>samples\sample pictures</b> folder included with the Adobe Photoshop Panel Developer's Guide.</li>
+    		<li>Make sure <b>Blend Images Together</b> and <b>Geometric Distortion Correction</b> are checked.</li>
+    		</ul>
+    	<img src="../images/PerLayer_PhotomergeDialog.jpg" />
+		<li>Press <b>OK</b>.<br />
+				<img src="../images/PerLayer_PhotomergeResult.jpg" /></li>
+    	<li>Go to the <b>Layers Panel</b> or go to <b> Window &gt; Layers</b> or press <b>F7</b>. <br />
+    			<img src="../images/PerLayer_PhotomergeLayers.jpg" /><br />
+    		Each layer contains an original image that is stitched together to become a panorama. During Photomerge, the metadata of each of the original images were copied in each of its corresponding layer. </li>
+    	<li>Select the layer called <b>PerLayerMetadataLeft.jpg</b> or the top most layer.<br />
+    			<img src="../images/PerLayer_PhotomergeLayerTopSelected.jpg" /></li>
+    	<li>Go to the <b>Per Layer Metadata Panel</b> or go to <b> </b> <b>Windows &gt; Extensions &gt; PerLayerMetadata</b>.<br />
+				<img src="../images/PerLayer_PerLayerPanelTopLayerSelected.jpg" /><br />
+    		The Per Layer Metadata panel shows the name of the layer, the time when the layer was last modified or changed, the original image description metadata contained within the layer, and a text area for the users to write comments. Whenever the user changes the description or comments field, the &quot;Apply Changes&quot; button is enabled allowing the user's text input in the text area fields apply to the layer's metadata.</li>
+    	<li>The Per Layer Metadata Panel can also export the raw metadata of the layer in the flyout menu. Select the <b>second icon from the top right</b>:<br />
+    			<img src="../images/PerLayer_PerLayerFlyOutPanel.jpg" /></li>
+    	<li>Once the raw metadata of a layer is exported, it can be opened by a text editor.</li>
+    	<li>Close the <b>Per Layer Metadata Panel</b>.</li>
+    	<li>Close <b>Adobe Photoshop</b>.</li>
+    	</ol>
+  </div>
+	<br class="clearfloat" />
+</div>
+</body>
+</html>

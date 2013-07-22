@@ -1,0 +1,268 @@
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2008 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+Name:				index.html
+Author:				John Huan Vu
+					Photoshop Engineering Intern
+					Adobe Systems Incorporated
+Description:		The index file describes the overall picture of the Adobe
+					Photoshop Panel Developer's Guide for other developers to use
+					and make using Adobe Flex Builder.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adobe Photoshop Panel Developer's Guide</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="twoColLiqLt">
+<div id="container">
+  <div id="sidebar1">
+    <h4>Table of Contents</h4>
+    <span class = "toc_links">
+		<a href="index.html">Introduction</a><br/>
+    	<a href="who.html">Who Should Read This?</a><br/>
+		<a href="howDoesItWork.html">How Does It Work?</a><br/>
+		<a href="download.html">Download(s)</a><br/>
+		<a href="requirements.html">System and Software Requirements</a><br/>
+		<a href="psReservedWords.html">Adobe Photoshop Reserved Words</a><br/>
+		<br />
+		Tutorials<br />
+		<a href="tutorial_overview.html">Overview</a>
+    	<ol>
+			<li><a href="startingFlexProject.html">Starting a Flex Project</a></li>
+			<li><a href="helloworld.html">Hello World Panel</a></li>
+			<li><a href="csxsfile.html">Placing the CSXS Library</a></li>
+			<br />
+			<li><a href="shortcutbuttons.html">Shortcut Buttons Panel</a>
+			<ol type="a">
+				<li><a href="shortcutbuttons_javascript.html">JavaScript</a></li>
+				<li><a href="shortcutbuttons_design.html">Design the Panel</a></li>
+				<li><a href="shortcutbuttons_actionscript.html">ActionScript</a></li>
+				<li><a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></li>
+				<li><a href="shortcutbuttons_air.html">CSXS Logger AIR Debugger (Optional)</a></li>
+			</ol>
+			</li>
+			<br />
+			<li><a href="scriptlistener.html">Setting Up Script Listener</a></li>
+			<br />
+			<li><a href="colorpicker.html">Color Picker Panel</a></li>
+			<ol type="a.html">
+				<li><a href="colorpicker_javascript.html">JavaScript</a></li>
+				<li><a href="colorpicker_design.html">Design the Panel</a></li>
+				<li><a href="colorpicker_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="colorpicker_actionscript.html">ActionScript</a></li>
+				<li><a href="colorpicker_icons.html">Create Custom Icons</a></li>
+			</ol>
+			<br />
+			<li><a href="flickr.html">Flickr Search Panel</a></li>
+			<ol type="a.html">
+				<li><a href="flickr_design.html">Design the Panel</a></li>
+				<li><a href="flickr_actionscriptFlickr.html">Create a Flickr Service</a></li>
+				<li><a href="flickr_createThumbnailModule.html">Design a Custom Module</a></li>
+				<li><a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></li>
+				<li><a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></li>
+			</ol>
+			<br />
+			<li><a href="perLayer.html">Per Layer Metadata Panel</a></li>
+			<ol type="a.html">
+				<li><a href="perLayer_metadata.html">View Metadata</a></li>
+				<li><a href="perLayer_javascript.html">JavaScript</a></li>
+				<li><a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="perLayer_design.html">Designing the Panel</a></li>
+				<li><a href="perLayer_actionscript.html">ActionScript</a></li>
+				<li><a href="perLayer_photomerge.html">Using Photomerge</a></li>
+			</ol>
+    	</ol>
+	 	<a href="otherSamples.html">Other Samples</a> <br/>
+	 	<a href="bestPractices.html">Best Practices</a><br />
+		<a href="faq.html">Frequently Asked Questions</a><br />
+		<a href="acronyms.html">Acronyms and Definitions</a><br />
+		<a href="links.html">Links</a>
+		</span>
+	</div>
+  <div id="mainContent">
+    <span class="main_title">Adobe<sup>&reg;</sup> Photoshop<sup>&reg;</sup> Panel Developer's Guide</span>
+	<hr />
+    <h1>Shortcut Buttons Panel: CSXS Logger AIR Debugger (Optional)</h1>
+    <p>The fifth part of the Shortcut Buttons Panel is debugging with the CSXS Logger AIR (Adobe Integrated Runtime) Application. The developer will  install the CSXS Logger AIR Application to the computer. The developer will program in ActionScript to set up a logging connection to the CSXS Logger AIR Application.  The result is using the CSXS Logger AIR Application to view the debugging communication between the SWF file, the corresponding JavaScript file, and Adobe Photoshop.
+    <p><u>Instructions</u>: </p>
+    <ol>
+		<li>Open the <b>utilities</b> folder included with the Adobe Photoshop Panel Developer's Guide.</li>
+    	<li><b>Double-click</b> the <b>CSXSLibraryAIRLogger.air</b> file to install the CSXS Logger	AIR Application. </li>
+    	<li>The application installed is called <b>CSXSLibraryAIRLogger.air</b>. When opened, the CSXS Library Logger AIR Application opens as a window like seen below:<br />
+				<img src="../images/CSXSLibraryLoggerBlank.jpg" /></li>
+    	<li>Close the <b>utilities</b> folder.</li>
+    	<li>Open <b>Adobe Flex Builder</b>.</li>
+    	<li> If the <b>ShortcutButtons</b> project fails to show up:
+    		<ol type = "a">
+					<li>Go to <b>File &gt; Import &gt; Flex Project...</b>.</li>
+    			<li>Select <b>Project</b> and <b>Browse...</b> to the <b>ShortcutButtons</b> folder on the desktop.</li>
+    			<li>Deselect <b>Use default location</b>.</li>
+    			<li>Press <b>Finish</b>.</li>
+    			<img src="../images/ShortcutButtons_ImportFlexProject.jpg" />
+				</ol>
+    		</li>
+    	<li>Go to <b>Flex Navigator</b> or go to <b>Window &gt; Flex Navigator</b>.</li>
+    	<li>Double-click on <b>ShortcutButtons.mxml</b> if the Design Area is empty.</li>
+    	<img src="../images/ShortcutButtons_FlexNavigator.jpg" />
+		<li>Go to <b>Source Mode</b> by selecting <b>Source</b> under the <b>ShortcutButtons.mxml</b> tab or go to <b> Window &gt; Switch Source/Design Mode</b>.</li>
+    	<li>The red colored text are the changes made to <b>ShortcutButtons.mxml</b>:
+    		<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;mx:Application xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot; layout=&quot;absolute&quot; creationComplete=&quot;init()&quot;
+   <span class="codeChange">xmlns:csxslogtargets=&quot;com.adobe.csxs.logging.targets.*&quot;</span>&gt;
+   &lt;mx:Script&gt;
+      &lt;![CDATA[
+         import com.adobe.csxs.core.CSXSInterface;<span class="codeChange"></span>
+         <span class="codeChange">import mx.logging.*;</span>
+         
+         public var newDocTimer:Timer = new Timer(10000);
+         public var closeDocTimer:Timer = new Timer(12000);
+         
+         <span class="codeChange">private static var logConnection:LocalConnectionTarget = null;</span>
+         
+         public function callAddDocument():void{
+            CSXSInterface.instance.evalScript(&quot;addDocument&quot;);
+         }
+         public function callCloseDocument():void{
+            CSXSInterface.instance.evalScript(&quot;closeDocument&quot;);
+         }
+         public function init():void{
+            CSXSInterface.instance.evalScript(&quot;PhotoshopPersistent&quot;);
+            newDocTimer.addEventListener(TimerEvent.TIMER,newDocTimeHandler);
+            closeDocTimer.addEventListener(TimerEvent.TIMER,closeDocTimeHandler);
+            newDocTimer.start();
+            closeDocTimer.start();
+         }
+         public function newDocTimeHandler(event:TimerEvent):void{
+            if(actNewDoc.selected) callAddDocument();
+         }
+         public function closeDocTimeHandler(event:TimerEvent):void{
+            if(actCloseDoc.selected) callCloseDocument();
+         }
+<span class="codeChange">         public static function logger():ILogger{
+            if(!logConnection){
+               logConnection = new LocalConnectionTarget(&quot;_test&quot;);
+               logConnection.filters = [&quot;*&quot;];
+               logConnection.level = LogEventLevel.ALL;
+               logConnection.includeDate = true;
+               logConnection.includeTime = true;
+               logConnection.includeCategory = true;
+               logConnection.includeLevel = true;
+            }
+            return Log.getLogger(&quot;ConnectNow&quot;);
+         }</span>
+      ]]&gt;
+   &lt;/mx:Script&gt;
+   &lt;mx:Button x=&quot;10&quot; y=&quot;10&quot; label=&quot;New Document&quot; click=&quot;callAddDocument();&quot;/&gt;
+   &lt;mx:Button x=&quot;10&quot; y=&quot;40&quot; label=&quot;Close Document&quot; click=&quot;callCloseDocument();&quot;/&gt;
+   &lt;mx:CheckBox x=&quot;135&quot; y=&quot;10&quot; label=&quot;Activate every 10 seconds&quot; id=&quot;actNewDoc&quot;/&gt;
+   &lt;mx:CheckBox x=&quot;135&quot; y=&quot;40&quot; label=&quot;Activate every 12 seconds&quot; id=&quot;actCloseDoc&quot;/&gt;
+   
+   <span class="codeChange">&lt;csxslogtargets:LocalConnectionTarget level=&quot;0&quot; includeDate=&quot;true&quot;
+         includeTime=&quot;true&quot; includeCategory=&quot;true&quot; includeLevel=&quot;true&quot;&gt;
+      &lt;csxslogtargets:filters&gt;
+         &lt;mx:Array&gt;&lt;mx:String&gt;com.adobe.csxs.*&lt;/mx:String&gt;&lt;/mx:Array&gt;
+      &lt;/csxslogtargets:filters&gt;
+   &lt;/csxslogtargets:LocalConnectionTarget&gt;
+   &lt;csxslogtargets:SocketTarget level=&quot;0&quot; includeDate=&quot;true&quot;
+         includeTime=&quot;true&quot; includeCategory=&quot;true&quot; includeLevel=&quot;true&quot;&gt;
+      &lt;csxslogtargets:filters&gt;
+         &lt;mx:Array&gt;&lt;mx:String&gt;com.adobe.csxs.*&lt;/mx:String&gt;&lt;/mx:Array&gt;
+      &lt;/csxslogtargets:filters&gt;
+   &lt;/csxslogtargets:SocketTarget&gt;
+   &lt;mx:TraceTarget level=&quot;0&quot; includeDate=&quot;true&quot;
+         includeTime=&quot;true&quot; includeCategory=&quot;true&quot; includeLevel=&quot;true&quot;&gt;
+      &lt;mx:filters&gt;
+         &lt;mx:Array&gt;&lt;mx:String&gt;com.adobe.csxs.*&lt;/mx:String&gt;&lt;/mx:Array&gt;
+      &lt;/mx:filters&gt;
+   &lt;/mx:TraceTarget&gt;</span>
+&lt;/mx:Application&gt;</pre>
+				<p><u>Code Walkthrough</u>: The additional code (the red colored text) are required for communication to the CSXS Logger AIR Application. Developers can use the same code for  other panels created to view the debugging communication between the SWF file, the corresponding JavaScript file, and Adobe Photoshop.</p>
+    		</li>
+    	<li>Go to <b>Run &gt; Run ShortcutButtons</b> to preview the design area in the web browser.<br />
+				<i>Note: The buttons and checkboxes will not work in the web browser because the target is Adobe Photoshop.</i></li>
+    	<li>Close the web browser.</li>
+    	<li>Close <b>Adobe Flex Builder</b>.</li>
+    	<li>Open the <b>ShortcutButtons</b> folder on the desktop.<br />
+				<img src="../images/ShortcutButtons_ShortcutButtonsFolder.jpg" /></li>
+    	<li>Open the <b>bin-debug</b> folder.<br />
+		</li>
+    	<li>Copy <b>ShortcutButtons.swf</b> into the <b>Panels</b> folder under the <b>Adobe Photoshop CS5\Plug-ins\</b> folder located under:</li>
+    	<ul>
+			<li><b>Applications</b> for Macintosh</li>
+    		<li><b>Program Files</b> for Windows</li>
+    		</ul>
+    	<li>Open <b>CSXSLogger</b>.</li>
+    	<li>Open <b>Adobe Photoshop</b>.</li>
+    	<li>Go to <b>Windows &gt; Extensions &gt; ShortcutButtons</b>.</li>
+    	<li>The Shortcut Buttons Panel opens as a panel like seen below:<br />
+				<img src="../images/ShortcutButtons_ShortcutButtonsFlashPanel.jpg" /></li>
+    	<li>Click on <b>New Document</b>.</li>
+    	<li>Click on <b>Close Document</b>.</li>
+    	<li>The output from the CSXSLogger should be similar to below:
+    		<pre>8/19/2008 15:55:02.348 [INFO] com.adobe.csxs.external.RecieveExternalEvents Registered ExternalInterface callback: 'ExtensionEventHandler' successfully.
+------------------
+8/19/2008 15:55:02.354 [INFO] com.adobe.csxs.external.DispatchExternalRequestAsync DispatchExternalRequestAsync singleton instantiated successfully.
+------------------
+8/19/2008 15:55:02.355 [INFO] com.adobe.csxs.core.CSXSInterface CSXSInterface singleton instantiated successfully. CSXSInterface is ready to recieve commands
+------------------
+8/19/2008 15:55:02.359 [DEBUG] com.adobe.csxs.external.CommunicationUtils [DispatchingRequest functionName=&quot;PhotoshopPersistent&quot; params=&quot;&quot;]
+------------------
+8/19/2008 15:55:02.363 [ERROR] com.adobe.csxs.external.CommunicationUtils [Null result while dispatching request functionName=&quot;PhotoshopPersistent&quot;]
+------------------
+8/19/2008 15:55:02.365 [DEBUG] com.adobe.csxs.external.CommunicationUtils [Result=&quot;[RequestResult status=&quot;InvalidReturnParams&quot; data=null]&quot;]
+------------------
+8/19/2008 15:55:04.000 [DEBUG] com.adobe.csxs.external.RecieveExternalEvents [RecievedEvent event=&quot;PlugPlugLoseFocus&quot;']
+------------------
+8/19/2008 15:55:04.064 [DEBUG] com.adobe.csxs.external.CommunicationUtils [DispatchingRequest functionName=&quot;addDocument&quot; params=&quot;&quot;]
+------------------
+8/19/2008 15:55:04.819 [INFO] com.adobe.csxs.external.CommunicationUtils [RequestResult after parsing result=&quot;[RequestResult status=&quot;PlugPlugRequestComplete&quot; data=undefined]&quot; ]
+------------------
+8/19/2008 15:55:04.821 [DEBUG] com.adobe.csxs.external.CommunicationUtils [Result=&quot;[RequestResult status=&quot;PlugPlugRequestComplete&quot; data=undefined]&quot;]
+------------------
+8/19/2008 15:55:05.343 [DEBUG] com.adobe.csxs.external.RecieveExternalEvents [RecievedEvent event=&quot;PlugPlugLoseFocus&quot;']
+------------------
+8/19/2008 15:55:05.423 [DEBUG] com.adobe.csxs.external.CommunicationUtils [DispatchingRequest functionName=&quot;closeDocument&quot; params=&quot;&quot;]
+------------------
+8/19/2008 15:55:05.566 [INFO] com.adobe.csxs.external.CommunicationUtils [RequestResult after parsing result=&quot;[RequestResult status=&quot;PlugPlugRequestComplete&quot; data=undefined]&quot; ]
+------------------
+8/19/2008 15:55:05.567 [DEBUG] com.adobe.csxs.external.CommunicationUtils [Result=&quot;[RequestResult status=&quot;PlugPlugRequestComplete&quot; data=undefined]&quot;]
+------------------</pre>
+				<p><u>Code Walkthrough</u>: There are three categories shown in the CSXS Logger: </p>
+    		<ol>
+					<li><code>[INFO]</code> - Information from the CSXS such as opening and closing the panel.</li>
+    			<li><code>[DEBUG]</code> - Actions committed to and from the CSXS such as calling a function in the JavaScript file and passing parameters.</li>
+    			<li><code>[ERROR]</code> - Errors committed to and from the CSXS such as calling a function that is not existent in the JavaScript file.</li>
+    			</ol>
+    		<br />
+    		There is only one error because <code>PhotoshopPersistent</code> is not a function within the JavaScript file. <code>PhotoshopPersistent</code> is actually a reserved word in Adobe Photoshop. <i>Note: For more information, see <a href="psReservedWords.html">Adobe Photoshop Reserved Words</a></i>. The keyword <code>PlugPlug</code> is the interface between the SWF file and the JavaScript file. </li>
+    	<li>Close the <b>Shortcut Buttons Panel</b>.</li>
+    	<li>Close <b>Adobe Photoshop</b>.</li>
+    	</ol>
+  </div>
+	<br class="clearfloat" />
+</div>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2008 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+Name:				index.html
+Author:				John Huan Vu
+					Photoshop Engineering Intern
+					Adobe Systems Incorporated
+Description:		The index file describes the overall picture of the Adobe
+					Photoshop Panel Developer's Guide for other developers to use
+					and make using Adobe Flex Builder.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adobe Photoshop Panel Developer's Guide</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="twoColLiqLt">
+<div id="container">
+  <div id="sidebar1">
+    <h4>Table of Contents</h4>
+    <span class = "toc_links">
+		<a href="index.html">Introduction</a><br/>
+    	<a href="who.html">Who Should Read This?</a><br/>
+		<a href="howDoesItWork.html">How Does It Work?</a><br/>
+		<a href="download.html">Download(s)</a><br/>
+		<a href="requirements.html">System and Software Requirements</a><br/>
+		<a href="psReservedWords.html">Adobe Photoshop Reserved Words</a><br/>
+		<br />
+		Tutorials<br />
+		<a href="tutorial_overview.html">Overview</a>
+    	<ol>
+			<li><a href="startingFlexProject.html">Starting a Flex Project</a></li>
+			<li><a href="helloworld.html">Hello World Panel</a></li>
+			<li><a href="csxsfile.html">Placing the CSXS Library</a></li>
+			<br />
+			<li><a href="shortcutbuttons.html">Shortcut Buttons Panel</a>
+			<ol type="a">
+				<li><a href="shortcutbuttons_javascript.html">JavaScript</a></li>
+				<li><a href="shortcutbuttons_design.html">Design the Panel</a></li>
+				<li><a href="shortcutbuttons_actionscript.html">ActionScript</a></li>
+				<li><a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></li>
+				<li><a href="shortcutbuttons_air.html">CSXS Logger AIR Debugger (Optional)</a></li>
+			</ol>
+			</li>
+			<br />
+			<li><a href="scriptlistener.html">Setting Up Script Listener</a></li>
+			<br />
+			<li><a href="colorpicker.html">Color Picker Panel</a></li>
+			<ol type="a.html">
+				<li><a href="colorpicker_javascript.html">JavaScript</a></li>
+				<li><a href="colorpicker_design.html">Design the Panel</a></li>
+				<li><a href="colorpicker_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="colorpicker_actionscript.html">ActionScript</a></li>
+				<li><a href="colorpicker_icons.html">Create Custom Icons</a></li>
+			</ol>
+			<br />
+			<li><a href="flickr.html">Flickr Search Panel</a></li>
+			<ol type="a.html">
+				<li><a href="flickr_design.html">Design the Panel</a></li>
+				<li><a href="flickr_actionscriptFlickr.html">Create a Flickr Service</a></li>
+				<li><a href="flickr_createThumbnailModule.html">Design a Custom Module</a></li>
+				<li><a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></li>
+				<li><a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></li>
+			</ol>
+			<br />
+			<li><a href="perLayer.html">Per Layer Metadata Panel</a></li>
+			<ol type="a.html">
+				<li><a href="perLayer_metadata.html">View Metadata</a></li>
+				<li><a href="perLayer_javascript.html">JavaScript</a></li>
+				<li><a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="perLayer_design.html">Designing the Panel</a></li>
+				<li><a href="perLayer_actionscript.html">ActionScript</a></li>
+				<li><a href="perLayer_photomerge.html">Using Photomerge</a></li>
+			</ol>
+    	</ol>
+	 	<a href="otherSamples.html">Other Samples</a> <br/>
+	 	<a href="bestPractices.html">Best Practices</a><br />
+		<a href="faq.html">Frequently Asked Questions</a><br />
+		<a href="acronyms.html">Acronyms and Definitions</a><br />
+		<a href="links.html">Links</a>
+		</span>
+	</div>
+  <div id="mainContent">
+    <span class="main_title">Adobe<sup>&reg;</sup> Photoshop<sup>&reg;</sup> Panel Developer's Guide</span>
+	<hr />
+    <h1>Flickr Search Panel: Connect on Preferences</h1>
+    <p>The fifth part of the Flickr Search Panel is programming the Adobe Photoshop Panel to only connect to the internet if it is allowed by the user's preferences. The developer will  program in ActionScript to determine whether the user has allowed connection to the internet. Otherwise, the developer will program in ActionScript to give an alert to the user and prevent connection to Flickr. After programming in ActionScript, the developer will copy the Adobe Flex Builder produced SWF file to the Adobe Photoshop Panels folder. The result is a fixed-size Flickr Search Panel with the font family, font size, and the panel's background color initialized to the same characteristics as the panels in Adobe Photoshop with a flyout menu allowing the user to change the panel's background color. Another result for the Flickr Search Panel is to honor the user's preferences if one chooses not to connect to the internet.
+    <p><u>Instructions</u>: </p>
+    <ol>
+		<li>The red colored text are the changes made to the <b>Script</b> tag in <b>FlickrSearch.mxml</b>:
+			<pre>&lt;mx:Script&gt;
+   &lt;![CDATA[
+      import mx.controls.Alert;
+      import mx.events.FlexEvent;
+      import mx.rpc.events.*;
+      import mx.collections.*;
+      import com.adobe.csxs.core.CSXSInterface;
+      import com.adobe.csxs.events.*;
+      import com.adobe.csxs.types.*;
+
+      private var defaultColor:String;
+      <span class="codeChange">private var offline:Boolean;</span>
+         
+      [Bindable]
+      private var photoFeed:ArrayCollection;
+      private function init():void{
+         searchText.addEventListener(FlexEvent.ENTER, requestPhotos);
+         
+         var windowSize:WindowGeometry = new WindowGeometry(100,100,350,350);
+         CSXSInterface.getInstance().requestStateChange(StateChangeEvent.WINDOW_RESIZE, windowSize);
+         
+         var result:SyncRequestResult = CSXSInterface.instance.getHostEnvironment();
+         var hostData:HostEnvironment = result.data;
+         var skinInfo:AppSkinInfo = hostData.appSkinInfo;
+         <span class="codeChange">offline = hostData.isAppOffline;</span>
+         defaultColor = skinInfo.panelBackgroundColor.color.rgb;
+         this.setStyle(&quot;backgroundGradientColors&quot;, [defaultColor, defaultColor]);
+         this.setStyle(&quot;fontFamily&quot;, skinInfo.baseFontFamily);
+         this.setStyle(&quot;fontSize&quot;, skinInfo.baseFontSize);
+         
+         var xmlMenu:XML = &lt;Menu&gt;
+            &lt;MenuItem Label=&quot;Photoshop Color Background&quot;/&gt;
+            &lt;MenuItem Label=&quot;---&quot;/&gt;
+            &lt;MenuItem Label=&quot;White Background&quot;/&gt;
+            &lt;MenuItem Label=&quot;Red Background&quot;/&gt;
+            &lt;MenuItem Label=&quot;Green Background&quot;/&gt;
+            &lt;MenuItem Label=&quot;Blue Background&quot;/&gt;
+            &lt;/Menu&gt;;
+         CSXSInterface.getInstance().setPanelMenu(xmlMenu);
+         CSXSInterface.getInstance().addEventListener(MenuClickEvent.FLYOUT_MENU_CLICK, onMenuHandler);
+      }
+      private function onMenuHandler(inEvent:MenuClickEvent):void {
+         if (&quot;Photoshop Color Background&quot; == inEvent.menuName) {
+            this.setStyle(&quot;backgroundGradientColors&quot;, [defaultColor, defaultColor]);
+         } else if (&quot;White Background&quot; == inEvent.menuName) {
+            this.setStyle(&quot;backgroundGradientColors&quot;, [0xffffff, 0xffffff]);
+         } else if (&quot;Blue Background&quot; == inEvent.menuName) {
+            this.setStyle(&quot;backgroundGradientColors&quot;, [0x005a8c, 0x005a8c]);
+         } else if (&quot;Red Background&quot; == inEvent.menuName) {
+            this.setStyle(&quot;backgroundGradientColors&quot;, [0x8c0000, 0x8c0000]);
+         } else if (&quot;Green Background&quot; == inEvent.menuName) {
+            this.setStyle(&quot;backgroundGradientColors&quot;, [0x008c00, 0x008c00]);
+         } else {
+            Alert.show(&quot;Unknown selection: &quot; + inEvent.menuName);
+         }
+      }
+      private function requestPhotos(event:Event):void{
+<span class="codeChange">         if(!offline){</span>
+            flickrService.cancel();
+            var params:Object = new Object();
+            params.format = &quot;rss_200_enc&quot;;
+            params.tags = searchText.text;
+            flickrService.send(params);
+<span class="codeChange">         } else {
+            Alert.show(&quot;Make sure 'Allow Extensions to Connect to the Internet' is enabled &quot;+
+               &quot;located in Preferences under Plug-Ins&quot;, &quot;Disabled Internet Connection&quot;);
+         }</span>
+      }
+      private function photoHandler(event:ResultEvent):void{
+         photoFeed = event.result.rss.channel.item as ArrayCollection;
+      }
+      private function faultHandler(event:FaultEvent):void{
+         Alert.show(&quot;Not able to load photos from services&quot;,&quot;Error&quot;);
+      }
+   ]]&gt;
+&lt;/mx:Script&gt;</pre>
+				<p><u>Code Walkthrough</u>: The private global variable <code>offline</code> is used to retrieve whether or not the user has allowed any Adobe Photoshop Panels to connect to the internet through <code>isAppOffline</code> retrieved from <code>hostData</code>. In the function <code>requestPhotos</code>, an <code>if</code> statement is placed to determine whether or not to request images from Flickr or give an alert informing the user of the situation.</p>
+		</li>
+    	<li>Go to <b>Run &gt; Run FlickrSearch</b> to preview the design area in the web browser.</li>
+    	<li>Close the web browser.</li>
+    	<li>Close <b>Adobe Flex Builder</b>.</li>
+    	<li> Open the <b>FlickrSearch</b> folder on the desktop.<br />
+				<img src="../images/FlickrSearch_FlickrSearchFolder.jpg" /> </li>
+    	<li> Open the <b>bin-debug</b> folder.<br />
+				<img src="../images/FlickrSearch_BinDebugFolder.jpg" /> </li>
+    	<li>Copy <b>FlickrSearch.swf</b> into the <b>Panels</b> folder under the <b>Adobe Photoshop CS5\Plug-ins\</b> folder located under:</li>
+    	<ul>
+			<li><b>Applications</b> for Macintosh</li>
+    		<li><b>Program Files</b> for Windows</li>
+    		</ul>
+    	<li>Open <b>Adobe Photoshop</b>.</li>
+    	<li> Go to <b>Windows &gt; Extensions &gt; FlickrSearch</b>. The Flickr Search Panel opens as a panel like seen below:<br />
+				<img src="../images/FlickrSearch_FlickrSearchFlashPanel.jpg" /><br />
+    		The Flickr Search Panel has text input, a button to search on Flickr, and a layout to display the images retrieved. By default, the panel's background color, font size, and font family are the same as the ones in Adobe Photoshop. </li>
+    	<li>Type in metadata tags in the text input field to search for images on Flickr. Metadata will also be discussed in <a href="perLayer.html">Per Layer Metadata Panel</a> tutorial. For this example, <b>Kennedy Library</b> will be used as the metadata tags with the following image results:<br />
+				<img src="../images/FlickrSearch_FlickrSearchFlashPanelResults.jpg" /><br />
+				<i>Note: The image results for &quot;Kennedy Library&quot; will not necessary be the same as the one shown in this tutorial.</i></li>
+    	<li>The Flickr Search Panel can also change different background colors in the flyout menu. Select the <b>second icon from the top right</b>:<br />
+				<img src="../images/FlickrSearch_FlickrPanelFlyOutPanel.jpg" /> </li>
+    	<li> The possible background colors of the Flickr Search Panel are shown below:<br />
+				<img src="../images/FlickrSearch_FlickrSearchFlashPanelWhite.jpg" /> <img src="../images/FlickrSearch_FlickrSearchFlashPanelRed.jpg" /><br />
+				<img src="../images/FlickrSearch_FlickrSearchFlashPanelBlue.jpg" /> <img src="../images/FlickrSearch_FlickrSearchFlashPanelGreen.jpg" /></li>
+    	<li>Go to <b>Preferences &gt; Plug-Ins...</b> located under:
+    		<ul>
+					<li><b>Photoshop</b> for Macintosh</li>
+    			<li><b>Edit</b> for Windows</li>
+    			</ul>
+    		<img src="../images/PSPreferences_PlugIns.jpg" /></li>
+    	<li>Uncheck <b>Allow Extensions to Connect to the Internet</b>.</li>
+    	<li>Close the <b>Flickr Search Panel</b>.</li>
+    	<li>Close <b>Adobe Photoshop</b>.</li>
+    	<li>Open <b>Adobe Photoshop</b>.</li>
+    	<li>Go to <b>Windows &gt; Extensions &gt; FlickrSearch</b>.</li>
+    	<li>Type in metadata tags in the text input field to search for images on Flickr. For this example, <b>Kennedy Library</b> will be used as the metadata tags with the following error:<br />
+				<img src="../images/FlickrSearch_FlickrSearchFlashPanelInternetDisabled.jpg" /> </li>
+    	<li>Go to <b>Preferences &gt; Plug-Ins...</b> located under:
+    		<ul>
+					<li><b>Photoshop</b> for Macintosh</li>
+    			<li><b>Edit</b> for Windows</li>
+    			</ul>
+    		</li>
+    	<li>Check <b>Allow Extensions to Connect to the Internet</b>.</li>
+    	<li>Close the <b>Flickr Search Panel</b>.</li>
+    	<li>Close <b>Adobe Photoshop</b>.</li>
+    	</ol>
+  </div>
+	<br class="clearfloat" />
+</div>
+</body>
+</html>

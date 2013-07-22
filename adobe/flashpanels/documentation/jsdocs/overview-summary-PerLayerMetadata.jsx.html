@@ -1,0 +1,588 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+ Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="PerLayerMetadata.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>PerLayerMetadata.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		The script contains a functions to retrieve the metadata
+			of a selected layer. The script also contains two
+			functions to set the description metadata and the user
+			comments metadata of a selected layer.
+			There are also four utility functions that retrieves
+			and calculates the last time a layer was modified, load
+			and unload the XMP Script Library, and converting a
+			property with an identifier to XML for the SWF file and the
+			CSXS Library to parse and use properly. This script
+			is to be used by a SWF file called PerLayerMetadata.swf
+			created though Adobe Flex.<BR/><BR/><B>Author:</B> John Huan Vu, Photoshop Engineering Intern, Adobe Systems Incorporated
+	, Pete Falco, Photoshop Lead Computer Scientist, Adobe Systems Incorporated
+	, Allen Jeng, Photoshop Software Quality Engineering Developer, Adobe Systems Incorporated
+	<BR/>
+	
+</p>
+
+<hr>
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+	<a name="method_summary"><!-- --></a>
+	<table border="1" cellpadding="3" cellspacing="0" width="100%">
+		<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+			<td colspan=2>
+				<font size="+2">
+					<b>Method Summary</b>
+				</font>
+			</td>
+		</tr>
+	
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!exportLayerMetadata">exportLayerMetadata</a></b>()
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The function exports the raw metadata from the selected
+			layer into the specified path by the user.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;String</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!getLayerChangedDate">getLayerChangedDate</a></b>()
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The function finds the date and time in which the selected
+			layer has been last modified.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;String</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!getLayerMetadata">getLayerMetadata</a></b>()
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Retrieve information on the layer includes its name,
+			when it was last modified, the description from the Dublin
+			Core metadata schema, and any of the user's comments from
+			the EXIF metadata schema.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Boolean</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!loadXMPLibrary">loadXMPLibrary</a></b>()
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The function loads the XMP Script Library.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!setCommMetadata">setCommMetadata</a></b>(&lt;String&gt; comm)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The function takes in the user comments input field from
+			the user and place in the EXIF's description metadata
+			field of the image.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!setDescMetadata">setDescMetadata</a></b>(&lt;String&gt; desc)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The function takes in the description input field from
+			the user and places in the Dublin Core's description metadata
+			field of the image.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!unloadXMPLibrary">unloadXMPLibrary</a></b>()
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The function unloads the XMP Script Library.
+		      </td>
+		   </tr>
+		
+	
+	</table>
+    <p>
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview">﻿<span class="comment">/**************************************************************************
+	ADOBE SYSTEMS INCORPORATED
+	 Copyright 2008 Adobe Systems Incorporated
+	 All Rights Reserved.
+
+	NOTICE:  Adobe permits you to use, modify, and distribute this file
+	in accordance with the terms of the Adobe license agreement accompanying
+	it.  If you have received this file from a source other than Adobe, then
+	your use, modification, or distribution of it requires the prior written
+	permission of Adobe.
+**************************************************************************/</span>
+
+<span class="comment">/**  Name:			PerLayerMetdata.jsx
+	<span class="attrib">@author</span> John Huan Vu, Photoshop Engineering Intern, Adobe Systems Incorporated
+	<span class="attrib">@author</span> Pete Falco, Photoshop Lead Computer Scientist, Adobe Systems Incorporated
+	<span class="attrib">@author</span> Allen Jeng, Photoshop Software Quality Engineering Developer, Adobe Systems Incorporated
+	<span class="attrib">@fileoverview</span> The script contains a functions to retrieve the metadata
+			of a selected layer. The script also contains two
+			functions to set the description metadata and the user
+			comments metadata of a selected layer.
+			There are also four utility functions that retrieves
+			and calculates the last time a layer was modified, load
+			and unload the XMP Script Library, and converting a
+			property with an identifier to XML for the SWF file and the
+			CSXS Library to parse and use properly. This script
+			is to be used by a SWF file called PerLayerMetadata.swf
+			created though Adobe Flex.
+*/</span>
+
+<span class="comment">/**
+	Retrieve information on the layer includes its name,
+			when it was last modified, the description from the Dublin
+			Core metadata schema, and any of the user's comments from
+			the EXIF metadata schema.
+	<span class="attrib">@returns</span> An XML object containing the values for the variables:
+			layerName, layerChangeDate, description, and comments of
+			the layer that is currently selected.
+	<span class="attrib">@type</span> String
+*/</span>
+<span class="reserved">function</span> getLayerMetadata(){	
+	var xml = <span class="literal">"&lt;object&gt;"</span>;
+	<span class="reserved">if</span>( app.activeDocument.activeLayer.isBackgroundLayer || !loadXMPLibrary()){
+		xml += convertToXML(<span class="literal">""</span>, <span class="literal">"layerName"</span>);
+		xml += convertToXML(<span class="literal">""</span>, <span class="literal">"layerChangedDate"</span>);
+		xml += convertToXML(<span class="literal">""</span>, <span class="literal">"description"</span>);
+		xml += convertToXML(<span class="literal">""</span>, <span class="literal">"comments"</span>);
+	} <span class="reserved">else</span> {
+		var xmp;
+		try {
+			xml += convertToXML(app.activeDocument.activeLayer.name.toString(), <span class="literal">"layerName"</span>);
+		} catch(e) {
+			xml += convertToXML(<span class="literal">""</span>, <span class="literal">"layerName"</span>);
+		}
+		
+		try {
+			xml += convertToXML(getLayerChangedDate().toString(), <span class="literal">"layerChangedDate"</span>);
+		} catch(e) {
+			xml += convertToXML(<span class="literal">""</span>, <span class="literal">"layerChangedDate"</span>);
+		}
+		
+		try { 
+			xmp = new XMPMeta(app.activeDocument.activeLayer.xmpMetadata.rawData);
+		} catch(e) {
+			xml += convertToXML(<span class="literal">""</span>, <span class="literal">"description"</span>);
+			xml += convertToXML(<span class="literal">""</span>, <span class="literal">"comments"</span>);
+			xml += <span class="literal">"&lt;/object&gt;"</span>;
+			unloadXMPLibrary();
+			<span class="reserved">return</span> xml;
+		}
+	
+		try {
+			xml += convertToXML(
+				xmp.getArrayItem(XMPConst.NS_DC, <span class="literal">"description"</span>, 1).toString(), <span class="literal">"description"</span>);
+		} catch(e) {
+			xml += convertToXML(<span class="literal">""</span>, <span class="literal">"description"</span>);
+		}
+	
+		try {
+			xml += convertToXML(
+				xmp.getProperty(XMPConst.NS_EXIF, <span class="literal">"userComment"</span>).toString(), <span class="literal">"comments"</span>);
+		} catch(e) {
+			xml += convertToXML(<span class="literal">""</span>, <span class="literal">"comments"</span>);
+		}
+	}
+	xml += <span class="literal">"&lt;/object&gt;"</span>;
+	unloadXMPLibrary();
+	<span class="reserved">return</span> xml;
+}
+
+
+<span class="comment">/**
+	The function takes in the description input field from
+			the user and places in the Dublin Core's description metadata
+			field of the image.
+	<span class="attrib">@param</span> {String} desc Description metadata the user wrote to be placed
+*/</span>
+<span class="reserved">function</span> setDescMetadata(desc){
+	<span class="reserved">if</span>( app.activeDocument.activeLayer.isBackgroundLayer || !loadXMPLibrary()){
+		alert(<span class="literal">"Can't place description metadata on a background layer.\n"</span> +
+			<span class="literal">"Layer &gt; New &gt; Layer From Background..."</span>);
+	} <span class="reserved">else</span> {
+		var xmp;
+		<span class="reserved">if</span> (desc == <span class="literal">""</span>)
+			desc = <span class="literal">" "</span>;
+			
+		try{
+			xmp = new XMPMeta(app.activeDocument.activeLayer.xmpMetadata.rawData);
+		} catch(e) {
+			xmp = new XMPMeta();
+		}
+	
+		try{
+			<span class="reserved">if</span>( xmp.countArrayItems(XMPConst.NS_DC, <span class="literal">"description"</span>) == 0){
+				xmp.appendArrayItem(XMPConst.NS_DC, <span class="literal">"description"</span>, null,
+					XMPConst.PROP_IS_ARRAY, XMPConst.ARRAY_IS_ORDERED);
+				xmp.insertArrayItem(XMPConst.NS_DC, <span class="literal">"description"</span>, 1, desc);
+			} <span class="reserved">else</span> {
+				xmp.setArrayItem(XMPConst.NS_DC, <span class="literal">"description"</span>, 1, desc);
+			}
+		} catch(e) {
+			alert(<span class="literal">"Unable to place description metadata on selected layer.\n"</span> + e);
+		}
+		app.activeDocument.activeLayer.xmpMetadata.rawData = xmp.serialize();
+	}
+	unloadXMPLibrary();
+}
+
+
+<span class="comment">/**
+	The function takes in the user comments input field from
+			the user and place in the EXIF's description metadata
+			field of the image.
+	<span class="attrib">@param</span> {String} comm - User comments metadata the user wrote to be placed
+*/</span>
+<span class="reserved">function</span> setCommMetadata(comm){
+	<span class="reserved">if</span>( app.activeDocument.activeLayer.isBackgroundLayer || !loadXMPLibrary()){
+		alert(<span class="literal">"Can't place comments metadata on a background layer.\n"</span> +
+			<span class="literal">"Layer &gt; New &gt; Layer From Background..."</span>);
+	} <span class="reserved">else</span> {
+		var xmp;
+		<span class="reserved">if</span> (comm == <span class="literal">""</span>)
+			comm = <span class="literal">" "</span>;
+			
+		try{
+			xmp = new XMPMeta(app.activeDocument.activeLayer.xmpMetadata.rawData);
+		} catch(e) {
+			xmp = new XMPMeta();
+		}
+		try{
+			xmp.setProperty(XMPConst.NS_EXIF, <span class="literal">"userComment"</span>, comm);
+		} catch(e) {
+			alert(<span class="literal">"Unable to place comments metadata on selected layer.\n"</span> + e);
+		}
+		app.activeDocument.activeLayer.xmpMetadata.rawData = xmp.serialize();
+	}
+	unloadXMPLibrary();
+}
+
+
+<span class="comment">/**
+	The function exports the raw metadata from the selected
+			layer into the specified path by the user.
+*/</span>
+<span class="reserved">function</span> exportLayerMetadata(){
+	var path = File.saveDialog();
+	var file = new File(path);
+	file.encoding = <span class="literal">"UTF-8"</span>;
+	try{
+		file.open(<span class="literal">"w"</span>);
+		file.write(app.activeDocument.activeLayer.xmpMetadata.rawData.toString());
+	} catch(e) {
+		alert(<span class="literal">"Unable to write to file.\n"</span> + e);
+	}
+	file.close();
+}
+
+
+<span class="comment">/**
+	The function finds the date and time in which the selected
+			layer has been last modified.
+	<span class="attrib">@returns</span> The date and time according to the locale of the computer
+	<span class="attrib">@type</span> String
+*/</span>
+<span class="reserved">function</span> getLayerChangedDate(){
+	var metadataStrID = stringIDToTypeID(<span class="literal">"metadata"</span>);
+	var ref = new ActionReference();
+	ref.putProperty(charIDToTypeID(<span class="literal">'Prpr'</span>), metadataStrID);
+	ref.putEnumerated(charIDToTypeID(<span class="literal">'Lyr '</span>), charIDToTypeID(<span class="literal">'Ordn'</span>),
+													charIDToTypeID(<span class="literal">'Trgt'</span>));
+	var desc = executeActionGet(ref);
+	
+	<span class="reserved">if</span> (desc.hasKey(metadataStrID)){
+		var descMetadata = desc.getObjectValue( metadataStrID );
+		var timeInSeconds = descMetadata.getDouble(stringIDToTypeID(<span class="literal">"layerTime"</span>));
+		var d = new Date();
+		d.setTime(timeInSeconds*1000.0);
+		<span class="reserved">return</span> d.toLocaleString();
+	}
+}
+
+
+<span class="comment">/**
+	The function loads the XMP Script Library.
+	<span class="attrib">@returns</span> True if the XMP Script Library was loaded successfully.
+	<span class="attrib">@type</span> Boolean
+*/</span>
+<span class="reserved">function</span> loadXMPLibrary(){
+	<span class="reserved">if</span> ( !ExternalObject.AdobeXMPScript ){
+		try{
+			ExternalObject.AdobeXMPScript = new ExternalObject(<span class="literal">'lib:AdobeXMPScript'</span>);
+		}catch (e){
+			alert(<span class="literal">"Can't load XMP Script Library"</span>);
+			<span class="reserved">return</span> false;
+		}
+	}
+	<span class="reserved">return</span> true;
+}
+
+
+<span class="comment">/**
+	The function unloads the XMP Script Library.
+*/</span>
+<span class="reserved">function</span> unloadXMPLibrary(){
+	<span class="reserved">if</span>( ExternalObject.AdobeXMPScript ) {
+		try{
+			ExternalObject.AdobeXMPScript.unload();
+			ExternalObject.AdobeXMPScript = undefined;
+		}catch (e){
+			alert(<span class="literal">"Can't unload XMP Script Library"</span>);
+		}
+	}
+}
+
+
+<span class="comment">/**
+	In order to communicate to the SWF file, it must be written as an XML
+		containing the property and identifier. This utility is very helpful for
+		a two-way communication between the JSX and SWF.
+	<span class="attrib">@param</span> {String} property The property or value for the identifier
+	<span class="attrib">@param</span> {String} identifier The unique identifier for the property
+	<span class="attrib">@returns</span> An xml containing the property and identifier
+	<span class="attrib">@type</span> String
+*/</span>
+<span class="reserved">function</span> convertToXML(property, identifier){
+	var type = typeof property;
+	var xml = <span class="literal">'&lt;property id = "'</span> + identifier + <span class="literal">'" &gt;'</span>;
+	
+	switch(type){
+		case <span class="literal">"number"</span>:
+			xml += <span class="literal">"&lt;number&gt;"</span>;
+			xml += property.toString();
+			xml += <span class="literal">"&lt;/number&gt;"</span>;
+			break;
+		case <span class="literal">"boolean"</span>:
+			xml += <span class="literal">"&lt;"</span> + property.toString() + <span class="literal">"/&gt;"</span>;
+			break;
+		case <span class="literal">"string"</span>:
+			xml += <span class="literal">"&lt;string&gt;"</span>;
+			xml += property.toString();
+			xml += <span class="literal">"&lt;/string&gt;"</span>;
+			break;
+		case <span class="literal">"object"</span>:
+			<span class="comment">// Object case is currently not supported</span>
+			alert(<span class="literal">"Object case is currently not supported"</span>);
+			<span class="comment">//xml += "&lt;object&gt;";</span>
+			<span class="comment">//for(var i in property)</span>
+			<span class="comment">//	xml += convertToXML(property[i], </span>
+			<span class="comment">//xml += "&lt;/object&gt;";</span>
+			break;
+		case <span class="literal">"undefined"</span>:
+			xml += <span class="literal">"&lt;string&gt;undefined&lt;/string&gt;"</span>;
+			break;
+		default:
+			alert(<span class="literal">"Type "</span> + type + <span class="literal">" is unknown."</span>);
+			<span class="reserved">return</span> <span class="literal">""</span>;
+	}
+	xml += <span class="literal">'&lt;/property&gt;'</span>;
+	<span class="reserved">return</span> xml;
+}</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Wed Sep  3 16:09:11 2008</div>
+</body>
+</html>

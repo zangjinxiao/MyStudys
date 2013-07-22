@@ -1,0 +1,532 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Frameset//EN""http://www.w3.org/TR/REC-html40/frameset.dtd">
+<html>
+<head>
+<title>
+ Overview
+</title>
+<link rel ="stylesheet" type="text/css" href="stylesheet.css" title="Style">
+<script>
+function asd() {
+	
+		parent.document.title="FiltersPreview.jsx Overview";
+	
+}
+</script>
+</head>
+<body bgcolor="white" onload="asd();">
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> 	<font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top">
+<em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<center>
+	
+	   <h2>FiltersPreview.jsx</h2>
+	
+</center>
+
+	
+
+
+<h4>Summary</h4>
+<p>
+	
+		The FiltersPreview.jsx file will contain the functions
+			for FiltersPreview.mxml, an Adobe Flex Project, for the
+			Filters Preview Panel. It will contain functions to
+			execute the proper filter and also utility functions to
+			check if the layer is a smart object and also determine
+			which layer is the correct filter.<BR/><BR/><B>Author:</B> John Huan Vu, Photoshop Engineering Intern, Adobe Systems Incorporated
+	<BR/>
+	
+</p>
+
+<hr>
+
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+
+	<a name="method_summary"><!-- --></a>
+	<table border="1" cellpadding="3" cellspacing="0" width="100%">
+		<tr bgcolor="#CCCCFF" class="TableHeadingColor">
+			<td colspan=2>
+				<font size="+2">
+					<b>Method Summary</b>
+				</font>
+			</td>
+		</tr>
+	
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!changeGaussianFilter">changeGaussianFilter</a></b>(&lt;String&gt; params)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The function first converts the parameter into a floating
+			values and apply the Gaussian Blur filter to the smart object.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!changeUnsharpFilter">changeUnsharpFilter</a></b>(&lt;String&gt; params)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The function first splits the parameters into separate
+			values and apply the unsharp mask filter to the smart object.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!changeZigZagFilter">changeZigZagFilter</a></b>(&lt;String&gt; params)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The function first splits the parameters into separate
+			values and apply the zig zag filter to the smart object.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;void</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!checkForSmartObject">checkForSmartObject</a></b>()
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 Checks if the active layer is a smart object.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;Array</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!getFilterLayerIndex">getFilterLayerIndex</a></b>(&lt;String&gt; fourCharID)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The function determines all the layers that have the same
+			four character ID of the filter being searched.
+		      </td>
+		   </tr>
+		
+		   <tr bgcolor="white" class="TableRowColor">
+		      <td align="right" valign="top" width="1%">
+			 <font size="-1">
+			    <code>static&nbsp;String</code>
+			 </font>
+		      </td>
+		      <td>
+			 <code>
+			    <b>
+			       <a href="GLOBALS.html#!s!styleToCharID">styleToCharID</a></b>(&lt;Integer&gt; style)
+			 </code>
+			 <br>
+			 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			 The function determines the which style of zig zag to apply
+		      </td>
+		   </tr>
+		
+	
+	</table>
+    <p>
+
+<!-- ========== END METHOD SUMMARY =========== -->
+
+
+        <pre class="sourceview">﻿<span class="comment">/**************************************************************************
+	ADOBE SYSTEMS INCORPORATED
+	 Copyright 2008 Adobe Systems Incorporated
+	 All Rights Reserved.
+
+	NOTICE:  Adobe permits you to use, modify, and distribute this file
+	in accordance with the terms of the Adobe license agreement accompanying
+	it.  If you have received this file from a source other than Adobe, then
+	your use, modification, or distribution of it requires the prior written
+	permission of Adobe.
+**************************************************************************/</span>
+
+<span class="comment">/**  Name: FiltersPreview.jsx
+	<span class="attrib">@author</span> John Huan Vu, Photoshop Engineering Intern, Adobe Systems Incorporated
+	<span class="attrib">@fileoverview</span> The FiltersPreview.jsx file will contain the functions
+			for FiltersPreview.mxml, an Adobe Flex Project, for the
+			Filters Preview Panel. It will contain functions to
+			execute the proper filter and also utility functions to
+			check if the layer is a smart object and also determine
+			which layer is the correct filter.
+*/</span>
+
+<span class="comment">/**
+	Checks if the active layer is a smart object. If not, convert the
+			layer to a smart object to be used by non-destructive filters.
+*/</span>
+<span class="reserved">function</span> checkForSmartObject(){
+	<span class="reserved">if</span> (app.activeDocument.activeLayer.kind != LayerKind.SMARTOBJECT){
+		try{
+			executeAction(stringIDToTypeID(<span class="literal">"newPlacedLayer"</span>), undefined, DialogModes.NO);
+		} catch(e){
+			alert(<span class="literal">"Problems converting the active layer to a smart layer. "</span> + e);
+		}
+	}
+}
+
+<span class="comment">/**
+	The function first converts the parameter into a floating
+			values and apply the Gaussian Blur filter to the smart object.
+	<span class="attrib">@param</span> {String} params The parameters used for the Gaussian Blur filter
+*/</span>
+<span class="reserved">function</span> changeGaussianFilter(params){
+	<span class="reserved">if</span> (app.documents.length != 0){
+		var radius = parseFloat(params);
+		
+		checkForSmartObject();
+		
+		var gaussianLayerIndexes = getFilterLayerIndex(<span class="literal">"GsnB"</span>);
+		
+		<span class="reserved">if</span>(gaussianLayerIndexes.length &gt; 0){
+			var idsetd = charIDToTypeID( <span class="literal">"setd"</span> );
+			var desc8 = new ActionDescriptor();
+			var idnull = charIDToTypeID( <span class="literal">"null"</span> );
+			var ref1 = new ActionReference();
+			var idfilterFX = stringIDToTypeID( <span class="literal">"filterFX"</span> );
+			ref1.putIndex( idfilterFX, gaussianLayerIndexes[0] + 1 );
+			var idLyr = charIDToTypeID( <span class="literal">"Lyr "</span> );
+			var idOrdn = charIDToTypeID( <span class="literal">"Ordn"</span> );
+			var idTrgt = charIDToTypeID( <span class="literal">"Trgt"</span> );
+			ref1.putEnumerated( idLyr, idOrdn, idTrgt );
+			desc8.putReference( idnull, ref1 );
+			var idfilterFX = stringIDToTypeID( <span class="literal">"filterFX"</span> );
+			var desc9 = new ActionDescriptor();
+			var idFltr = charIDToTypeID( <span class="literal">"Fltr"</span> );
+			var desc10 = new ActionDescriptor();
+			var idRds = charIDToTypeID( <span class="literal">"Rds "</span> );
+			var idPxl = charIDToTypeID( <span class="literal">"#Pxl"</span> );
+			
+			<span class="comment">// Apply the radius parameter</span>
+			desc10.putUnitDouble( idRds, idPxl, radius);
+			var idGsnB = charIDToTypeID( <span class="literal">"GsnB"</span> );
+			desc9.putObject( idFltr, idGsnB, desc10 );
+			var idfilterFX = stringIDToTypeID( <span class="literal">"filterFX"</span> );
+			desc8.putObject( idfilterFX, idfilterFX, desc9 );
+			executeAction( idsetd, desc8, DialogModes.NO );
+		} <span class="reserved">else</span> {
+			app.activeDocument.activeLayer.applyGaussianBlur(radius);
+		}
+	}
+}
+
+<span class="comment">/**
+	The function first splits the parameters into separate
+			values and apply the unsharp mask filter to the smart object.
+	<span class="attrib">@param</span> {String} params The parameters used for the Unsharp Mask filter
+*/</span>
+<span class="reserved">function</span> changeUnsharpFilter(params){
+	<span class="reserved">if</span> (app.documents.length != 0){
+		var paramsTokens = params.split(<span class="literal">","</span>);
+		amt = parseInt(paramsTokens[0]);
+		radius = parseFloat(paramsTokens[1]);
+		threshold = parseInt(paramsTokens[2]);
+		
+		checkForSmartObject();
+		
+		var unsharpLayerIndexes = getFilterLayerIndex(<span class="literal">"UnsM"</span>);
+		
+		<span class="reserved">if</span>(unsharpLayerIndexes.length &gt; 0){
+			var idsetd = charIDToTypeID( <span class="literal">"setd"</span> );
+			var desc13 = new ActionDescriptor();
+			var idnull = charIDToTypeID( <span class="literal">"null"</span> );
+			var ref3 = new ActionReference();
+			var idfilterFX = stringIDToTypeID( <span class="literal">"filterFX"</span> );
+			ref3.putIndex( idfilterFX, unsharpLayerIndexes[0] + 1 );
+			var idLyr = charIDToTypeID( <span class="literal">"Lyr "</span> );
+			var idOrdn = charIDToTypeID( <span class="literal">"Ordn"</span> );
+			var idTrgt = charIDToTypeID( <span class="literal">"Trgt"</span> );
+			ref3.putEnumerated( idLyr, idOrdn, idTrgt );
+			desc13.putReference( idnull, ref3 );
+			var idfilterFX = stringIDToTypeID( <span class="literal">"filterFX"</span> );
+			var desc14 = new ActionDescriptor();
+			var idFltr = charIDToTypeID( <span class="literal">"Fltr"</span> );
+			var desc15 = new ActionDescriptor();
+			var idAmnt = charIDToTypeID( <span class="literal">"Amnt"</span> );
+			var idPrc = charIDToTypeID( <span class="literal">"#Prc"</span> );
+			
+			<span class="comment">// Apply the amt parameter</span>
+			desc15.putUnitDouble( idAmnt, idPrc, amt );
+			var idRds = charIDToTypeID( <span class="literal">"Rds "</span> );
+			var idPxl = charIDToTypeID( <span class="literal">"#Pxl"</span> );
+			
+			<span class="comment">// Apply the radius parameter</span>
+			desc15.putUnitDouble( idRds, idPxl, radius );
+			var idThsh = charIDToTypeID( <span class="literal">"Thsh"</span> );
+			
+			<span class="comment">// Apply the threshold parameter</span>
+			desc15.putInteger( idThsh, threshold );
+			var idUnsM = charIDToTypeID( <span class="literal">"UnsM"</span> );
+			desc14.putObject( idFltr, idUnsM, desc15 );
+			var idfilterFX = stringIDToTypeID( <span class="literal">"filterFX"</span> );
+			desc13.putObject( idfilterFX, idfilterFX, desc14 );
+			executeAction( idsetd, desc13, DialogModes.NO );
+		} <span class="reserved">else</span> {
+			app.activeDocument.activeLayer.applyUnSharpMask(amt,radius,threshold);
+		}
+	}
+}
+
+<span class="comment">/**
+	The function first splits the parameters into separate
+			values and apply the zig zag filter to the smart object.
+	<span class="attrib">@param</span> {String} params The parameters used for the Zig Zag filter
+*/</span>
+<span class="reserved">function</span> changeZigZagFilter(params){
+	<span class="reserved">if</span> (app.documents.length != 0){
+		var paramsTokens = params.split(<span class="literal">","</span>);
+		amt = parseInt(paramsTokens[0]);
+		ridges = parseInt(paramsTokens[1]);
+		style = parseInt(paramsTokens[2]);
+
+		checkForSmartObject();
+		
+		var zigZagLayerIndexes = getFilterLayerIndex(<span class="literal">"ZgZg"</span>);
+		
+		<span class="reserved">if</span>(zigZagLayerIndexes.length &gt; 0){
+			var idsetd = charIDToTypeID( <span class="literal">"setd"</span> );
+			var desc13 = new ActionDescriptor();
+			var idnull = charIDToTypeID( <span class="literal">"null"</span> );
+			var ref5 = new ActionReference();
+			var idfilterFX = stringIDToTypeID( <span class="literal">"filterFX"</span> );
+			ref5.putIndex( idfilterFX, zigZagLayerIndexes[0] + 1 );
+			var idLyr = charIDToTypeID( <span class="literal">"Lyr "</span> );
+			var idOrdn = charIDToTypeID( <span class="literal">"Ordn"</span> );
+			var idTrgt = charIDToTypeID( <span class="literal">"Trgt"</span> );
+			ref5.putEnumerated( idLyr, idOrdn, idTrgt );
+			desc13.putReference( idnull, ref5 );
+			var idfilterFX = stringIDToTypeID( <span class="literal">"filterFX"</span> );
+			var desc14 = new ActionDescriptor();
+			var idFltr = charIDToTypeID( <span class="literal">"Fltr"</span> );
+			var desc15 = new ActionDescriptor();
+			var idAmnt = charIDToTypeID( <span class="literal">"Amnt"</span> );
+			
+			<span class="comment">// Apply the amt parameter</span>
+			desc15.putInteger( idAmnt, amt );
+			var idNmbR = charIDToTypeID( <span class="literal">"NmbR"</span> );
+			
+			<span class="comment">// Apply the ridges parameter</span>
+			desc15.putInteger( idNmbR, ridges );
+			var idZZTy = charIDToTypeID( <span class="literal">"ZZTy"</span> );
+			var idZZTy = charIDToTypeID( <span class="literal">"ZZTy"</span> );
+			
+			<span class="comment">// Apply the style parameter</span>
+			var idOtFr = charIDToTypeID( styleToCharID(style));
+			desc15.putEnumerated( idZZTy, idZZTy, idOtFr );
+			var idZgZg = charIDToTypeID( <span class="literal">"ZgZg"</span> );
+			desc14.putObject( idFltr, idZgZg, desc15 );
+			var idfilterFX = stringIDToTypeID( <span class="literal">"filterFX"</span> );
+			desc13.putObject( idfilterFX, idfilterFX, desc14 );
+			executeAction( idsetd, desc13, DialogModes.NO);
+		} <span class="reserved">else</span> {
+			<span class="reserved">if</span>(style == 0){
+				app.activeDocument.activeLayer.applyZigZag(amt,ridges,ZigZagType.AROUNDCENTER);
+			} <span class="reserved">else</span> <span class="reserved">if</span>(style == 1){
+				app.activeDocument.activeLayer.applyZigZag(amt,ridges,ZigZagType.OUTFROMCENTER);
+			} <span class="reserved">else</span> {
+				app.activeDocument.activeLayer.applyZigZag(amt,ridges,ZigZagType.PONDRIPPLES);
+			}
+		}
+	}
+}
+
+<span class="comment">/**
+	The function determines the which style of zig zag to apply
+	<span class="attrib">@param</span> {Integer} style The style of zig zag filter to apply
+	<span class="attrib">@returns</span> Four character ID of the style the zig zag filter will apply
+	<span class="attrib">@type</span> String
+*/</span>
+<span class="reserved">function</span> styleToCharID(style){
+	<span class="reserved">if</span>(style == 0) <span class="reserved">return</span> <span class="literal">"ArnC"</span>;
+	<span class="reserved">else</span> <span class="reserved">if</span>(style == 1) <span class="reserved">return</span> <span class="literal">"OtFr"</span>;
+	<span class="reserved">else</span> <span class="reserved">return</span> <span class="literal">"PndR"</span>;
+}
+
+<span class="comment">/**
+	The function determines all the layers that have the same
+			four character ID of the filter being searched.
+	<span class="attrib">@param</span> {String} fourCharID The four character ID of the filter
+	<span class="attrib">@returns</span> An array of the indexes of where the layer is located
+	<span class="attrib">@type</span> Array
+*/</span>
+<span class="reserved">function</span> getFilterLayerIndex(fourCharID) {
+	var filterIndexes = new Array();
+	
+	var filterRuntimeID = charIDToTypeID( fourCharID );
+	var smartObjectID = stringIDToTypeID( <span class="literal">"smartObject"</span> );
+	var filterFXID = stringIDToTypeID( <span class="literal">"filterFX"</span> );
+	var fltrID = charIDToTypeID( <span class="literal">'Fltr'</span> );
+	
+	var ref = new ActionReference();
+	ref.putProperty(charIDToTypeID(<span class="literal">'Prpr'</span>), smartObjectID);
+	ref.putEnumerated(charIDToTypeID(<span class="literal">'Lyr '</span>), charIDToTypeID(<span class="literal">'Ordn'</span>), charIDToTypeID(<span class="literal">'Trgt'</span>));
+
+	var resultDesc = executeActionGet( ref );
+	<span class="reserved">if</span> (resultDesc.hasKey(smartObjectID)){
+		var smartDesc = resultDesc.getObjectValue(smartObjectID);
+		
+		<span class="reserved">if</span> (smartDesc.hasKey(filterFXID)) {
+			var resultList = smartDesc.getList(filterFXID);
+			
+			<span class="reserved">for</span> (var i=0; i &lt; resultList.count; i++ ) {
+				var filterFXDesc = resultList.getObjectValue( i );
+				<span class="reserved">if</span> ( filterFXDesc.hasKey( fltrID ) ) {
+					var filterObjID = filterFXDesc.getObjectType( fltrID );
+					<span class="reserved">if</span> ( filterObjID == filterRuntimeID ) {
+						filterIndexes.push( i );
+					}
+				}
+			}
+		}
+	}	
+	<span class="reserved">return</span> filterIndexes;
+}</pre>
+	<hr>
+
+
+
+<!-- ========== START OF NAVBAR ========== -->
+<a name="navbar_top"><!-- --></a>
+<table border="0" width="100%" cellpadding="1" cellspacing="0">
+<tr>
+<td colspan=2 bgcolor="#EEEEFF" class="NavBarCell1">
+<a name="navbar_top_firstrow"><!-- --></a>
+<table border="0" cellpadding="0" cellspacing="3">
+  <tr align="center" valign="top">
+  
+  
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-summary.html"><font class="NavBarFont1"><b>Overview</b></font></a>&nbsp;</td>
+  <td bgcolor="#FFFFFF" class="NavBarCell1Rev">	&nbsp;<font class="NavBarFont1Rev"><b>File</b></font>&nbsp;</td>
+  
+
+  <td bgcolor="#FFFFFF" class="NavBarCell1"> <font class="NavBarFont1">Class</font>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="overview-tree.html"><font class="NavBarFont1"><b>Tree</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="index-all.html"--><font class="NavBarFont1"><b>Index</b></font></a>&nbsp;</td>
+  <td bgcolor="#EEEEFF" class="NavBarCell1">    <a href="help-doc.html"><font class="NavBarFont1"><b>Help</b></font></a>&nbsp;</td>
+  </tr>
+</table>
+</td>
+<td bgcolor="#EEEEFF" align="right" valign="top"><em>
+<b></b></em>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+&nbsp;PREV&nbsp;
+&nbsp;NEXT</font></td>
+<td bgcolor="white" class="NavBarCell2"><font size="-2">
+  <a href="index.html" target="_top"><b>FRAMES</b></a>  &nbsp;
+&nbsp;<a href="overview-summary.html" target="_top"><b>NO FRAMES</b></a>
+&nbsp;&nbsp;
+<script>
+  <!--
+  if(window==top) {
+    document.writeln('<A HREF="allclasses-noframe.html" TARGET=""><B>All Classes</B></A>');
+  }
+  //-->
+</script>
+<noscript>
+<a href="allclasses-noframe.html" target=""><b>All Classes</b></a>
+</noscript>
+</font></td>
+</tr>
+</table>
+<!-- =========== END OF NAVBAR =========== -->
+
+<hr>
+<font size="-1">
+
+</font>
+<div class="jsdoc_ctime">Documentation generated by <a href="http://jsdoc.sourceforge.net/" target="_parent">JSDoc</a> on Wed Sep  3 16:09:11 2008</div>
+</body>
+</html>

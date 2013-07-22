@@ -1,0 +1,2016 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="CSXSInterface,com.adobe.csxs.core.CSXSInterface,m_currentStateInfo,currentStateInfo,instance,jobManager,rootDisplayObject,addEventListener,deletePreference,deleteSharedPreference,dispatchEvent,evalScript,execute,getApplicationId,getExtensionId,getExtensions,getHostEnvironment,getInstance,getNetworkPreferences,getSystemPath,getWindowGeometry,hasEventListener,initResourceBundle,launchBrowser,removeEventListener,requestOpenExtension,requestStateChange,retrievePreference,retrieveSharedPreference,setPanelMenu,storePreference,storeSharedPreference,updateStateInfo,willTrigger" name="keywords">
+<title>com.adobe.csxs.core.CSXSInterface</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'CSXSInterface - Public SDK CSXSLibrary API Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Public SDK CSXSLibrary API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/adobe/csxs/core/CSXSInterface.html&amp;com/adobe/csxs/core/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;CSXSInterface</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class CSXSInterface"); titleBar_setSubNav(false,true,false,false,true,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.adobe.csxs.core</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public final  class CSXSInterface</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td>flash.events.IEventDispatcher</td>
+</tr>
+</table>
+<p></p>
+  This is the entry point to the CSXS infrastructure. To access the singleton instance, 
+  use <code>CSXSInterface.getInstance()</code> or <code>CSXSInterface.instance</code>.
+  Use this object to:
+  <ul>
+  <li>Access state information for an extension and the host application in
+  which it is running, including system preferences</li>
+  <li>Initialize an extension</li>
+  <li>Create or change the extension window's menu </li>
+  <li>Execute scripts and processes defined in an extension</li>
+  <li>Register interest in event notifications, and dispatch events</li>
+  <li>Launch a browser or another extension</li>
+  </ul>
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#currentStateInfo">currentStateInfo</a> : <a href="../types/StateInfo.html">StateInfo</a>
+<div class="summaryTableDescription">[read-only]
+   Provides current state information.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#instance">instance</a> : <a href="../core/CSXSInterface.html">CSXSInterface</a>
+<div class="summaryTableDescription">[static][read-only] Stores the singleton instance of the <code>CSXSInterface</code> class.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#jobManager">jobManager</a> : <a href="../service/JobManager.html">JobManager</a>
+<div class="summaryTableDescription">[read-only]
+   Returns the <code>JobManager</code> for this extension.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#rootDisplayObject">rootDisplayObject</a> : DisplayObject<div class="summaryTableDescription">[static][write-only]
+   Setter for the root <code>DisplayObject</code>.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#CSXSInterface()">CSXSInterface</a>(caller:Function)</div>
+<div class="summaryTableDescription">
+    Constructor.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addEventListener()">addEventListener</a>(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Registers an interest in a  <code>CSXSEvent</code> of a particular type, and assigns the event handler.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deletePreference()">deletePreference</a>(key:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Deletes a preference key-value pair.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deleteSharedPreference()">deleteSharedPreference</a>(key:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Deletes a shared preference key-value pair.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dispatchEvent()">dispatchEvent</a>(event:Event):Boolean</div>
+<div class="summaryTableDescription">
+   Triggers an event programmatically.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#evalScript()">evalScript</a>(functionName:String, ... stringArguments):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Evaluates a function defined in a script that is associated with the extension.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#execute()">execute</a>(id:String, ... stringArguments):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Executes a native process that has been defined in the extension data section
+   of the extension manifest.xml file.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getApplicationId()">getApplicationId</a>():String</div>
+<div class="summaryTableDescription">
+   Retrieves the unique identifier of the current host application.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getExtensionId()">getExtensionId</a>():String</div>
+<div class="summaryTableDescription">
+   Retrieves the unique identifier of the extension.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getExtensions()">getExtensions</a>(extensionIds:Array = null):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Retrieves the list of extensions currently loaded in the current host application.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getHostEnvironment()">getHostEnvironment</a>():<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Provides information about the application in which the extension is currently running.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getInstance()">getInstance</a>():<a href="../core/CSXSInterface.html">CSXSInterface</a>
+</div>
+<div class="summaryTableDescription">[static] Retrieves the singleton instance of the <code>CSXSInterface</code> class.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getNetworkPreferences()">getNetworkPreferences</a>():<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Retrieves network-related preferences.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getSystemPath()">getSystemPath</a>(pathType:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Retrieves a path for which a constant is defined in the system.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getWindowGeometry()">getWindowGeometry</a>():<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Retrieves the screen location and size of the extension window.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#hasEventListener()">hasEventListener</a>(type:String):Boolean</div>
+<div class="summaryTableDescription">
+   Reports whether this extension has registered an interest in an event of a given type.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initResourceBundle()">initResourceBundle</a>():<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Initializes the resource bundle for this extension with property values
+   for the current application and locale.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#launchBrowser()">launchBrowser</a>(url:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Launches the default browser to show the given page.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeEventListener()">removeEventListener</a>(type:String, listener:Function, useCapture:Boolean = false):void</div>
+<div class="summaryTableDescription">
+   Unregisters this extension's interest in an event of a given type.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#requestOpenExtension()">requestOpenExtension</a>(extensionID:String, startupParams:String = null):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Loads and launches another extension.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#requestStateChange()">requestStateChange</a>(newState:String, windowGeometry:<a href="../types/WindowGeometry.html">WindowGeometry</a>):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Sets the state of the window in which the extension is running.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#retrievePreference()">retrievePreference</a>(key:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Retrieves an extension preference.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#retrieveSharedPreference()">retrieveSharedPreference</a>(key:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Retrieves a shared preference.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setPanelMenu()">setPanelMenu</a>(xmlMenu:XML):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Sets the menu for the extension window.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#storePreference()">storePreference</a>(key:String, value:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Stores a preference value associated with an identifying key.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#storeSharedPreference()">storeSharedPreference</a>(key:String, value:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a>
+</div>
+<div class="summaryTableDescription">
+   Stores a shared preference value associated with an identifying key.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#willTrigger()">willTrigger</a>(type:String):Boolean</div>
+<div class="summaryTableDescription">
+   Reports whether an event listener is registered with this event-dispatcher object
+   for any of its ancestors for the specified event type.</div>
+</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+</table>
+</div>
+<a name="eventSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Events</div>
+<table id="summaryTableEvent" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Event</th><th>Summary</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:applicationReskin">applicationReskin</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the window skin information changes.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:flyoutMenuClick">flyoutMenuClick</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the user clicks a window flyout menu.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:goOffline">goOffline</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached by a host application when extensions should stop any network-related operations.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:goOnline">goOnline</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached by a host application when extensions can restart network-related operations.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:mainMenuClick">mainMenuClick</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the user clicks a main window menu.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:requestComplete">requestComplete</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when an asynchronous event completes.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:requestFailed">requestFailed</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when an asynchronous event fails.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:windowClose">windowClose</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the window is closed.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:windowGetFocus">windowGetFocus</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the window gains the input focus.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:windowHide">windowHide</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the window is hidden, after being visible.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:windowLoseFocus">windowLoseFocus</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the window loses the input focus.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:windowMinimize">windowMinimize</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the window is minimized/iconified.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:windowMove">windowMove</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the window moves.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:windowOpen">windowOpen</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the window is opened, after it is fully initialized and ready to respond 
+ to changes in the geometry.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:windowResize">windowResize</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the window size changes.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:windowRestore">windowRestore</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the window is restored after being minimized/iconified.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#event:windowShow">windowShow</a>
+</div>
+</td><td class="summaryTableDescription summaryTableCol">
+ Dispached when the window become visible, after being hidden.</td><td class="summaryTableOwnerCol">CSXSInterface</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="currentStateInfo"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">currentStateInfo</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>currentStateInfo:<a href="../types/StateInfo.html">StateInfo</a></code>&nbsp;&nbsp;[read-only]<p>
+   Provides current state information. This property is bindable and readonly.
+   </p><p>This property can be used as the source for data binding.</p>
+<span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get currentStateInfo():<a href="../types/StateInfo.html">StateInfo</a></code>
+<br>
+</div>
+<a name="instance"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">instance</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>instance:<a href="../core/CSXSInterface.html">CSXSInterface</a></code>&nbsp;&nbsp;[read-only]<p> Stores the singleton instance of the <code>CSXSInterface</code> class. </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public static function get instance():<a href="../core/CSXSInterface.html">CSXSInterface</a></code>
+<br>
+</div>
+<a name="jobManager"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">jobManager</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>jobManager:<a href="../service/JobManager.html">JobManager</a></code>&nbsp;&nbsp;[read-only]<p>
+   Returns the <code>JobManager</code> for this extension. This should be the sole instance
+   used.
+   
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get jobManager():<a href="../service/JobManager.html">JobManager</a></code>
+<br>
+</div>
+<a name="m_currentStateInfo"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">m_currentStateInfo</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>csxs_internal var m_currentStateInfo:<a href="../types/StateInfo.html">StateInfo</a></code>
+</div>
+<a name="rootDisplayObject"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rootDisplayObject</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>rootDisplayObject:DisplayObject</code>&nbsp;&nbsp;[write-only]<p>
+   Setter for the root <code>DisplayObject</code>.
+   
+   If the CSXS SWC is used in a Flash extension, the root DisplayObject has to be provided to the SWC 
+   by calling this method BEFORE making the first call to CSXSInterface.instance or CSXSInterface.getInstance().
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set rootDisplayObject(value:DisplayObject):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="CSXSInterface()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">CSXSInterface</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function CSXSInterface(caller:Function)</code><p>
+    Constructor. The singleton instance is created internally; do not use this or the 
+    <code>new</code> operator to create multiple instances.  
+    Instead, call the static method <code>CSXSInterface.getInstance()</code>
+    or use <code>CSXSInterface.instance</code> to retrieve the existing instance.
+    </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">caller</span>:Function</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/CSXSInterface.html#getInstance()" target="">getInstance()</a>
+</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="addEventListener()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addEventListener(type:String, listener:Function, useCapture:Boolean = false, priority:int = 0, useWeakReference:Boolean = false):void</code><p>
+   Registers an interest in a  <code>CSXSEvent</code> of a particular type, and assigns the event handler. 
+   The event infrastructure notifies your extension when events of the given type occur,
+   passing the event object to the registered handler function.
+   Extends <code>flash.events.IEventDispatcher</code> for <code>CSXSEvent</code> handling.  
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; The name of the event type of interest. See <code>CSXSEvent</code> for allowed values.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">listener</span>:Function</code> &mdash; The handler function for the event.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Optional. When true, the listener processes the event only during the capture phase and
+     not in the target or bubbling phase. When false (the default), the listener processes the event only 
+     during the target or bubbling phase.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">priority</span>:int</code> (default = <code>0</code>)<code></code> &mdash; Optional. A higher priority value causes an event to be handled before simultaneous events with lower values.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">useWeakReference</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Optional. When true, the listener can be garbage-collected. When false (the default), this is prevented.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../events/CSXSEvent.html" target="">com.adobe.csxs.events.CSXSEvent</a>
+</div>
+</div>
+<a name="deletePreference()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deletePreference</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function deletePreference(key:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Deletes a preference key-value pair.
+    
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; The identifying key.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>status</code> value reports whether the request was sucessful. 
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>
+   <div class='listing'><pre>
+   var testKey:string="a"; //or a.b.c
+   var result:SyncRequestResult = deletePreference(testKey);
+   if(SyncRequestResult.COMPLETE == result.status)
+   {
+    trace("Preference Deleted Successfully");
+   }
+   </pre></div>
+   <p></p>
+</div>
+<a name="deleteSharedPreference()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deleteSharedPreference</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function deleteSharedPreference(key:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Deletes a shared preference key-value pair.
+    </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; The identifying key.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>status</code> value reports whether the request was sucessful.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>
+   <div class='listing'><pre>
+   var testKey:string="a"; //or a.b.c
+   var result:SyncRequestResult = deleteSharedPreference(testKey);
+   if(SyncRequestResult.COMPLETE == result.status)
+   {
+    trace("Preference Deleted Successfully");
+   }
+   </pre></div>
+   <p></p>
+</div>
+<a name="dispatchEvent()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dispatchEvent</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function dispatchEvent(event:Event):Boolean</code><p>
+   Triggers an event programmatically. You can use it to dispatch a standard Flash event
+   or <code>CSXSEvent</code>. Extends <code>flash.events.IEventDispatcher</code> for <code>CSXSEvent</code> handling.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">event</span>:Event</code> &mdash; The event object. 
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; True on success.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../events/CSXSEvent.html" target="">com.adobe.csxs.events.CSXSEvent</a>
+</div>
+</div>
+<a name="evalScript()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">evalScript</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function evalScript(functionName:String, ... stringArguments):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Evaluates a function defined in a script that is associated with the extension.
+   All consecutive calls are executed in the same script engine.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">functionName</span>:String</code> &mdash; The function to call, defined in a script provided with the extension.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code>... <span class="label">stringArguments</span></code> &mdash; String arguments to pass to the function. 
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>data</code> value is the result of evaluation, 
+   or NULL on error.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>   Use this call:
+   <code>evalScript("FnMyScript", "param1", "param2");</code>
+   to evaluate this function in the associated script:
+   <code>FnMyScript('param1', 'param2');</code>
+   <p>If the call returns an object containing properties, 
+   the script result is an XML object with this format:</p>
+   <div class='listing'><pre>
+    &lt;object&gt;
+     &lt;property id="strValue1"&gt;&lt;string&gt;Hello&lt/string&gt;&lt/property&lt;
+     &lt;property id="numValue2"&gt;&lt;number&gt;10&lt/number&gt;&lt/property&lt;
+     &lt;property id="boolValue3"&gt;&lt;true/&gt;&lt/property&lt;
+    &lt;/object&gt;
+    </pre></div>
+    To access the values:
+    <div class='listing'><pre>
+    var result:SyncRequestResult = evalScript("FnMyScript", "param1", "param2");
+    var oResult:Object;
+    if((SyncRequestResult.COMPLETE == result.status) && result.data)
+    {
+     oResult = result.data as Object;
+     //Make sure oResult has properties "strValue1", "numValue2" and "boolValue3"
+       if(oResult.hasOwnProperty("strValue1") && oResult.hasOwnProperty("numValue2")&& oResult.hasOwnProperty("boolValue3"))
+       {
+        var strVal:String = oResult.strValue1;
+      var numVal:Number = oResult.numValue2;
+      var boolVal:Boolean = oResult.boolValue3;
+     }
+    }
+   </pre></div>
+   <p>If the call returns a string containing XML, use the <code>CDATA</code> tag to enclose the XML.
+    For instance, suppose the result of evaluation is this string:
+    <div class='listing'><pre>
+    &lt;![CDATA[
+     &lt;someinfo&gt; 
+      &lt;tag1&gt;&lt;prop&gt;Prop1&lt;/prop&gt;&lt;prop&gt;Prop2&lt;/prop&gt;&lt;/tag1&gt;
+      &lt;tag2&gt;&lt;link&gt;Prop3&lt;/link&gt;&lt;/tag2&gt;
+     &lt;/someinfo&gt;
+    ]]&gt;
+   </pre></div>
+   To access the values:
+    <div class='listing'><pre>
+    var result:SyncRequestResult = evalScript("FnMyScript", "param1", "param2");
+    var strResult:String;
+    if((SyncRequestResult.COMPLETE == result.status) && result.data)
+    {
+     strResult = result.data as String;
+     trace(strResult);  
+    }
+   </pre></div>
+   This prints "&lt;someinfo&gt;&lt;tag1&gt;&lt;prop&gt;Prop1&lt;/prop&gt;&lt;prop&gt;Prop2&lt;/prop&gt;&lt;/tag1&gt;&lt;tag2&gt;&lt;link&gt;Prop3&lt;/link&gt;&lt;/tag2&gt;&lt;/someinfo&gt;"
+   </p>
+   <p></p>
+</div>
+<a name="execute()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">execute</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function execute(id:String, ... stringArguments):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Executes a native process that has been defined in the extension data section
+   of the extension manifest.xml file. 
+   The <code>ExtensionData</code> is nested in <code>DispatchInfoList->Extension->DispatchInfo</code>.
+   <br/>
+   Sample of a native process section in the extension manifest file:
+   <div class='listing'><pre>
+   &lt;DispatchInfoList&gt;
+   ...
+   &lt;Extension&gt;
+     ...
+      &lt;DispatchInfo&gt;
+     ...
+        &lt;ExtensionData&gt;
+           &lt;ExecutableList&gt;
+           &lt;Executable Id="myId" Platform="win"&gt;c:/absPath/myProcess.exe&lt;/Executable&gt;
+           &lt;Executable Id="myId" Platform="mac"&gt;/absPath/myProcess&lt;/Executable&gt;
+         &lt;/ExecutableList&gt;
+       &lt;/ExtensionData&gt;
+   ...
+   </pre></div>
+      </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">id</span>:String</code> &mdash; The unique identifier of the defined process, as specified in the extension manifest <code>Executable</code> tag.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code>... <span class="label">stringArguments</span></code> &mdash; The arguments defined for the process. They are passed as command line arguments to the process.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>status</code> value reports whether the request was sucessful. The <code>data</code> value is NULL.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+</div>
+<a name="getApplicationId()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getApplicationId</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getApplicationId():String</code><p>
+   Retrieves the unique identifier of the current host application.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash; The host application ID.
+   </td>
+</tr>
+</table>
+</div>
+<a name="getExtensionId()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getExtensionId</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getExtensionId():String</code><p>
+   Retrieves the unique identifier of the extension.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash; The extension ID.
+   </td>
+</tr>
+</table>
+</div>
+<a name="getExtensions()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getExtensions</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getExtensions(extensionIds:Array = null):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Retrieves the list of extensions currently loaded in the current host application.
+    The extension list is initialized once, and remains the same during the lifetime of the CSXS session.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">extensionIds</span>:Array</code> (default = <code>null</code>)<code></code> &mdash; An array of unique identifiers for extensions of interest.
+      If omitted, retrieves data for all extensions.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>data</code> value contains the list of extensions.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+</div>
+<a name="getHostEnvironment()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getHostEnvironment</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getHostEnvironment():<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Provides information about the application in which the extension is currently running.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>data</code> value is a <code>HostEnvironment</code> object, 
+   or NULL on error.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+<br>
+<a href="../types/HostEnvironment.html" target="">com.adobe.csxs.types.HostEnvironment</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>   <div class='listing'><pre>
+   var result:SyncRequestResult = getHostEnvironment();
+   var hostEnv:HostEnvironment;
+   if((SyncRequestResult.COMPLETE == result.status) && result.data)
+   { 
+     hostEnv = result.data as HostEnvironment; 
+   }
+   </pre></div>
+   <p></p>
+</div>
+<a name="getInstance()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getInstance</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getInstance():<a href="../core/CSXSInterface.html">CSXSInterface</a></code><p> Retrieves the singleton instance of the <code>CSXSInterface</code> class. </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../core/CSXSInterface.html">CSXSInterface</a></code></td>
+</tr>
+</table>
+</div>
+<a name="getNetworkPreferences()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getNetworkPreferences</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getNetworkPreferences():<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Retrieves network-related preferences.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>data</code> value is a <code>NetworkPreferences</code> object, 
+     or NULL on error.   
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+<br>
+<a href="../types/NetworkPreferences.html" target="">com.adobe.csxs.types.NetworkPreferences</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>   <div class='listing'><pre>
+   var result:SyncRequestResult = getNetworkPreferences();
+   var netPref:NetworkPreferences;
+   if((SyncRequestResult.COMPLETE == result.status) && result.data)
+   { 
+     netPref = result.data as NetworkPreferences; 
+   }
+   </pre></div>
+   <p></p>
+</div>
+<a name="getSystemPath()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getSystemPath</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getSystemPath(pathType:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Retrieves a path for which a constant is defined in the system. 
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pathType</span>:String</code> &mdash; A string containing a path-type constant defined in the <code>SystemPath</code> object, 
+     such as <code>SystemPath.USER_DATA</code>.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>data</code> value is a <code>SystemPath</code> object, 
+     or NULL on error.    
+     <p> If the path-type string is not in the correct format, returns a status of 
+     <code>SyncRequestResult.INVALID_INPUT_PARAMS</code>.</p>
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+<br>
+<a href="../types/SystemPath.html" target="">com.adobe.csxs.types.SystemPath</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>   <div class='listing'><pre>
+   var result:SyncRequestResult = getSystemPath(SystemPath.APPLICATION_DATA);
+   var appData:String;
+   if((SyncRequestResult.COMPLETE == result.status) && result.data)
+   {
+    appData = result.data;
+   }
+   </pre></div>
+   <p></p>
+</div>
+<a name="getWindowGeometry()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getWindowGeometry</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getWindowGeometry():<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Retrieves the screen location and size of the extension window.
+    </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>data</code> value is a <code>WindowGeometry</code> object, 
+     or NULL on error. 
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+<br>
+<a href="../types/WindowGeometry.html" target="">com.adobe.csxs.types.WindowGeometry</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>   <div class='listing'><pre>
+   var result:SyncRequestResult = getWindowGeometry();
+   var winGeom:WindowGeometry;
+   if((SyncRequestResult.COMPLETE == result.status) && result.data)
+   { 
+      winGeom = result.data as WindowGeometry; 
+   }
+   </pre></div>
+   <p></p>
+</div>
+<a name="hasEventListener()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hasEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function hasEventListener(type:String):Boolean</code><p>
+   Reports whether this extension has registered an interest in an event of a given type. 
+   Extends <code>flash.events.IEventDispatcher</code> for <code>CSXSEvent</code> handling. 
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; The name of the event type of interest. See <code>CSXSEvent</code> for allowed values.   
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; True if the extension handles this type of event.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../events/CSXSEvent.html" target="">com.adobe.csxs.events.CSXSEvent</a>
+</div>
+</div>
+<a name="initResourceBundle()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initResourceBundle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function initResourceBundle():<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Initializes the resource bundle for this extension with property values
+   for the current application and locale. After this call, you can query all properties 
+   (in "extensionDirectory/locale/{locale}/messages.properties" or
+   "extensionDirectory/locale/messages.properties") using the <code>IResourceManager</code>.
+   The bundle name is "messages".
+    </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>status</code> value reports whether the request was sucessful. 
+    
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+</div>
+<a name="launchBrowser()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">launchBrowser</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function launchBrowser(url:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Launches the default browser to show the given page.
+    </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">url</span>:String</code> &mdash; A string containing a URI-format path for a local page, 
+      or an HTTP/HTTPS request for a remote page.  
+    </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>status</code> value reports whether the request was sucessful. The <code>data</code> value is NULL.
+     <p>If the SWF is not trusted and the platform is not Windows, returns a status of 
+     <code>SyncRequestResult.DENIED</code>.</p>
+     <p> If the URL is not in the correct format, returns a status of 
+     <code>SyncRequestResult.INVALID_INPUT_PARAMS</code>.</p>
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>   <div class='listing'><pre>
+   var result:SyncRequestResult = launchBrowser("file:///C:/my.html"); //or http://mysite.com/myurl.html
+   if(SyncRequestResult.COMPLETE == result.status)
+   { 
+     trace("Success");
+   }
+   </pre></div>
+   <p></p>
+</div>
+<a name="removeEventListener()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeEventListener</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeEventListener(type:String, listener:Function, useCapture:Boolean = false):void</code><p>
+   Unregisters this extension's interest in an event of a given type. The parameter
+   values must match those with which the interest was originally registered.
+   Extends <code>flash.events.IEventDispatcher</code> for <code>CSXSEvent</code> handling.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; The name of the event type of interest. See <code>CSXSEvent</code> for allowed values.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">listener</span>:Function</code> &mdash; The handler function for the event.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">useCapture</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Optional. Specifies whether the listener was registered for the capture phase or 
+   the target and bubbling phases. Default is false.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../events/CSXSEvent.html" target="">com.adobe.csxs.events.CSXSEvent</a>
+</div>
+</div>
+<a name="requestOpenExtension()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">requestOpenExtension</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function requestOpenExtension(extensionID:String, startupParams:String = null):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Loads and launches another extension. 
+   If the target extension is already loaded, it is activated.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">extensionID</span>:String</code> &mdash; The extension's unique identifier.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">startupParams</span>:String</code> (default = <code>null</code>)<code></code> &mdash; Startup parameters to be passed to the loaded extension.
+     Specify key-value pairs as a GET URL parameter list; for example: "key1=value1&key2=value2".
+   
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code></td>
+</tr>
+</table>
+<br>
+<span class="label">Example</span>
+<br>
+   To launch the extension "help" with ID "HLP" from this extension, call:
+   <code>requestOpenExtension("HLP")</code>
+   
+   <p></p>
+</div>
+<a name="requestStateChange()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">requestStateChange</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function requestStateChange(newState:String, windowGeometry:<a href="../types/WindowGeometry.html">WindowGeometry</a>):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Sets the state of the window in which the extension is running.
+   You can close the window, hide or show it, minimize or restore it,
+   move or resize it, and set or remove the input focus.
+   You cannot use this function to open a window; to do this, open the extension using
+   <code>requestOpenExtension()</code>
+    
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">newState</span>:String</code> &mdash; A string containing one of:
+    <ul>
+      <li><code>StateChangeEvent.WINDOW_RESIZE</code><br/>
+     Provide <code>WindowGeometry.width</code> and <code>WindowGeometry.height</code>
+     in the <code>winGeo</code> parameter.  </li>
+      <li><code>StateChangeEvent.WINDOW_MOVE</code><br/>
+     Provide <code>WindowGeometry.topleftx</code>, <code>WindowGeometry.toplefty</code>
+    in the <code>winGeo</code> parameter. </li>
+      <li><code>StateChangeEvent.WINDOW_GET_FOCUS</code>  </li>
+      <li><code>StateChangeEvent.WINDOW_LOSE_FOCUS</code> </li>
+      <li><code>StateChangeEvent.WINDOW_SHOW</code></li>
+      <li><code>StateChangeEvent.WINDOW_HIDE</code> </li>
+      <li><code>StateChangeEvent.WINDOW_MINIMIZE</code></li>
+      <li><code>StateChangeEvent.WINDOW_RESTORE</code><br/>
+     If the window is not minimized, has no effect. </li>
+       <li><code>StateChangeEvent.WINDOW_CLOSE</code></li>
+   </ul>
+   <code>StateChangeEvent.WINDOW_OPEN</code> is an invalid value.
+    </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">windowGeometry</span>:<a href="../types/WindowGeometry.html">WindowGeometry</a></code> &mdash; A window-geometry object that provides the width and height values for a resize operation,
+    or the new location for a move operation. NULL for other operation requests.
+   
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>status</code> value reports whether the request was sucessful. The <code>data</code> value is NULL.   
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>   <div class='listing'><pre> 
+   var winGeom:WindowGeometry = new WindowGeometry(); 
+   winGeom.width = 100; 
+   winGeom.height = 200; 
+   requestStateChange(StateChangeEvent.WINDOW_RESIZE, winGeom);
+   </pre></div>
+   <p>
+   <div class='listing'><pre>
+   requestStateChange(StateChangeEvent.WINDOW_HIDE, null);
+   </pre></div>
+   </p>
+   <p></p>
+</div>
+<a name="retrievePreference()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">retrievePreference</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function retrievePreference(key:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Retrieves an extension preference.
+    </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; The identifying key of the preference.
+     </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>data</code> value is 
+     the value of the specified preference, if any.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>
+   <div class='listing'><pre>
+   var testKey:string="a"; //or a.b.c
+   var result:SyncRequestResult = retrievePreference(testKey);
+   if(SyncRequestResult.COMPLETE == result.status && result.data)
+   {
+    var testValue:String = result.data as String;
+   }
+   </pre></div>
+   <p></p>
+</div>
+<a name="retrieveSharedPreference()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">retrieveSharedPreference</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function retrieveSharedPreference(key:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Retrieves a shared preference.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; The identifying key of the preference.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>data</code> value is 
+     the value of the specified preference, if any.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>
+   <div class='listing'><pre>
+   var testKey:string="a"; //or a.b.c
+   var result:SyncRequestResult = retrieveSharedPreference(testKey);
+   if(SyncRequestResult.COMPLETE == result.status && result.data)
+   {
+    var testValue:String = result.data as String;
+   }
+   </pre></div>
+   <p></p>
+</div>
+<a name="setPanelMenu()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setPanelMenu</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setPanelMenu(xmlMenu:XML):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Sets the menu for the extension window. If a menu already exists, replaces it with this new one.
+   Before setting the menu, use <code>addEventHandler()</code> to register a handler function that provides the
+   menu's behavior in response to user clicks on the leaf items. 
+    
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">xmlMenu</span>:XML</code> &mdash; An XML structure containing menu item identifiers and localized menus strings,
+   or NULL to remove any existing menu. 
+   <p>Menu items are created in the specified order. </p>
+   <p>Use a menu item value of "---" (three dashes) to insert a horizontal divider. </p>
+   <p>A <code>MenuItem</code> element can contain nested items to any depth, creating a hierarchical menu. 
+       Clicks on parent items open the child items. Clicks on leaf items trigger the event
+       notification. </p>
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>status</code> value reports whether the request was sucessful. The <code>data</code> value is NULL.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>   <div class='listing'><pre>
+   //Sample Menu XML structure
+   var xmlMyMenu:XML =
+   &lt;Menu&gt;
+    &lt;MenuItem Id="menuItemId1" Label="myItem1"/&gt;
+    &lt;MenuItem Label="myItem2"&gt;
+     &lt;MenuItem Label="myItem2_1"&gt;
+      &lt;MenuItem Label="myItem2_1_1"/&gt;
+      &lt;MenuItem Label="myItem2_1_2"/&gt;
+      &lt;MenuItem Label="---"/&gt;
+      &lt;MenuItem Label="myItem2_1_3"/&gt;           
+     &lt;/MenuItem&gt;                
+    &lt;/MenuItem&gt;  
+    &lt;MenuItem Label="---"/&gt;  
+    &lt;MenuItem Label="myItem3"/&gt;               
+   &lt;/Menu&gt;
+         
+   setPanelMenu(xmlKulerMenu);
+   </pre></div>
+   This code creates a menu with three top items.
+   The second item has a subitem containing a further submenu, 
+   which has a separator between the second and third items.
+   Another separator divides the second and third top-level items:
+   <div class='listing'><pre>
+   myItem1 
+   myItem2 &gt; myItem2_1 &gt; myItem2_1_1
+                       myItem2_1_2
+   ------------------------------ 
+                       myItem2_1_3
+    ------------------------------
+   myItem3  
+   </pre></div>
+    <p></p>
+</div>
+<a name="storePreference()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">storePreference</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function storePreference(key:String, value:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Stores a preference value associated with an identifying key. 
+   A subsequent call with the same key overwrites the exsisting value.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; The identifying key.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; The new preference value, a string. Any other types must be converted to
+    a string before storing as a preference. 
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result 
+   
+   
+                        
+                     </td>
+</tr>
+</table>
+<br>
+<span class="label">Example</span>
+<br>
+   <div class='listing'><pre>
+   var testKey:string="a"; //or a.b.c
+   var testValue:String = "Hello World"; 
+      var result:SyncRequestResult = storePreference(testKey, testValue);
+   if(SyncRequestResult.COMPLETE == result.status)
+   {
+    trace("stored successfully");
+   }
+   </pre></div>
+   <p></p>
+</div>
+<a name="storeSharedPreference()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">storeSharedPreference</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function storeSharedPreference(key:String, value:String):<a href="../types/SyncRequestResult.html">SyncRequestResult</a></code><p>
+   Stores a shared preference value associated with an identifying key. 
+   A subsequent call for the same key overwrites the exsisting value.
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">key</span>:String</code> &mdash; The identifying key.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; The new preference value, a string. 
+      Any other type must be converted to a string before storage as a preference. 
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../types/SyncRequestResult.html">SyncRequestResult</a></code> &mdash; 
+                        A result object whose <code>status</code> value reports whether the request was sucessful.   
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../types/SyncRequestResult.html" target="">com.adobe.csxs.types.SyncRequestResult</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>
+   <div class='listing'><pre>
+   var testKey:string="a"; //or a.b.c
+   var testValue:String = "Hello World"; 
+      var result:SyncRequestResult = storePreference(testKey, testValue);
+   if(SyncRequestResult.COMPLETE == result.status)
+   {
+    trace("stored successfully");
+   }
+   </pre></div>
+   <p></p>
+</div>
+<a name="updateStateInfo()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">updateStateInfo</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>csxs_internal function updateStateInfo(name:String, value:*):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:*</code></td>
+</tr>
+</table>
+</div>
+<a name="willTrigger()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">willTrigger</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function willTrigger(type:String):Boolean</code><p>
+   Reports whether an event listener is registered with this event-dispatcher object
+   for any of its ancestors for the specified event type. Returns true if an event listener 
+   is triggered during any phase of the event flow when an event of the specified type is 
+   dispatched to this event-dispatcher object or any of its descendants.
+   This function examines the entire event flow; this differs from  #hasEventListener(), 
+   which examines only the object to which it belongs.
+    Extends <code>flash.events.IEventDispatcher</code> for <code>CSXSEvent</code> handling.
+    </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">type</span>:String</code> &mdash; name of the event type of interest. See <code>CSXSEvent</code> for allowed values.
+    </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; True if a listener will be triggered.
+    </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../events/CSXSEvent.html" target="">com.adobe.csxs.events.CSXSEvent</a>
+</div>
+</div>
+<div class="detailSectionHeader">Event detail</div>
+<a name="event:applicationReskin"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">applicationReskin</td><td class="detailHeaderType">event&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/AppReskinEvent.html"><code>com.adobe.csxs.events.AppReskinEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the window skin information changes.
+ </p></div>
+<a name="event:flyoutMenuClick"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">flyoutMenuClick</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/MenuClickEvent.html"><code>com.adobe.csxs.events.MenuClickEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the user clicks a window flyout menu.
+ </p></div>
+<a name="event:goOffline"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">goOffline</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>mx.events.Event</code></a>
+<br>
+<p></p><p>
+ Dispached by a host application when extensions should stop any network-related operations.
+ </p></div>
+<a name="event:goOnline"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">goOnline</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href=""><code>mx.events.Event</code></a>
+<br>
+<p></p><p>
+ Dispached by a host application when extensions can restart network-related operations.
+  </p></div>
+<a name="event:mainMenuClick"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mainMenuClick</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/MenuClickEvent.html"><code>com.adobe.csxs.events.MenuClickEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the user clicks a main window menu.
+ </p></div>
+<a name="event:requestComplete"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">requestComplete</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/AsyncRequestEvent.html"><code>com.adobe.csxs.events.AsyncRequestEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when an asynchronous event completes.
+ </p></div>
+<a name="event:requestFailed"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">requestFailed</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/AsyncRequestEvent.html"><code>com.adobe.csxs.events.AsyncRequestEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when an asynchronous event fails.
+ </p></div>
+<a name="event:windowClose"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">windowClose</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/StateChangeEvent.html"><code>com.adobe.csxs.events.StateChangeEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the window is closed.
+ </p></div>
+<a name="event:windowGetFocus"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">windowGetFocus</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/StateChangeEvent.html"><code>com.adobe.csxs.events.StateChangeEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the window gains the input focus.
+ </p></div>
+<a name="event:windowHide"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">windowHide</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/StateChangeEvent.html"><code>com.adobe.csxs.events.StateChangeEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the window is hidden, after being visible.
+ </p></div>
+<a name="event:windowLoseFocus"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">windowLoseFocus</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/StateChangeEvent.html"><code>com.adobe.csxs.events.StateChangeEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the window loses the input focus.
+ </p></div>
+<a name="event:windowMinimize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">windowMinimize</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/StateChangeEvent.html"><code>com.adobe.csxs.events.StateChangeEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the window is minimized/iconified.
+ </p></div>
+<a name="event:windowMove"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">windowMove</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/StateChangeEvent.html"><code>com.adobe.csxs.events.StateChangeEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the window moves.
+ </p></div>
+<a name="event:windowOpen"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">windowOpen</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/StateChangeEvent.html"><code>com.adobe.csxs.events.StateChangeEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the window is opened, after it is fully initialized and ready to respond 
+ to changes in the geometry.
+ </p></div>
+<a name="event:windowResize"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">windowResize</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/StateChangeEvent.html"><code>com.adobe.csxs.events.StateChangeEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the window size changes.
+ </p></div>
+<a name="event:windowRestore"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">windowRestore</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/StateChangeEvent.html"><code>com.adobe.csxs.events.StateChangeEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the window is restored after being minimized/iconified.
+ </p></div>
+<a name="event:windowShow"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">windowShow</td><td class="detailHeaderType">event&nbsp;</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<span class="label">Event object type: </span><a href="../events/StateChangeEvent.html"><code>com.adobe.csxs.events.StateChangeEvent</code></a>
+<br>
+<p></p><p>
+ Dispached when the window become visible, after being hidden.
+ </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">Copyright &copy; 2010 Adobe Systems Incorporated. All Rights Reserved.</center>
+</div>
+</body>
+</html>
+<!--Copyright © 2010 Adobe Systems Incorporated. All Rights Reserved.-->

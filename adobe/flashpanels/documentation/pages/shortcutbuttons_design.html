@@ -1,0 +1,146 @@
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2008 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+Name:				index.html
+Author:				John Huan Vu
+					Photoshop Engineering Intern
+					Adobe Systems Incorporated
+Description:		The index file describes the overall picture of the Adobe
+					Photoshop Panel Developer's Guide for other developers to use
+					and make using Adobe Flex Builder.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adobe Photoshop Panel Developer's Guide</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="twoColLiqLt">
+<div id="container">
+  <div id="sidebar1">
+    <h4>Table of Contents</h4>
+    <span class = "toc_links">
+		<a href="index.html">Introduction</a><br/>
+    	<a href="who.html">Who Should Read This?</a><br/>
+		<a href="howDoesItWork.html">How Does It Work?</a><br/>
+		<a href="download.html">Download(s)</a><br/>
+		<a href="requirements.html">System and Software Requirements</a><br/>
+		<a href="psReservedWords.html">Adobe Photoshop Reserved Words</a><br/>
+		<br />
+		Tutorials<br />
+		<a href="tutorial_overview.html">Overview</a>
+    	<ol>
+			<li><a href="startingFlexProject.html">Starting a Flex Project</a></li>
+			<li><a href="helloworld.html">Hello World Panel</a></li>
+			<li><a href="csxsfile.html">Placing the CSXS Library</a></li>
+			<br />
+			<li><a href="shortcutbuttons.html">Shortcut Buttons Panel</a>
+			<ol type="a">
+				<li><a href="shortcutbuttons_javascript.html">JavaScript</a></li>
+				<li><a href="shortcutbuttons_design.html">Design the Panel</a></li>
+				<li><a href="shortcutbuttons_actionscript.html">ActionScript</a></li>
+				<li><a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></li>
+				<li><a href="shortcutbuttons_air.html">CSXS Logger AIR Debugger (Optional)</a></li>
+			</ol>
+			</li>
+			<br />
+			<li><a href="scriptlistener.html">Setting Up Script Listener</a></li>
+			<br />
+			<li><a href="colorpicker.html">Color Picker Panel</a></li>
+			<ol type="a.html">
+				<li><a href="colorpicker_javascript.html">JavaScript</a></li>
+				<li><a href="colorpicker_design.html">Design the Panel</a></li>
+				<li><a href="colorpicker_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="colorpicker_actionscript.html">ActionScript</a></li>
+				<li><a href="colorpicker_icons.html">Create Custom Icons</a></li>
+			</ol>
+			<br />
+			<li><a href="flickr.html">Flickr Search Panel</a></li>
+			<ol type="a.html">
+				<li><a href="flickr_design.html">Design the Panel</a></li>
+				<li><a href="flickr_actionscriptFlickr.html">Create a Flickr Service</a></li>
+				<li><a href="flickr_createThumbnailModule.html">Design a Custom Module</a></li>
+				<li><a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></li>
+				<li><a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></li>
+			</ol>
+			<br />
+			<li><a href="perLayer.html">Per Layer Metadata Panel</a></li>
+			<ol type="a.html">
+				<li><a href="perLayer_metadata.html">View Metadata</a></li>
+				<li><a href="perLayer_javascript.html">JavaScript</a></li>
+				<li><a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="perLayer_design.html">Designing the Panel</a></li>
+				<li><a href="perLayer_actionscript.html">ActionScript</a></li>
+				<li><a href="perLayer_photomerge.html">Using Photomerge</a></li>
+			</ol>
+    	</ol>
+	 	<a href="otherSamples.html">Other Samples</a> <br/>
+	 	<a href="bestPractices.html">Best Practices</a><br />
+		<a href="faq.html">Frequently Asked Questions</a><br />
+		<a href="acronyms.html">Acronyms and Definitions</a><br />
+		<a href="links.html">Links</a>
+		</span>
+	</div>
+  <div id="mainContent">
+    <span class="main_title">Adobe<sup>&reg;</sup> Photoshop<sup>&reg;</sup> Panel Developer's Guide</span>
+	<hr />
+    <h1>Shortcut Buttons Panel: Design the Panel</h1>
+    <p>The second part of the Shortcut Buttons Panel is designing the Adobe Photoshop Panel using Adobe Flex Builder.  The developer will drag and drop two button control components and two checkbox control components to the design area within Adobe Flex Builder to design the Adobe Photoshop Panel. The result is an Adobe Photoshop Panel containing two buttons and two checkboxes.
+    <p><u>Instructions</u>: </p>
+    <ol>
+		<li>Complete the <b><a href="startingFlexProject.html">Starting a Flex Project</a></b>.</li>
+    	<li>Go to <b>File &gt; New &gt; Flex Project.</b></li>
+    	<ol type="a">
+			<li>Under <b>Project name:</b>, type in <b>ShortcutButtons</b>.<br />
+					<i>Note: The Adobe Flex Project filename and corresponding SWF filename must have the same name as the JavaScript filename.</i></li>
+    		<li>Deselect <b>Use default location</b> and under <b>Folder:</b>, save to the <b>Desktop</b> in a new folder called <b>ShortcutButtons</b>.</li>
+    		<li>Press <b>Finish</b>.</li>
+    		<br />
+    		<img src="../images/ShortcutButtons_NewFlexProject.jpg" />
+		</ol>
+    	<li>Go to <b>Design Mode</b> by selecting <b>Design</b> under the <b>ShortcutButtons.mxml</b> tab or go to <b> Window &gt; Switch Source/Design Mode</b>.<br />
+    			<img src="../images/DesignSelected.jpg" /></li>
+    	<li>Go to the <b>Components</b> window or go to <b>Window &gt; Components</b>.</li>
+    	<ol type="a">
+			<li>Under the <b>Controls</b> folder in the <b>Components</b> window, drag and drop the following control components into the design area:
+				<ul>
+						<li>Two <b>Button</b> control components</li>
+					<li>Two <b>CheckBox</b> control components</li>
+				</ul>
+				<img src="../images/ComponentsWindowLabel_Controls.jpg" /> </li>
+    		<li><b>Double-Click</b> on one of the Button control component placed in the design area and type in <b>New Document</b> and press <b>Enter</b>.</li>
+    		<li><b>Double-Click</b> on the other Button control component placed in the design area and type in <b>Close Document</b> and press <b>Enter</b>.</li>
+    		<li><b>Double-Click</b> on one of the CheckBox control component's text placed in the design area and type in <b>Activate every 10 seconds</b> and press <b>Enter</b>.</li>
+    		<li><b>Double-Click</b> on the other CheckBox control component's text placed in the design area and type in <b>Activate every 12 seconds</b> and press <b>Enter</b>.<br />
+					<img src="../images/ShortcutButtons_DesignAreaWithButtons.jpg" /></li>
+    		</ol>
+    	<li>Go to <b>File &gt; Save</b>.</li>
+    	<li>Close <b>Adobe Flex Builder</b>.</li>
+    	</ol>
+        <span class="nextLink">Continue to <a href="shortcutbuttons_actionscript.html">ActionScript</a></span>
+  </div>
+	<br class="clearfloat" />
+</div>
+</body>
+</html>

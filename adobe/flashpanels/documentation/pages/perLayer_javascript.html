@@ -1,0 +1,339 @@
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2008 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+Name:				index.html
+Author:				John Huan Vu
+					Photoshop Engineering Intern
+					Adobe Systems Incorporated
+Description:		The index file describes the overall picture of the Adobe
+					Photoshop Panel Developer's Guide for other developers to use
+					and make using Adobe Flex Builder.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adobe Photoshop Panel Developer's Guide</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="twoColLiqLt">
+<div id="container">
+  <div id="sidebar1">
+    <h4>Table of Contents</h4>
+    <span class = "toc_links">
+		<a href="index.html">Introduction</a><br/>
+    	<a href="who.html">Who Should Read This?</a><br/>
+		<a href="howDoesItWork.html">How Does It Work?</a><br/>
+		<a href="download.html">Download(s)</a><br/>
+		<a href="requirements.html">System and Software Requirements</a><br/>
+		<a href="psReservedWords.html">Adobe Photoshop Reserved Words</a><br/>
+		<br />
+		Tutorials<br />
+		<a href="tutorial_overview.html">Overview</a>
+    	<ol>
+			<li><a href="startingFlexProject.html">Starting a Flex Project</a></li>
+			<li><a href="helloworld.html">Hello World Panel</a></li>
+			<li><a href="csxsfile.html">Placing the CSXS Library</a></li>
+			<br />
+			<li><a href="shortcutbuttons.html">Shortcut Buttons Panel</a>
+			<ol type="a">
+				<li><a href="shortcutbuttons_javascript.html">JavaScript</a></li>
+				<li><a href="shortcutbuttons_design.html">Design the Panel</a></li>
+				<li><a href="shortcutbuttons_actionscript.html">ActionScript</a></li>
+				<li><a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></li>
+				<li><a href="shortcutbuttons_air.html">CSXS Logger AIR Debugger (Optional)</a></li>
+			</ol>
+			</li>
+			<br />
+			<li><a href="scriptlistener.html">Setting Up Script Listener</a></li>
+			<br />
+			<li><a href="colorpicker.html">Color Picker Panel</a></li>
+			<ol type="a.html">
+				<li><a href="colorpicker_javascript.html">JavaScript</a></li>
+				<li><a href="colorpicker_design.html">Design the Panel</a></li>
+				<li><a href="colorpicker_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="colorpicker_actionscript.html">ActionScript</a></li>
+				<li><a href="colorpicker_icons.html">Create Custom Icons</a></li>
+			</ol>
+			<br />
+			<li><a href="flickr.html">Flickr Search Panel</a></li>
+			<ol type="a.html">
+				<li><a href="flickr_design.html">Design the Panel</a></li>
+				<li><a href="flickr_actionscriptFlickr.html">Create a Flickr Service</a></li>
+				<li><a href="flickr_createThumbnailModule.html">Design a Custom Module</a></li>
+				<li><a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></li>
+				<li><a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></li>
+			</ol>
+			<br />
+			<li><a href="perLayer.html">Per Layer Metadata Panel</a></li>
+			<ol type="a.html">
+				<li><a href="perLayer_metadata.html">View Metadata</a></li>
+				<li><a href="perLayer_javascript.html">JavaScript</a></li>
+				<li><a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="perLayer_design.html">Designing the Panel</a></li>
+				<li><a href="perLayer_actionscript.html">ActionScript</a></li>
+				<li><a href="perLayer_photomerge.html">Using Photomerge</a></li>
+			</ol>
+    	</ol>
+	 	<a href="otherSamples.html">Other Samples</a> <br/>
+	 	<a href="bestPractices.html">Best Practices</a><br />
+		<a href="faq.html">Frequently Asked Questions</a><br />
+		<a href="acronyms.html">Acronyms and Definitions</a><br />
+		<a href="links.html">Links</a>
+		</span>
+	</div>
+  <div id="mainContent">
+    <span class="main_title">Adobe<sup>&reg;</sup> Photoshop<sup>&reg;</sup> Panel Developer's Guide</span>
+	<hr />
+    <h1>Per Layer Metadata Panel: JavaScript</h1>
+    <p>The second part of the Per Layer Metadata Panel is creating a JavaScript file. The JavaScript file will have functions to load and unload the XMP Script Library to access the XMP metadata, retrieve the metadata of the active layer, set the metadata of the description and comments of the active layer, and export the metadata of the active layer. The JavaScript file will have utility functions to retrieve the date and time when the active layer was last changed, and create an XML object of the property and value to be sent to the SWF file. The JavaScript file will be created using ExtendScript Toolkit. The result is to place the JavaScript file into the Adobe Photoshop Panels folder for the SWF file to communicate with.</p>
+    <p>Go to <a href="../jsdocs/overview-summary-PerLayerMetadata.jsx.html" target="_blank"> Per Layer Metadata Panel's JavaScript API</a> that covers a summary of functions and scripts used.</p>
+    <p><u>Instructions</u>: </p>
+    <ol>
+		<li>Open <b>ExtendScript Toolkit</b>.</li>
+    	<li>Go to <b>File &gt; New JavaScript</b>.</li>
+    	<li>Copy the following JavaScript code into the new file:</li>
+    	<pre>
+function loadXMPLibrary(){
+   if ( !ExternalObject.AdobeXMPScript ){
+      try{
+         ExternalObject.AdobeXMPScript = new ExternalObject('lib:AdobeXMPScript');
+      }catch (e){
+         alert(&quot;Can't load XMP Script Library&quot;);
+         return false;
+      }
+   }
+   return true;
+}
+<br />
+function unloadXMPLibrary(){
+   if( ExternalObject.AdobeXMPScript ) {
+      try{
+         ExternalObject.AdobeXMPScript.unload();
+         ExternalObject.AdobeXMPScript = undefined;
+      }catch (e){
+         alert(&quot;Can't unload XMP Script Library&quot;);
+      }
+   }
+}
+</pre>
+		<p><u>Code Walkthrough</u>: The two functions, <code>loadXMPLibrary</code> and <code>unloadXMPLibrary</code>, are used respectively to load and unload the XMP Script Library to write and modify metadata. The function <code>unloadXMPLibrary</code> is used to free up the memory when the XMP Script Library is loaded.</p>
+    	<li>Copy the following JavaScript code to retrieve the metadata into the file:</li>
+    	<pre>
+function getLayerMetadata(){   
+   var xml = &quot;&lt;object&gt;&quot;;
+   if( app.activeDocument.activeLayer.isBackgroundLayer || !loadXMPLibrary()){
+      xml += convertToXML(&quot;&quot;, &quot;layerName&quot;);
+      xml += convertToXML(&quot;&quot;, &quot;layerChangedDate&quot;);
+      xml += convertToXML(&quot;&quot;, &quot;description&quot;);
+      xml += convertToXML(&quot;&quot;, &quot;comments&quot;);
+   } else {
+      var xmp;
+      try {
+         xml += convertToXML(app.activeDocument.activeLayer.name.toString(), &quot;layerName&quot;);
+      } catch(e) {
+         xml += convertToXML(&quot;&quot;, &quot;layerName&quot;);
+      }
+      
+      try {
+         xml += convertToXML(getLayerChangedDate().toString(), &quot;layerChangedDate&quot;);
+      } catch(e) {
+         xml += convertToXML(&quot;&quot;, &quot;layerChangedDate&quot;);
+      }
+      
+      try { 
+         xmp = new XMPMeta(app.activeDocument.activeLayer.xmpMetadata.rawData);
+      } catch(e) {
+         xml += convertToXML(&quot;&quot;, &quot;description&quot;);
+         xml += convertToXML(&quot;&quot;, &quot;comments&quot;);
+         xml += &quot;&lt;/object&gt;&quot;;
+         unloadXMPLibrary();
+         return xml;
+      }
+   
+      try {
+         xml += convertToXML(
+            xmp.getArrayItem(XMPConst.NS_DC, &quot;description&quot;, 1).toString(), &quot;description&quot;);
+      } catch(e) {
+         xml += convertToXML(&quot;&quot;, &quot;description&quot;);
+      }
+   
+      try {
+         xml += convertToXML(
+            xmp.getProperty(XMPConst.NS_EXIF, &quot;userComment&quot;).toString(), &quot;comments&quot;);
+      } catch(e) {
+         xml += convertToXML(&quot;&quot;, &quot;comments&quot;);
+      }
+   }
+   xml += &quot;&lt;/object&gt;&quot;;
+   unloadXMPLibrary();
+   return xml;
+}
+</pre>
+		<p><u>Code Walkthrough</u>: The function <code>getLayerMetadata</code> retrieves the metadata from the active layer selected in Adobe Photoshop. The function first makes sure that it's not a background layer and that XMP Script Library is loaded for accessing metadata. The background layer, by default, does not have metadata. The function first retrieves the layer name and the date and time the layer was last changed from the function <code>getLayerChangeDate</code>. The function then checks if the metadata can be successfully retrieved from the metadata. If retrieving the metadata was successful, the function retrieves the <code>description</code> field from the Dublin Core metadata schema represented by <code>XMPConst.NS_DC</code> and the <code>comments</code> field from the EXIF metadata schema represented by <code>XMPConst.EXIF</code>. For more information on other metadata schema and its corresponding fields, please  refer to <a href="http://www.adobe.com/products/xmp" target="_blank">Adobe Developer's Center: Extensible Metadata Platform (XMP)</a> including the XMPScript API Reference.</p>
+    	<li>Copy the following JavaScript code to place the metadata into the file:</li>
+    	<pre>
+function setDescMetadata(desc){
+   if( app.activeDocument.activeLayer.isBackgroundLayer || !loadXMPLibrary()){
+      alert(&quot;Can't place description metadata on a background layer.\n&quot; +
+         &quot;Layer &gt; New &gt; Layer From Background...&quot;);
+   } else {
+      var xmp;
+      if (desc == &quot;&quot;)
+         desc = &quot; &quot;;
+         
+      try{
+         xmp = new XMPMeta(app.activeDocument.activeLayer.xmpMetadata.rawData);
+      } catch(e) {
+         xmp = new XMPMeta();
+      }
+   
+      try{
+         if( xmp.countArrayItems(XMPConst.NS_DC, &quot;description&quot;) == 0){
+            xmp.appendArrayItem(XMPConst.NS_DC, &quot;description&quot;, null,
+               XMPConst.PROP_IS_ARRAY, XMPConst.ARRAY_IS_ORDERED);
+            xmp.insertArrayItem(XMPConst.NS_DC, &quot;description&quot;, 1, desc);
+         } else {
+            xmp.setArrayItem(XMPConst.NS_DC, &quot;description&quot;, 1, desc);
+         }
+      } catch(e) {
+         alert(&quot;Unable to place description metadata on selected layer.\n&quot; + e);
+      }
+      app.activeDocument.activeLayer.xmpMetadata.rawData = xmp.serialize();
+   }
+   unloadXMPLibrary();
+}
+<br />
+function setCommMetadata(comm){
+   if( app.activeDocument.activeLayer.isBackgroundLayer || !loadXMPLibrary()){
+      alert(&quot;Can't place comments metadata on a background layer.\n&quot; +
+         &quot;Layer &gt; New &gt; Layer From Background...&quot;);
+   } else {
+      var xmp;
+      if (comm == &quot;&quot;)
+         comm = &quot; &quot;;
+         
+      try{
+         xmp = new XMPMeta(app.activeDocument.activeLayer.xmpMetadata.rawData);
+      } catch(e) {
+         xmp = new XMPMeta();
+      }
+      try{
+         xmp.setProperty(XMPConst.NS_EXIF, &quot;userComment&quot;, comm);
+      } catch(e) {
+         alert(&quot;Unable to place comments metadata on selected layer.\n&quot; + e);
+      }
+      app.activeDocument.activeLayer.xmpMetadata.rawData = xmp.serialize();
+   }
+   unloadXMPLibrary();
+}
+</pre>
+		<p><u>Code Walkthrough</u>: The function <code>setDescMetadata</code> takes the user's input metadata in the description field and apply to the <code>description</code> field from the Dublin Core metadata schema represented by <code>XMPConst.NS_DC</code>. The function <code>setCommMetadata</code> takes the user's input metadata in the comments field and apply to the <code>userComment</code> field from the EXIF metadata schema represented by <code>XMPConst.EXIF</code>. For more information on other metadata schema and its corresponding fields, please  refer to <a href="http://www.adobe.com/products/xmp" target="_blank">Adobe Developer's Center: Extensible Metadata Platform (XMP)</a> including the XMPScript API Reference.</p>
+    	<li>Copy the following JavaScript code to place the metadata into the file:</li>
+    	<pre>
+function exportLayerMetadata(){
+   var path = File.saveDialog();
+   var file = new File(path);
+   file.encoding = &quot;UTF-8&quot;;
+   try{
+      file.open(&quot;w&quot;);
+      file.write(app.activeDocument.activeLayer.xmpMetadata.rawData.toString());
+   } catch(e) {
+      alert(&quot;Unable to write to file.\n&quot; + e);
+   }
+   file.close();
+}
+<br />
+function getLayerChangedDate(){
+   var metadataStrID = stringIDToTypeID(&quot;metadata&quot;);
+   var ref = new ActionReference();
+   ref.putProperty(charIDToTypeID('Prpr'), metadataStrID);
+   ref.putEnumerated(charIDToTypeID('Lyr '), charIDToTypeID('Ordn'),
+                                       charIDToTypeID('Trgt'));
+   var desc = executeActionGet(ref);
+   
+   if (desc.hasKey(metadataStrID)){
+      var descMetadata = desc.getObjectValue( metadataStrID );
+      var timeInSeconds = descMetadata.getDouble(stringIDToTypeID(&quot;layerTime&quot;));
+      var d = new Date();
+      d.setTime(timeInSeconds*1000.0);
+      return d.toLocaleString();
+   }
+}
+<br />
+function convertToXML(property, identifier){
+   var type = typeof property;
+   var xml = '&lt;property id = &quot;' + identifier + '&quot; &gt;';
+   
+   switch(type){
+      case &quot;number&quot;:
+         xml += &quot;&lt;number&gt;&quot;;
+         xml += property.toString();
+         xml += &quot;&lt;/number&gt;&quot;;
+         break;
+      case &quot;boolean&quot;:
+         xml += &quot;&lt;&quot; + property.toString() + &quot;/&gt;&quot;;
+         break;
+      case &quot;string&quot;:
+         xml += &quot;&lt;string&gt;&quot;;
+         xml += property.toString();
+         xml += &quot;&lt;/string&gt;&quot;;
+         break;
+      case &quot;object&quot;:
+         // Object case is currently not supported
+         alert(&quot;Object case is currently not supported&quot;);
+         //xml += &quot;&lt;object&gt;&quot;;
+         //for(var i in property)
+         //   xml += convertToXML(property[i], 
+         //xml += &quot;&lt;/object&gt;&quot;;
+         break;
+      case &quot;undefined&quot;:
+         xml += &quot;&lt;string&gt;undefined&lt;/string&gt;&quot;;
+         break;
+      default:
+         alert(&quot;Type &quot; + type + &quot; is unknown.&quot;);
+         return &quot;&quot;;
+   }
+   xml += '&lt;/property&gt;';
+   return xml;
+}
+</pre>
+		<p><u>Code Walkthrough</u>: The function <code>exportLayerMetadata</code> prompts the user for the location to save the metadata and then write to that location. The function <code>getLayerChangedDate</code> retrieves the date and time in which the active layer was last changed and converts to the locale time. The function <code>convertToXML</code> takes a <code>property</code> and a unique <code>identifier</code> to return as an XML object understood by the Per Layer Metadata Panel.</p>
+    	<li>Go to <b>File &gt; Save As...</b>.</li>
+    	<ol type="a">
+			<li>Under <b>Save As:</b>, type in <b>PerLayerMetadata.jsx</b>.</li>
+    		<li>Save the file into the <b>Panels</b> folder under the <b>Adobe Photoshop CS5\Plug-ins\</b> folder located under:</li>
+    		<ul>
+				<li><b>Applications</b> for Macintosh</li>
+    			<li><b>Program Files</b> for Windows</li>
+    			</ul>
+    		<li>Press <b>Save</b>.</li>
+    		</ol>
+    	<li>Close <b>ExtendScript Toolkit</b>.</li>
+    	</ol>
+        <span class="nextLink">Continue to <a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></span>
+  </div>
+	<br class="clearfloat" />
+</div>
+</body>
+</html>

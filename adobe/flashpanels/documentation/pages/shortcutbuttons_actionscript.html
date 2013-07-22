@@ -1,0 +1,199 @@
+<!--
+/*************************************************************************
+*
+* ADOBE CONFIDENTIAL
+* ___________________
+*
+*  Copyright 2008 Adobe Systems Incorporated
+*  All Rights Reserved.
+*
+* NOTICE:  All information contained herein is, and remains
+* the property of Adobe Systems Incorporated and its suppliers,
+* if any.  The intellectual and technical concepts contained
+* herein are proprietary to Adobe Systems Incorporated and its
+* suppliers and may be covered by U.S. and Foreign Patents,
+* patents in process, and are protected by trade secret or copyright law.
+* Dissemination of this information or reproduction of this material
+* is strictly forbidden unless prior written permission is obtained
+* from Adobe Systems Incorporated.
+**************************************************************************/
+
+Name:				index.html
+Author:				John Huan Vu
+					Photoshop Engineering Intern
+					Adobe Systems Incorporated
+Description:		The index file describes the overall picture of the Adobe
+					Photoshop Panel Developer's Guide for other developers to use
+					and make using Adobe Flex Builder.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Adobe Photoshop Panel Developer's Guide</title>
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="twoColLiqLt">
+<div id="container">
+  <div id="sidebar1">
+    <h4>Table of Contents</h4>
+    <span class = "toc_links">
+		<a href="index.html">Introduction</a><br/>
+    	<a href="who.html">Who Should Read This?</a><br/>
+		<a href="howDoesItWork.html">How Does It Work?</a><br/>
+		<a href="download.html">Download(s)</a><br/>
+		<a href="requirements.html">System and Software Requirements</a><br/>
+		<a href="psReservedWords.html">Adobe Photoshop Reserved Words</a><br/>
+		<br />
+		Tutorials<br />
+		<a href="tutorial_overview.html">Overview</a>
+    	<ol>
+			<li><a href="startingFlexProject.html">Starting a Flex Project</a></li>
+			<li><a href="helloworld.html">Hello World Panel</a></li>
+			<li><a href="csxsfile.html">Placing the CSXS Library</a></li>
+			<br />
+			<li><a href="shortcutbuttons.html">Shortcut Buttons Panel</a>
+			<ol type="a">
+				<li><a href="shortcutbuttons_javascript.html">JavaScript</a></li>
+				<li><a href="shortcutbuttons_design.html">Design the Panel</a></li>
+				<li><a href="shortcutbuttons_actionscript.html">ActionScript</a></li>
+				<li><a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></li>
+				<li><a href="shortcutbuttons_air.html">CSXS Logger AIR Debugger (Optional)</a></li>
+			</ol>
+			</li>
+			<br />
+			<li><a href="scriptlistener.html">Setting Up Script Listener</a></li>
+			<br />
+			<li><a href="colorpicker.html">Color Picker Panel</a></li>
+			<ol type="a.html">
+				<li><a href="colorpicker_javascript.html">JavaScript</a></li>
+				<li><a href="colorpicker_design.html">Design the Panel</a></li>
+				<li><a href="colorpicker_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="colorpicker_actionscript.html">ActionScript</a></li>
+				<li><a href="colorpicker_icons.html">Create Custom Icons</a></li>
+			</ol>
+			<br />
+			<li><a href="flickr.html">Flickr Search Panel</a></li>
+			<ol type="a.html">
+				<li><a href="flickr_design.html">Design the Panel</a></li>
+				<li><a href="flickr_actionscriptFlickr.html">Create a Flickr Service</a></li>
+				<li><a href="flickr_createThumbnailModule.html">Design a Custom Module</a></li>
+				<li><a href="flickr_actionscriptEnvironment.html">Modify Panel's Properties</a></li>
+				<li><a href="flickr_actionscriptAppOnline.html">Connect on Preferences</a></li>
+			</ol>
+			<br />
+			<li><a href="perLayer.html">Per Layer Metadata Panel</a></li>
+			<ol type="a.html">
+				<li><a href="perLayer_metadata.html">View Metadata</a></li>
+				<li><a href="perLayer_javascript.html">JavaScript</a></li>
+				<li><a href="perLayer_characterID.html">Find Character ID Code to Register Events</a></li>
+				<li><a href="perLayer_design.html">Designing the Panel</a></li>
+				<li><a href="perLayer_actionscript.html">ActionScript</a></li>
+				<li><a href="perLayer_photomerge.html">Using Photomerge</a></li>
+			</ol>
+    	</ol>
+	 	<a href="otherSamples.html">Other Samples</a> <br/>
+	 	<a href="bestPractices.html">Best Practices</a><br />
+		<a href="faq.html">Frequently Asked Questions</a><br />
+		<a href="acronyms.html">Acronyms and Definitions</a><br />
+		<a href="links.html">Links</a>
+		</span>
+	</div>
+  <div id="mainContent">
+    <span class="main_title">Adobe<sup>&reg;</sup> Photoshop<sup>&reg;</sup> Panel Developer's Guide</span>
+	<hr />
+    <h1>Shortcut Buttons Panel: ActionScript</h1>
+    <p>The third part of the Shortcut Buttons Panel is programming the Adobe Photoshop Panel using ActionScript. The developer will program in ActionScript to call the functions in the JavaScript file created earlier and also instantiate a timer for each check box control component. The timer will be used to automate the creation of a new document or to close a document in Adobe Photoshop. The developer will also learn how to create unique identifiers for the control components currently placed in the design area. After programming in ActionScript, the developer will copy the Adobe Flex Builder produced SWF file to the Adobe Photoshop Panels folder. The result is enabling and using the Shortcut Buttons Panel in Adobe Photoshop.
+    <p><u>Instructions</u>: </p>
+    <ol>
+		<li>Complete <a href="#csxsfile">Placing and Using the CSXS Library</a>.</li>
+    	<li>Open <b>Adobe Flex Builder</b>.</li>
+    	<li> If the <b>ShortcutButtons</b> project fails to show up:
+    		<ol type = "a">
+				<li>Go to <b>File &gt; Import &gt; Flex Project...</b>.</li>
+    			<li>Select <b>Project</b> and <b>Browse...</b> to the <b>ShortcutButtons</b> folder on the desktop.</li>
+    			<li>Deselect <b>Use default location</b>.</li>
+    			<li>Press <b>Finish</b>.</li>
+    			<img src="../images/ShortcutButtons_ImportFlexProject.jpg" />
+				</ol>
+    		</li>
+    	<li>Verify that <b>CSXSLibrary.swc</b> is under the <b>libs</b> folder. Double-click on <b>ColorPicker.mxml</b> if the Design Area is empty.</li>
+    	<img src="../images/ShortcutButtons_FlexNavigator.jpg" />
+		<li>Go to <b>Source Mode</b> by selecting Source<b> Mode</b> by selecting <b>Source</b> under the <b>ShortcutButtons.mxml</b> tab or go to <b> Window &gt; Switch Source/Design Mode</b>. The initial code should look similar to the following:
+			<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;mx:Application xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot; layout=&quot;absolute&quot;&gt;
+   &lt;mx:Button x=&quot;10&quot; y=&quot;10&quot; label=&quot;New Document&quot;/&gt;
+   &lt;mx:Button x=&quot;10&quot; y=&quot;40&quot; label=&quot;Close Document&quot;/&gt;
+   &lt;mx:CheckBox x=&quot;135&quot; y=&quot;10&quot; label=&quot;Activate every 10 seconds&quot;/&gt;
+   &lt;mx:CheckBox x=&quot;135&quot; y=&quot;40&quot; label=&quot;Activate every 12 seconds&quot;/&gt;
+&lt;/mx:Application&gt;</pre>
+	  </li>
+    	<li>The red colored text are the changes made to <b>ShortcutButtons.mxml</b>:
+    		<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;mx:Application xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot; layout=&quot;absolute&quot;&gt;
+   <span class="codeChange">&lt;mx:Script&gt;
+      &lt;![CDATA[
+         import com.adobe.csxs.core.CSXSInterface;
+         
+         public function callAddDocument():void{
+            CSXSInterface.instance.evalScript(&quot;addDocument&quot;);
+         }
+         public function callCloseDocument():void{
+            CSXSInterface.instance.evalScript(&quot;closeDocument&quot;);
+         }
+      ]]&gt;</span>
+   &lt;/mx:Script&gt;
+   &lt;mx:Button x=&quot;10&quot; y=&quot;10&quot; label=&quot;New Document&quot; <span class="codeChange">click=&quot;callAddDocument();&quot;</span>/&gt;
+   &lt;mx:Button x=&quot;10&quot; y=&quot;40&quot; label=&quot;Close Document&quot; <span class="codeChange">click=&quot;callCloseDocument();&quot;</span>/&gt;
+   &lt;mx:CheckBox x=&quot;135&quot; y=&quot;10&quot; label=&quot;Activate every 10 seconds&quot; <span class="codeChange">id=&quot;actNewDoc&quot;</span>/&gt;
+   &lt;mx:CheckBox x=&quot;135&quot; y=&quot;40&quot; label=&quot;Activate every 12 seconds&quot; <span class="codeChange">id=&quot;actCloseDoc&quot;</span>/&gt;
+&lt;/mx:Application&gt;</pre>
+				<p><u>Code Walkthrough</u>:  Importing <code>CSXSInterface</code> from <code>CSXSLibrary.swc</code> allows communication from the Shortcut Buttons Panel to the Shortcut Buttons JavaScript file. There are two functions inside the <code>mx:Script</code> tag called <code>callAddDocument</code> and <code>callCloseDocument</code> that uses <code>CSXSInterface</code> to call the <code>addDocument</code> and <code>closeDocument</code> functions respectively in ShortcutButtons.jsx. The two <code>mx:Button</code> tags has  a parameter called <code>click</code> which handles the mouse click event on the button. The button labeled <b>New Document</b> calls the <code>callAddDocument();</code> when the mouse is clicked while the button labeled <b>Close Document</b> calls the <code>callCloseDocument();</code> when the mouse is clicked. The two <code>mx:CheckBox</code> tags are uniquely identified by the <code>id</code> parameter.</p>
+    		</li>
+    	<li>The red colored text are the changes made to <b>ShortcutButtons.mxml</b>:
+    		<pre>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;mx:Application xmlns:mx=&quot;http://www.adobe.com/2006/mxml&quot; layout=&quot;absolute&quot; <span class="codeChange">creationComplete=&quot;init()&quot;</span>&gt;
+   &lt;mx:Script&gt;
+      &lt;![CDATA[
+         import com.adobe.csxs.core.CSXSInterface;
+         
+<span class="codeChange">         public var newDocTimer:Timer = new Timer(10000);
+         public var closeDocTimer:Timer = new Timer(12000);</span>
+         
+         public function callAddDocument():void{
+            CSXSInterface.instance.evalScript(&quot;addDocument&quot;);
+         }
+         public function callCloseDocument():void{
+            CSXSInterface.instance.evalScript(&quot;closeDocument&quot;);
+         }
+<span class="codeChange">         public function init():void{
+            newDocTimer.addEventListener(TimerEvent.TIMER,newDocTimeHandler);
+            closeDocTimer.addEventListener(TimerEvent.TIMER,closeDocTimeHandler);
+            newDocTimer.start();
+            closeDocTimer.start();
+         }
+         public function newDocTimeHandler(event:TimerEvent):void{
+            if(actNewDoc.selected) callAddDocument();
+         }
+         public function closeDocTimeHandler(event:TimerEvent):void{
+            if(actCloseDoc.selected) callCloseDocument();
+         }</span>
+      ]]&gt;
+   &lt;/mx:Script&gt;
+   &lt;mx:Button x=&quot;10&quot; y=&quot;10&quot; label=&quot;New Document&quot; click=&quot;callAddDocument();&quot;/&gt;
+   &lt;mx:Button x=&quot;10&quot; y=&quot;40&quot; label=&quot;Close Document&quot; click=&quot;callCloseDocument();&quot;/&gt;
+   &lt;mx:CheckBox x=&quot;135&quot; y=&quot;10&quot; label=&quot;Activate every 10 seconds&quot; id=&quot;actNewDoc&quot;/&gt;
+   &lt;mx:CheckBox x=&quot;135&quot; y=&quot;40&quot; label=&quot;Activate every 12 seconds&quot; id=&quot;actCloseDoc&quot;/&gt;
+&lt;/mx:Application&gt;</pre>
+				<p><u>Code Walkthrough</u>:  The <code>creationComplete</code> parameter inside <code>mx:Application</code> tag is like a constructor in Object-Oriented Programming. The function <code>init</code> is called by <code>creationComplete</code> to initialize the timer variables, <code>newDocTimer</code> and <code>closeDocTimer</code>, and the event handlers called <code>newDocTimer</code> and <code>closeDocTimer</code>. The timer variables, <code>newDocTimer</code> and <code>closeDocTimer</code>, are each initialized to 10 seconds and 12 seconds respectively represented by values of <code>10000</code> and <code>12000</code>. The functions <code>newDocTimeHandler</code> and <code>closeDocTimeHandler</code> are event handlers for the <code>newDocTimer</code> and <code>closeDocTimer</code> respectively to check whether or not the checkboxes, uniquely identified by <code>actNewDoc</code> and <code>actCloseDoc</code>, are selected to create or close a document respective to its own timer.</p>
+    		</li>
+    	</ol>
+  <span class="nextLink">Continue to <a href="shortcutbuttons_persistent.html">Photoshop Persistent</a></span>
+  </div>
+	<br class="clearfloat" />
+</div>
+</body>
+</html>
